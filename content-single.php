@@ -6,15 +6,37 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		
 
 		<div class="entry-meta">
+			
+						<?php echo get_avatar( get_the_author_meta( 'user_email' ), 32 ); ?>
+				
+	
 			<?php societycentral_posted_on(); ?>
+
 		</div><!-- .entry-meta -->
+	<h1 class="entry-title"><?php the_title(); ?></h1>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+
+		<?php
+			if ( has_post_thumbnail() ) {
+				echo "<figure>";
+				the_post_thumbnail('large');
+				$caption = get_post(get_post_thumbnail_id())->post_excerpt;
+			if($caption != "")
+			{
+				echo "<figcaption>" . $caption . "</figcaption>";
+			}
+				echo "</figure>";
+			} 
+		?><!-- insert featured image -->
+
 		<?php the_content(); ?>
+
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'societycentral' ),
