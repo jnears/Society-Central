@@ -12,10 +12,46 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
+			<div class="third">
+		        <h3>Contact</h3>
+		        <p>
+					Institute for Social &amp; Economic Research<br>
+					University of Essex<br>
+					Wivenhoe Park<br>
+					Colchester CO4 3SQ<br>
+					+44 (0) 1206 873684<br>
+					<a href="mailto:societycentral@essex.ac.uk">societycentral@essex.ac.uk</a><br>
+				</p>
+        	</div>
+
+			<div class="third">
+		        <nav>
+		          <h3>Departments</h3>
+		          <ol>
+		            <li><a href="#">Business, Innovation and Skills</a></li>
+		            <li><a href="#">Communities and Local Government</a></li>
+		            <li><a href="#">Culture, Media and Sport</a></li>
+		            <li><a href="#">Education</a></li>
+		            <li><a href="#">Work and Pensions</a></li>
+		            <li><a href="#">Health</a></li>
+		            <li><a href="#">Home Office</a></li>
+		            <li><a href="#">Treasury</a></li>
+		            <li><a href="#">Cabinet Office</a></li>
+		            <li><a href="#">Environment, Food and Rural Affairs</a></li>
+		          </ol>
+		        </nav>
+		    </div>
+
+			<div class="third twitter" data-twttr-id="twttr-sandbox-0">
+		        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" title="Twitter Timeline" width="469" height="400" style="border: none; max-width: 100%; min-width: 180px;"></iframe>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				</script>
+        	</div>
+
 			<a href="#" id="show-grid" class="btn">Toggle grid</a>
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'societycentral' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'societycentral' ), 'WordPress' ); ?></a>
+			<!-- <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'societycentral' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'societycentral' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'societycentral' ), 'societycentral', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'societycentral' ), 'societycentral', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?> -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

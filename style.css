@@ -2366,15 +2366,19 @@ img {
   color: #666666; }
 
 html.sc a:link, html.sc a:visited {
-  color: black;
+  color: #2c2c2c;
   text-decoration: none; }
 html.sc a:hover {
   text-decoration: underline; }
 html.sc header[role=banner] {
+  border-top: 0px;
   border-bottom: 1px solid #cccccc;
+  padding-top: 0;
+  min-height: 120px;
+  min-height: 6.66667rem;
   text-align: center;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.33333rem;
   background: #f2f2f2;
   position: relative; }
   html.sc header[role=banner] .container {
@@ -2387,7 +2391,8 @@ html.sc header[role=banner] {
     margin: 0px;
     margin: 0rem;
     padding-top: 27px;
-    padding-top: 1.5rem; }
+    padding-top: 1.5rem;
+    font-family: "OfficinaSerifITCW01-Bol 734534", Georgia, "Times New Roman", Times, serif; }
     html.sc header[role=banner] h1 a:link, html.sc header[role=banner] h1 a:visited {
       padding: 5px 20px;
       color: white;
@@ -2395,7 +2400,7 @@ html.sc header[role=banner] {
       text-decoration: none; }
     html.sc header[role=banner] h1 a:hover {
       text-decoration: none;
-      background: #1e9cee; }
+      background: #74a290; }
   html.sc header[role=banner] h2 {
     font-family: "Officina", Georgia, "Times New Roman", Times, serif;
     font-weight: normal;
@@ -2404,7 +2409,7 @@ html.sc header[role=banner] {
     font-size: 1.33333rem;
     line-height: 18px;
     line-height: 1rem;
-    margin: 5px 0 20px 0; }
+    margin: 5px 0 0 0; }
   html.sc header[role=banner] div.social-links {
     position: absolute;
     left: 0;
@@ -2436,7 +2441,26 @@ html.sc aside {
   font-size: 16px;
   font-size: 0.88889rem;
   position: relative;
-  right: 0; }
+  right: 0;
+  width: 100%; }
+  html.sc aside ul {
+    padding: 0;
+    margin: -5px 0 0 -5px; }
+    html.sc aside ul li {
+      list-style-type: none;
+      float: left;
+      margin: 8px 5px;
+      margin: 0.44444rem 0.27778rem; }
+      html.sc aside ul li a:link {
+        font-size: 18px;
+        font-size: 1rem;
+        padding: 5px 10px;
+        padding: 0.27778rem 0.55556rem;
+        background: #e2e2e2; }
+      html.sc aside ul li a:hover {
+        text-decoration: none;
+        background: #74a290;
+        color: white; }
   html.sc aside p:last-of-type {
     margin-bottom: 0; }
   html.sc aside article:not(:last-of-type) {
@@ -2554,6 +2578,24 @@ html.sc .screen-reader-text {
   padding: 0;
   position: absolute;
   width: 1px; }
+html.sc footer[role=contentinfo] {
+  color: white; }
+  html.sc footer[role=contentinfo] .site-info {
+    width: 90%;
+    margin: 0 auto; }
+    html.sc footer[role=contentinfo] .site-info ol {
+      padding-left: 0px; }
+      html.sc footer[role=contentinfo] .site-info ol li {
+        list-style-type: none; }
+    html.sc footer[role=contentinfo] .site-info a:visited {
+      color: white;
+      text-deocration: none; }
+    html.sc footer[role=contentinfo] .site-info .third {
+      float: left;
+      width: 33.33333%; }
+      html.sc footer[role=contentinfo] .site-info .third:last-of-type {
+        width: 31%;
+        padding-left: 2.33333%; }
 
 html.sc.grid {
   z-index: 10;

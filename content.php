@@ -47,9 +47,9 @@
 				$categories_list = get_the_category_list( __( ', ', 'societycentral' ) );
 				if ( $categories_list && societycentral_categorized_blog() ) :
 			?>
-			<span class="cat-links">
+			<!-- <span class="cat-links">
 				<?php printf( __( 'Posted in %1$s', 'societycentral' ), $categories_list ); ?>
-			</span>
+			</span> -->
 			<?php endif; // End if categories ?>
 
 			<?php
