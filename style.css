@@ -2436,6 +2436,8 @@ html.sc main {
 html.sc aside {
   margin-top: 0px;
   margin-top: 0rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem;
   margin-left: 0px;
   margin-left: 0rem;
   font-size: 16px;
@@ -2474,6 +2476,13 @@ html.sc aside {
     margin-bottom: 0.5rem;
     clear: both;
     color: gray; }
+  html.sc aside h2 {
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 36px;
+    line-height: 2rem;
+    margin-bottom: 9px;
+    margin-bottom: 0.5rem; }
 html.sc nav#site-navigation {
   display: none; }
 html.sc div#content {
