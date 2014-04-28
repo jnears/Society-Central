@@ -142,7 +142,7 @@ function headline_init() {
 
 	register_taxonomy(
 		'headline',
-		array('post','essexuni_news'),
+		array('post','societycentral_news'),
 		array(
 			'labels' => $labels,
 			'hierarchical' => true,
@@ -156,7 +156,7 @@ add_action( 'init', 'headline_init' );
 
 // Create the 'News in brief' post type
 function create_post_type() {
-	register_post_type( 'essexuni_news',
+	register_post_type( 'societycentral_news',
 		array(
 			'labels' => array(
 				'name' => __( 'News in brief' ),
@@ -174,6 +174,24 @@ add_action( 'init', 'create_post_type' );
 
 
 add_action( 'wp_enqueue_scripts', 'retina_support_enqueue_scripts' );
+
+
+//authors
+
+
+ 
+add_filter('user_contactmethods', 'my_user_contactmethods');
+
+function my_user_contactmethods($user_contactmethods){
+$user_contactmethods['twitter'] = 'Twitter Username';
+$user_contactmethods['facebook'] = 'Facebook URL';
+return $user_contactmethods;
+}
+
+
+
+
+
 
 //Enqueueing retina.js (for retina images)
 function retina_support_enqueue_scripts() {
