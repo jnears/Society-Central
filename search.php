@@ -7,13 +7,16 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'societycentral' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="search-title">Search results
+					<span><?php echo $wp_query->found_posts; ?> <?php _e( 'results for your search for ', 'locale' ); ?> '<?php the_search_query(); ?>'</span>
+				</h1>
+
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -32,7 +35,18 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<div id="secondary" class="widget-area" role="complementary">
+
+
+			<aside id="search" class="widget widget_search">
+				<?php get_search_form(); ?>
+			</aside>
+
+			
+
+	
+
+	</div><!-- #secondary -->
 <?php get_footer(); ?>

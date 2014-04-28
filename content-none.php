@@ -10,7 +10,10 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'societycentral' ); ?></h1>
+		<h1 class="search-title">Search results
+			<span><?php echo $wp_query->found_posts; ?> <?php _e( 'results for your search for ', 'locale' ); ?> '<?php the_search_query(); ?>'</span>
+		</h1>
+
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -20,7 +23,7 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'societycentral' ); ?></p>
+			<p><?php _e( 'Please try again with some different keywords.', 'societycentral' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>

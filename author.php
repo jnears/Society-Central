@@ -12,13 +12,6 @@
 <?php echo get_avatar( get_the_author_meta( 'user_email' ), 150 ); ?>
 
 
-<?php if ( get_the_author_meta( 'facebook' ) ) { ?>
- 
-<?php the_author_meta( 'facebook' ); ?>
-<?php } // End check for facebook ?>
-
-
-
     <dl>
         <dt>Website</dt>
         <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
