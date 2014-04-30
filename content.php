@@ -18,11 +18,11 @@
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<?php the_excerpt(0,4); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
+		<?php the_excerpt(9); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'societycentral' ),

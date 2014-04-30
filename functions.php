@@ -153,6 +153,35 @@ function headline_init() {
 add_action( 'init', 'headline_init' );
 
 
+function department_init() {
+	// create a new taxonomy
+	$labels = array(
+    'name' => _x( 'Departments', 'taxonomy general name' ),
+    'singular_name' => _x( 'Department', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Departments' ),
+    'all_items' => __( 'All Departments' ),
+    'parent_item' => __( 'Parent Department' ),
+    'parent_item_colon' => __( 'Parent Department:' ),
+    'edit_item' => __( 'Edit Department' ),
+    'update_item' => __( 'Update Department' ),
+    'add_new_item' => __( 'Add New Department' ),
+    'new_item_name' => __( 'New Department' ),
+    'menu_name' => __( 'Department' ),
+  );
+
+	register_taxonomy(
+		'department',
+		array('post','societycentral_news'),
+		array(
+			'labels' => $labels,
+			'hierarchical' => true,
+			 'rewrite' => array( 'slug' => 'department' )
+		)
+	);
+}
+add_action( 'init', 'department_init' );
+
+
 
 // Create the 'News in brief' post type
 function create_post_type() {
@@ -166,7 +195,7 @@ function create_post_type() {
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'news-in-brief'),
 			'menu_position' => 5,
-			'taxonomies' => array('category','post_tag','feature','content_types')
+			'taxonomies' => array('category','post_tag','feature','content_types') //add multiple existing categories to this custom post type
 		)
 	);
 }

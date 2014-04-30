@@ -27,18 +27,18 @@
 			<div class="third">
 		        <nav>
 		          <h3>Departments</h3>
-		          <ol>
-		            <li><a href="#">Business, Innovation and Skills</a></li>
-		            <li><a href="#">Communities and Local Government</a></li>
-		            <li><a href="#">Culture, Media and Sport</a></li>
-		            <li><a href="#">Education</a></li>
-		            <li><a href="#">Work and Pensions</a></li>
-		            <li><a href="#">Health</a></li>
-		            <li><a href="#">Home Office</a></li>
-		            <li><a href="#">Treasury</a></li>
-		            <li><a href="#">Cabinet Office</a></li>
-		            <li><a href="#">Environment, Food and Rural Affairs</a></li>
-		          </ol>
+		          <?php
+//list terms in a given taxonomy
+$taxonomy = 'department';
+$tax_terms = get_terms($taxonomy);
+?>
+<ol>
+<?php
+foreach ($tax_terms as $tax_term) {
+echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
+}
+?>
+</ol>
 		        </nav>
 		    </div>
 

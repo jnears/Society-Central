@@ -2374,11 +2374,11 @@ html.sc header[role=banner] {
   border-top: 0px;
   border-bottom: 1px solid #cccccc;
   padding-top: 0;
-  min-height: 120px;
-  min-height: 6.66667rem;
+  min-height: 126px;
+  min-height: 7rem;
   text-align: center;
-  margin-bottom: 24px;
-  margin-bottom: 1.33333rem;
+  margin-bottom: 36px;
+  margin-bottom: 2rem;
   background: #f2f2f2;
   position: relative; }
   html.sc header[role=banner] .container {
@@ -2431,8 +2431,8 @@ html.sc header[role=banner] {
     html.sc header[role=banner] div.util-links a:hover {
       color: #1e9cee; }
 html.sc main {
-  margin-top: 9px;
-  margin-top: 0.5rem; }
+  margin-top: 0px;
+  margin-top: 0rem; }
 html.sc aside {
   margin-top: 0px;
   margin-top: 0rem;
@@ -2491,10 +2491,18 @@ html.sc div#content {
 html.sc div#primary {
   float: left;
   width: 66.66667%; }
+  @media only screen and (max-width: 480px) {
+    html.sc div#primary {
+      float: none;
+      width: 100%; } }
 html.sc div#secondary {
   float: left;
   width: 31%;
   padding-left: 2.33333%; }
+  @media only screen and (max-width: 480px) {
+    html.sc div#secondary {
+      float: none;
+      width: 100%; } }
   html.sc div#secondary form[role=search] {
     position: relative;
     display: initial; }
@@ -2559,10 +2567,12 @@ html.sc main.site-main article {
   html.sc main.site-main article h1 {
     font-size: 24px;
     font-size: 1.33333rem;
-    line-height: 36px;
-    line-height: 2rem;
-    margin-bottom: 9px;
-    margin-bottom: 0.5rem; }
+    line-height: 27px;
+    line-height: 1.5rem;
+    margin-top: 9px;
+    margin-top: 0.5rem;
+    margin-bottom: 18px;
+    margin-bottom: 1rem; }
   html.sc main.site-main article p {
     margin: none;
     color: black; }
@@ -2578,6 +2588,10 @@ html.sc main.site-main article {
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       width: inherit; }
+      @media only screen and (max-width: 480px) {
+        html.sc main.site-main article figure img {
+          width: 80px;
+          height: 80px; } }
 html.sc .screen-reader-text {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2589,6 +2603,9 @@ html.sc .screen-reader-text {
   width: 1px; }
 html.sc footer[role=contentinfo] {
   color: white; }
+  html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
+    color: white;
+    text-deocration: none; }
   html.sc footer[role=contentinfo] .site-info {
     width: 90%;
     margin: 0 auto; }
@@ -2596,9 +2613,6 @@ html.sc footer[role=contentinfo] {
       padding-left: 0px; }
       html.sc footer[role=contentinfo] .site-info ol li {
         list-style-type: none; }
-    html.sc footer[role=contentinfo] .site-info a:visited {
-      color: white;
-      text-deocration: none; }
     html.sc footer[role=contentinfo] .site-info .third {
       float: left;
       width: 33.33333%; }
