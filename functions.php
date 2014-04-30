@@ -142,7 +142,7 @@ function headline_init() {
 
 	register_taxonomy(
 		'headline',
-		array('post','societycentral_news'),
+		array('post','essexuni_news'),
 		array(
 			'labels' => $labels,
 			'hierarchical' => true,
@@ -153,33 +153,34 @@ function headline_init() {
 add_action( 'init', 'headline_init' );
 
 
-function department_init() {
+
+/* custom taxonomy for sections (for post icons) */
+
+function sections_init() {
 	// create a new taxonomy
 	$labels = array(
-    'name' => _x( 'Departments', 'taxonomy general name' ),
-    'singular_name' => _x( 'Department', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Departments' ),
-    'all_items' => __( 'All Departments' ),
-    'parent_item' => __( 'Parent Department' ),
-    'parent_item_colon' => __( 'Parent Department:' ),
-    'edit_item' => __( 'Edit Department' ),
-    'update_item' => __( 'Update Department' ),
-    'add_new_item' => __( 'Add New Department' ),
-    'new_item_name' => __( 'New Department' ),
-    'menu_name' => __( 'Department' ),
+    'name' => _x( 'Content Types', 'taxonomy general name' ),
+    'singular_name' => _x( 'Content Type', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Content Type' ),
+    'all_items' => __( 'All Content Types' ),
+    'parent_item' => __( 'Parent Section' ),
+    'parent_item_colon' => __( 'Parent Content Types:' ),
+    'edit_item' => __( 'Edit Content Type' ),
+    'update_item' => __( 'Update Content Type' ),
+    'menu_name' => __( 'Content Types' ),
   );
 
 	register_taxonomy(
-		'department',
-		array('post','societycentral_news'),
+		'content_types',
+		array('post','essexuni_news'),
 		array(
 			'labels' => $labels,
 			'hierarchical' => true,
-			 'rewrite' => array( 'slug' => 'department' )
+			'rewrite' => array( 'slug' => 'content_types' )
 		)
 	);
 }
-add_action( 'init', 'department_init' );
+add_action( 'init', 'sections_init' );
 
 
 
@@ -203,6 +204,26 @@ add_action( 'init', 'create_post_type' );
 
 
 add_action( 'wp_enqueue_scripts', 'retina_support_enqueue_scripts' );
+
+
+
+
+function top_level_category_list() {
+  $args = array(
+            'hide_empty'  => 1,
+            'parent'      => 0,
+            'exclude'     => array(1,19,20)
+            );
+  $categories = get_categories( $args );
+  foreach($categories as $category) {
+    echo '<li><a href="';
+    echo get_category_link( $category->term_id );
+    echo '">';
+    echo $category->name;
+    echo '</a></li>';
+   }
+}
+
 
 
 //authors
@@ -292,6 +313,18 @@ function delete_retina_support_images( $attachment_id ) {
         }
     }
 }
+
+
+function my_get_posts( $query ) {
+	if ( is_home() && $query->is_main_query() )
+		$query->set( 'post_type', array( 'post', 'societycentral_news' ) );
+	return $query;
+}
+add_filter( 'pre_get_posts', 'my_get_posts' );
+
+
+
+
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {

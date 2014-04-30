@@ -2433,7 +2433,7 @@ html.sc header[role=banner] {
 html.sc main {
   margin-top: 0px;
   margin-top: 0rem; }
-html.sc aside {
+html.sc aside nav {
   margin-top: 0px;
   margin-top: 0rem;
   margin-bottom: 27px;
@@ -2445,29 +2445,29 @@ html.sc aside {
   position: relative;
   right: 0;
   width: 100%; }
-  html.sc aside ul {
+  html.sc aside nav ol {
     padding: 0;
     margin: -5px 0 0 -5px; }
-    html.sc aside ul li {
+    html.sc aside nav ol li {
       list-style-type: none;
       float: left;
       margin: 8px 5px;
       margin: 0.44444rem 0.27778rem; }
-      html.sc aside ul li a:link {
+      html.sc aside nav ol li a:link {
         font-size: 18px;
         font-size: 1rem;
         padding: 5px 10px;
         padding: 0.27778rem 0.55556rem;
         background: #e2e2e2; }
-      html.sc aside ul li a:hover {
+      html.sc aside nav ol li a:hover {
         text-decoration: none;
         background: #74a290;
         color: white; }
-  html.sc aside p:last-of-type {
+  html.sc aside nav p:last-of-type {
     margin-bottom: 0; }
-  html.sc aside article:not(:last-of-type) {
+  html.sc aside nav article:not(:last-of-type) {
     border-bottom: 1px solid black; }
-  html.sc aside h1 {
+  html.sc aside nav h1 {
     font-size: 20px;
     font-size: 1.11111rem;
     line-height: 36px;
@@ -2476,7 +2476,7 @@ html.sc aside {
     margin-bottom: 0.5rem;
     clear: both;
     color: gray; }
-  html.sc aside h2 {
+  html.sc aside nav h2 {
     font-size: 18px;
     font-size: 1rem;
     line-height: 36px;

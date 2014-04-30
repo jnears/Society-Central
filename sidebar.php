@@ -19,6 +19,8 @@
 		</ul>
 	</aside>
 
+
+
 	<aside id="meta" class="widget">
 		<h1 class="widget-title"><?php _e( 'Meta', 'societycentral' ); ?></h1>
 		<ul>
@@ -29,8 +31,12 @@
 	</aside>
 
 <?php endif; // end sidebar widget area ?>
+<aside id="headlines" class="widget">
 
-	<aside>
+		<h1>Topics</h1>
+		<?php echo headline_list(6); ?>
+	</aside>
+	<!-- <aside>
 		<h1>News in brief</h1>
 			<?php
 			$hargs = array( 'post_type' => 'societycentral_news', 'posts_per_page' => 3 );
@@ -45,5 +51,5 @@
 			endforeach;
 			wp_reset_query();
 			?>
-	</aside>
+	</aside> -->
 </div><!-- #secondary -->

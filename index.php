@@ -16,11 +16,12 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+
 		<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
+			
 			<?php while ( have_posts() ) : the_post(); ?>
-
+<?php query_posts( array( 'post_type' => array( 'post', 'news_in_brief' )); ?>
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
@@ -44,3 +45,17 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
+<?php
+			$hargs = array( 'post_type' => 'societycentral_news', 'posts_per_page' => 3 );
+			$myposts = get_posts( $hargs );
+			foreach( $myposts as $post ) :  setup_postdata($post);
+			?>
+				<article>
+					<h2><?php the_title(); ?></h2>
+					<?php the_content(); ?>
+				</article>
+			<?php
+			endforeach;
+			wp_reset_query();
+			?>

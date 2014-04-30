@@ -25,21 +25,14 @@
         	</div>
 
 			<div class="third">
-		        <nav>
-		          <h3>Departments</h3>
-		          <?php
-//list terms in a given taxonomy
-$taxonomy = 'department';
-$tax_terms = get_terms($taxonomy);
-?>
-<ol>
-<?php
-foreach ($tax_terms as $tax_term) {
-echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
-}
-?>
+  <h3>Departments</h3>
+					<nav class="topics"><ol>
+<?php top_level_category_list(); ?>
 </ol>
-		        </nav>
+ </nav>
+
+
+		       
 		    </div>
 
 			<div class="third twitter" data-twttr-id="twttr-sandbox-0">
