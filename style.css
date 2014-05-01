@@ -2459,7 +2459,7 @@ html.sc aside nav {
         padding: 5px 10px;
         padding: 0.27778rem 0.55556rem;
         background: #e2e2e2; }
-      html.sc aside nav ol li a:hover {
+      html.sc aside nav ol li a:hover, html.sc aside nav ol li a.active {
         text-decoration: none;
         background: #74a290;
         color: white; }

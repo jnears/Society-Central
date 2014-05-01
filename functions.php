@@ -334,11 +334,11 @@ function my_jquery_enqueue() {
 }
 
 //remove toggle grid prior to go live
-function add_togglegrid() {
+function add_general_ui() {
 wp_enqueue_script(
-    'togglegird', // name your script so that you can attach other scripts and de-register, etc.
-    get_template_directory_uri() . '/js/togglegrid.js', // this is the location of your script file
+    'general-ui', // name your script so that you can attach other scripts and de-register, etc.
+    get_template_directory_uri() . '/js/general-ui.js', // this is the location of your script file
     array('jquery') // this array lists the scripts upon which your script depends
 );
 }
-add_action( 'wp_enqueue_scripts', 'add_togglegrid' );
+add_action( 'wp_enqueue_scripts', 'add_general_ui' );
