@@ -15,6 +15,22 @@
 	
 			<?php societycentral_posted_on(); ?>
 
+			<?php
+
+// print out the taxomomy term and apply dynamic class (used for coloured lozenge)
+
+$taxonomy = 'content_types';
+$terms = get_the_terms( $post->ID , $taxonomy );
+
+if ( !empty( $terms ) ) :
+	foreach ( $terms as $term ) {
+		$link = get_term_link( $term, $taxonomy );
+		if ( !is_wp_error( $link ) )
+			echo '<i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
+	}
+endif;
+?>
+
 		</div><!-- .entry-meta -->
 	<h1 class="entry-title"><?php the_title(); ?></h1>
 
@@ -38,10 +54,10 @@
 		<?php the_content(); ?>
 
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'societycentral' ),
-				'after'  => '</div>',
-			) );
+			// wp_link_pages( array(
+				// 'before' => '<div class="page-links">' . __( 'Pages:', 'societycentral' ),
+				// 'after'  => '</div>',
+			// ) );
 		?>
 	</div><!-- .entry-content -->
 
@@ -75,7 +91,8 @@
 				$meta_text,
 				$category_list,
 				$tag_list,
-				get_permalink()
+				get_permalink(),
+				the_title_attribute( 'echo=0')
 			);
 		?>
 
