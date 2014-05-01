@@ -34,7 +34,7 @@
 <aside id="headlines" class="widget">
 
 		<h1>Topics</h1>
-		<?php echo headline_list(6); ?>
+		<?php echo headline_list(10); ?>
 	</aside>
 	<!-- <aside>
 		<h1>News in brief</h1>

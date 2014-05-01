@@ -10,26 +10,26 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<div class="third">
-		        <h3>Contact</h3>
-		        <p>
-					Institute for Social &amp; Economic Research<br>
-					University of Essex<br>
-					Wivenhoe Park<br>
-					Colchester CO4 3SQ<br>
-					+44 (0) 1206 873684<br>
-					<a href="mailto:societycentral@essex.ac.uk">societycentral@essex.ac.uk</a><br>
-				</p>
-        	</div>
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info">
+					<div class="third">
+				        <h3>Contact</h3>
+				        <p>
+							Institute for Social &amp; Economic Research<br>
+							University of Essex<br>
+							Wivenhoe Park<br>
+							Colchester CO4 3SQ<br>
+							+44 (0) 1206 873684<br>
+							<a href="mailto:societycentral@essex.ac.uk">societycentral@essex.ac.uk</a><br>
+						</p>
+		        	</div>
 
-			<div class="third">
-  <h3>Departments</h3>
-					<nav class="topics"><ol>
-<?php top_level_category_list(); ?>
-</ol>
- </nav>
+					<div class="third">
+		  <h3>Departments</h3>
+							<nav class="topics"><ol>
+		<?php top_level_category_list(); ?>
+		</ol>
+		 </nav>
 
 
 		       

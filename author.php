@@ -4,13 +4,14 @@
 		<main id="main" class="site-main" role="main">
 
 <!-- This sets the $curauth variable -->
-<h1 class="entry-title"><?php printf( __( 'About %s', 'societycentral' ), get_the_author() ); ?></h1>
+
+    <h1 class="entry-title"><?php printf( __( 'About %s', 'societycentral' ), get_the_author() ); ?></h1>
+    
     <?php
     $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
     ?>
 
-<?php echo get_avatar( get_the_author_meta( 'user_email' ), 150 ); ?>
-
+    <?php echo get_avatar( get_the_author_meta( 'user_email' ), 150 ); ?>
 
     <dl>
         <dt>Website</dt>
@@ -33,11 +34,10 @@
         <dt>Email</dt>
         <dd><?php the_author_meta( 'email' ); ?>
 		</dd>
-		<?php } // End check for email ?>
-        
-        <dt>Profile</dt>
-        <dd><?php echo $curauth->user_description; ?></dd>
+		<?php } // End check for email ?>   
     </dl>
+
+    <?php echo $curauth->user_description; ?>
 
     <h3>Posts by <?php echo $curauth->nickname; ?></h3>
 

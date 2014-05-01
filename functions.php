@@ -186,7 +186,7 @@ add_action( 'init', 'sections_init' );
 
 // Create the 'News in brief' post type
 function create_post_type() {
-	register_post_type( 'societycentral_news',
+	register_post_type( 'essexuni_news',
 		array(
 			'labels' => array(
 				'name' => __( 'News in brief' ),
@@ -226,10 +226,11 @@ function top_level_category_list() {
 
 
 
-//authors
 
 
- 
+
+
+ //add extra author twitter and facebook fields
 add_filter('user_contactmethods', 'my_user_contactmethods');
 
 function my_user_contactmethods($user_contactmethods){
@@ -316,8 +317,8 @@ function delete_retina_support_images( $attachment_id ) {
 
 
 function my_get_posts( $query ) {
-	if ( is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( 'post', 'societycentral_news' ) );
+	if (  $query->is_main_query() )
+		$query->set( 'post_type', array( 'post', 'essexuni_news' ) );
 	return $query;
 }
 add_filter( 'pre_get_posts', 'my_get_posts' );
