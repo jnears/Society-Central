@@ -9,7 +9,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<?php if (function_exists('relevanssi_didyoumean')) { relevanssi_didyoumean(get_search_query(), "Did you mean: ", "", 5);}?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">

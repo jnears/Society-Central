@@ -2487,7 +2487,8 @@ html.sc nav#site-navigation {
   display: none; }
 html.sc div#content {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 html.sc div#primary {
   float: left;
   width: 66.66667%; }
@@ -2503,13 +2504,22 @@ html.sc div#secondary {
     html.sc div#secondary {
       float: none;
       width: 100%; } }
+  html.sc div#secondary aside {
+    width: 100%;
+    margin-left: 0; }
+  html.sc div#secondary h1 {
+    font-size: 22px;
+    font-size: 1.22222rem;
+    font-weight: normal;
+    color: gray; }
   html.sc div#secondary form[role=search] {
     position: relative;
     display: initial; }
     html.sc div#secondary form[role=search] label {
       display: inline-block;
       width: 100%;
-      padding: 37px 0; }
+      padding: 27px 0px;
+      padding: 1.5rem 0rem; }
     html.sc div#secondary form[role=search] input[type=search] {
       -webkit-appearance: textfield;
       padding: 9px 4.5px 4.5px 27px;
@@ -2525,8 +2535,7 @@ html.sc div#secondary {
 html.sc main.site-main article {
   position: relative;
   padding: 27px 0px;
-  padding: 1.5rem 0rem;
-  padding-left: 150px; }
+  padding: 1.5rem 0rem; }
   html.sc main.site-main article .entry-meta {
     color: gray;
     font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
@@ -2539,7 +2548,14 @@ html.sc main.site-main article {
       color: gray;
       text-decoration: none; }
     html.sc main.site-main article .entry-meta a:hover {
-      color: #1e9cee; }
+      color: #2c2c2c;
+      text-decoration: underline; }
+    html.sc main.site-main article .entry-meta .avatar {
+      width: auto;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      margin-right: 10px; }
     html.sc main.site-main article .entry-meta a.tag {
       position: absolute;
       left: -128px;
@@ -2592,6 +2608,8 @@ html.sc main.site-main article {
         html.sc main.site-main article figure img {
           width: 80px;
           height: 80px; } }
+html.sc main.site-main article.image {
+  padding-left: 150px; }
 html.sc .screen-reader-text {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2619,6 +2637,76 @@ html.sc footer[role=contentinfo] {
       html.sc footer[role=contentinfo] .site-info .third:last-of-type {
         width: 31%;
         padding-left: 2.33333%; }
+html.sc #commentform p.form-allowed-tags {
+  display: none; }
+html.sc #primary form[role=search] {
+  display: block;
+  background: #f2f2f2;
+  padding: 10px;
+  padding: 0.55556rem;
+  width: 100%;
+  overflow: auto;
+  display: inline-block;
+  margin: 0; }
+  html.sc #primary form[role=search] label {
+    display: block;
+    width: 40%;
+    line-height: normal;
+    vertical-align: middle; }
+  html.sc #primary form[role=search] input[type=search] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%; }
+  html.sc #primary form[role=search] input[type=submit] {
+    padding: 8px;
+    padding: 0.44444rem; }
+html.sc #primary .comment-form {
+  width: auto;
+  line-height: normal;
+  padding-right: 18px;
+  padding-right: 1rem; }
+  html.sc #primary .comment-form label {
+    text-align: left; }
+  html.sc #primary .comment-form textarea {
+    width: 100%; }
+  html.sc #primary .comment-form input[type="submit"] {
+    margin: 0px;
+    margin: 0rem; }
+html.sc .pullquote {
+  font-size: 18px;
+  font-size: 1rem;
+  font-style: italic;
+  border-left: 10px solid #f2f2f2;
+  float: right;
+  width: 50%;
+  margin: 0px -27px 27px -27px;
+  margin: 0rem -1.5rem 1.5rem -1.5rem;
+  background: #f2f2f2;
+  padding: 27px;
+  padding: 1.5rem;
+  border: 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin: 0px 0px 18px 18px;
+  margin: 0rem 0rem 1rem 1rem; }
+  @media only screen and (max-width: 480px) {
+    html.sc .pullquote {
+      margin: 0px -18px 27px -18px;
+      margin: 0rem -1rem 1.5rem -1rem;
+      padding: 18px;
+      padding: 1rem;
+      border-radius: 0; } }
+  html.sc .pullquote *:last-child {
+    margin-bottom: 0px;
+    margin-bottom: 0rem; }
+  @media only screen and (max-width: 480px) {
+    html.sc .pullquote {
+      width: 100%;
+      margin: 0px;
+      margin: 0rem; } }
+html.sc body.home span.comments-link, html.sc body.home span.edit-link {
+  display: none; }
 
 html.sc.grid {
   z-index: 10;

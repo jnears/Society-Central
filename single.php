@@ -14,7 +14,29 @@ get_header(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php societycentral_post_nav(); ?>
+			<?//php societycentral_post_nav(); ?>
+
+			<?php  
+
+			$taxo_text = "";  
+
+			$os_list = get_the_term_list( $post->ID, 'headline', '<strong>Headlines:</strong> ', ', ', '' ); 
+
+
+			if ( '' != $os_list ) {  
+			$taxo_text .= "$os_list<br />\n";  
+			}  
+
+			if ( '' != $taxo_text ) {  
+			?>  
+			<div class="entry-utility">  
+			<?php  
+			echo $taxo_text;  
+			?>  
+			</div>  
+			<?  
+			} // endif  
+			?> 
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template

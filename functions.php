@@ -343,3 +343,53 @@ wp_enqueue_script(
 );
 }
 add_action( 'wp_enqueue_scripts', 'add_general_ui' );
+
+
+/* add style snippets dropdown to text editor */
+
+/* taken from http://alisothegeek.co lscm/2011/05/tinymce-styles-dropdown-wordpress-visual-editor */
+
+add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
+
+function my_mce_buttons_2( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init' );
+
+function my_mce_before_init( $settings ) {
+
+    $style_formats = array(
+    	array(
+    		'title' => 'Pullquote',
+    		'block' => 'div',
+    		'classes' => 'pullquote'
+
+        )
+    );
+
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+
+}
+
+add_action( 'admin_init', 'add_my_editor_style' );
+
+function add_my_editor_style() {
+	add_editor_style();
+}
+
+function truncate_title($limit) {
+  $title = get_the_title($post->ID);
+  $getlength = strlen($title);
+  if ($getlength > $limit){
+    $title = preg_replace('/\s+?(\S+)?$/', '', substr($title, 0, $limit)).'... ';
+  }
+  echo $title;
+}
+
+if (!wp_next_scheduled('relevanssi_build_index')) {
+    wp_schedule_event( time(), 'daily', 'relevanssi_build_index' );
+}

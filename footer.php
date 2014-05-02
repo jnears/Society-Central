@@ -12,6 +12,7 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 <div class="site-info">
+
 <div class="third">
 <h3>Contact</h3>
 <p>
@@ -30,9 +31,6 @@ Colchester CO4 3SQ<br>
 <?php top_level_category_list(); ?>
 </ol>
 </nav>
-
-
-
 </div>
 
 <div class="third twitter" data-twttr-id="twttr-sandbox-0">
