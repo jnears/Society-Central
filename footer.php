@@ -23,6 +23,8 @@ Colchester CO4 3SQ<br>
 +44 (0) 1206 873684<br>
 <a href="mailto:societycentral@essex.ac.uk">societycentral@essex.ac.uk</a><br>
 </p>
+<p class="logo"><a class="iser-logo" href="https://iser.essex.ac.uk">ISER</a></p>
+<p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
 </div>
 
 <div class="third">

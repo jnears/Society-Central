@@ -206,6 +206,17 @@ add_action( 'init', 'create_post_type' );
 add_action( 'wp_enqueue_scripts', 'retina_support_enqueue_scripts' );
 
 
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'essexuni_news'
+    ));
+    return $query;
+  }
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+
 
 
 function top_level_category_list() {
@@ -226,7 +237,14 @@ function top_level_category_list() {
 
 
 
+// Show posts of 'post', 'page' and 'movie' post types on home page
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
+function add_my_post_types_to_query( $query ) {
+    if ( is_home() && $query->is_main_query() )
+        $query->set( 'post_type', array( 'post', 'essexuni_news') );
+    return $query;
+}
 
 
 
@@ -316,12 +334,12 @@ function delete_retina_support_images( $attachment_id ) {
 }
 
 
-function my_get_posts( $query ) {
-	if (  $query->is_main_query() )
-		$query->set( 'post_type', array( 'post', 'essexuni_news' ) );
-	return $query;
-}
-add_filter( 'pre_get_posts', 'my_get_posts' );
+// function my_get_posts( $query ) {
+// 	if (  $query->is_main_query() )
+// 		$query->set( 'post_type', array( 'post', 'essexuni_news' ) );
+// 	return $query;
+// }
+// add_filter( 'pre_get_posts', 'my_get_posts' );
 
 
 

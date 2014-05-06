@@ -2365,348 +2365,377 @@ img {
 .pygment .il {
   color: #666666; }
 
-html.sc a:link, html.sc a:visited {
-  color: #2c2c2c;
-  text-decoration: none; }
-html.sc a:hover {
-  text-decoration: underline; }
-html.sc header[role=banner] {
-  border-top: 0px;
-  border-bottom: 1px solid #cccccc;
-  padding-top: 0;
-  min-height: 126px;
-  min-height: 7rem;
-  text-align: center;
-  margin-bottom: 36px;
-  margin-bottom: 2rem;
-  background: #f2f2f2;
-  position: relative; }
-  html.sc header[role=banner] .container {
-    height: 130px;
-    padding-right: 0; }
-  html.sc header[role=banner] h1 {
-    text-transform: uppercase;
-    font-size: 34px;
-    font-size: 1.88889rem;
-    margin: 0px;
-    margin: 0rem;
-    padding-top: 27px;
-    padding-top: 1.5rem;
-    font-family: "OfficinaSerifITCW01-Bol 734534", Georgia, "Times New Roman", Times, serif; }
-    html.sc header[role=banner] h1 a:link, html.sc header[role=banner] h1 a:visited {
-      padding: 5px 20px;
-      color: white;
-      background: #2c2c2c;
-      text-decoration: none; }
-    html.sc header[role=banner] h1 a:hover {
-      text-decoration: none;
-      background: #74a290; }
-  html.sc header[role=banner] h2 {
-    font-family: "Officina", Georgia, "Times New Roman", Times, serif;
-    font-weight: normal;
-    color: gray;
-    font-size: 24px;
-    font-size: 1.33333rem;
-    line-height: 18px;
-    line-height: 1rem;
-    margin: 5px 0 0 0; }
-  html.sc header[role=banner] div.social-links {
-    position: absolute;
-    left: 0;
-    bottom: 0px; }
-    html.sc header[role=banner] div.social-links a:link, html.sc header[role=banner] div.social-links a:active, html.sc header[role=banner] div.social-links a:visited {
-      color: gray;
-      padding: 9px;
-      padding: 0.5rem; }
-    html.sc header[role=banner] div.social-links a:hover {
-      color: #1e9cee; }
-  html.sc header[role=banner] div.util-links {
-    position: absolute;
-    right: 0;
-    bottom: 0px; }
-    html.sc header[role=banner] div.util-links a:link, html.sc header[role=banner] div.util-links a:active, html.sc header[role=banner] div.util-links a:visited {
-      padding: 9px;
-      padding: 0.5rem;
-      color: gray; }
-    html.sc header[role=banner] div.util-links a:hover {
-      color: #1e9cee; }
-html.sc main {
-  margin-top: 0px;
-  margin-top: 0rem; }
-html.sc aside nav {
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem;
-  margin-left: 0px;
-  margin-left: 0rem;
-  font-size: 16px;
-  font-size: 0.88889rem;
-  position: relative;
-  right: 0;
-  width: 100%; }
-  html.sc aside nav ol {
-    padding: 0;
-    margin: -5px 0 0 -5px; }
-    html.sc aside nav ol li {
-      list-style-type: none;
-      float: left;
-      margin: 8px 5px;
-      margin: 0.44444rem 0.27778rem; }
-      html.sc aside nav ol li a:link {
-        font-size: 18px;
-        font-size: 1rem;
-        padding: 5px 10px;
-        padding: 0.27778rem 0.55556rem;
-        background: #e2e2e2; }
-      html.sc aside nav ol li a:hover, html.sc aside nav ol li a.active {
-        text-decoration: none;
-        background: #74a290;
-        color: white; }
-  html.sc aside nav p:last-of-type {
-    margin-bottom: 0; }
-  html.sc aside nav article:not(:last-of-type) {
-    border-bottom: 1px solid black; }
-  html.sc aside nav h1 {
-    font-size: 20px;
-    font-size: 1.11111rem;
-    line-height: 36px;
-    line-height: 2rem;
-    margin-bottom: 9px;
-    margin-bottom: 0.5rem;
-    clear: both;
-    color: gray; }
-  html.sc aside nav h2 {
-    font-size: 18px;
-    font-size: 1rem;
-    line-height: 36px;
-    line-height: 2rem;
-    margin-bottom: 9px;
-    margin-bottom: 0.5rem; }
-html.sc nav#site-navigation {
-  display: none; }
-html.sc div#content {
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden; }
-html.sc div#primary {
-  float: left;
-  width: 66.66667%; }
-  @media only screen and (max-width: 480px) {
-    html.sc div#primary {
-      float: none;
-      width: 100%; } }
-html.sc div#secondary {
-  float: left;
-  width: 31%;
-  padding-left: 2.33333%; }
-  @media only screen and (max-width: 480px) {
-    html.sc div#secondary {
-      float: none;
-      width: 100%; } }
-  html.sc div#secondary aside {
+html.sc {
+  height: auto !important; }
+  html.sc img, html.sc object {
+    border: 0;
     width: 100%;
-    margin-left: 0; }
-  html.sc div#secondary h1 {
-    font-size: 22px;
-    font-size: 1.22222rem;
-    font-weight: normal;
-    color: gray; }
-  html.sc div#secondary form[role=search] {
-    position: relative;
-    display: initial; }
-    html.sc div#secondary form[role=search] label {
-      display: inline-block;
-      width: 100%;
-      padding: 27px 0px;
-      padding: 1.5rem 0rem; }
-    html.sc div#secondary form[role=search] input[type=search] {
-      -webkit-appearance: textfield;
-      padding: 9px 4.5px 4.5px 27px;
-      padding: 0.5rem 0.25rem 0.25rem 1.5rem;
-      position: relative;
-      width: 100%;
-      border: 1px solid #e2e2e2;
-      font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
-      box-sizing: border-box;
-      background: white url("ui/search-ico.png") no-repeat 8px center; }
-    html.sc div#secondary form[role=search] input[type=submit] {
-      display: none; }
-html.sc main.site-main article {
-  position: relative;
-  padding: 27px 0px;
-  padding: 1.5rem 0rem; }
-  html.sc main.site-main article .entry-meta {
-    color: gray;
-    font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
-    font-weight: normal;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+    height: auto !important;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; }
+  html.sc .lt-ie9 img, html.sc .lt-ie9 object {
+    height: 100% !important; }
+  html.sc a:link, html.sc a:visited {
+    color: #2c2c2c;
+    text-decoration: none; }
+  html.sc a:hover {
+    text-decoration: underline; }
+  html.sc header[role=banner] {
+    border-top: 0px;
+    border-bottom: 1px solid #cccccc;
+    padding-top: 0;
+    min-height: 126px;
+    min-height: 7rem;
+    text-align: center;
+    margin-bottom: 36px;
+    margin-bottom: 2rem;
+    background: #f2f2f2;
+    position: relative; }
+    html.sc header[role=banner] .container {
+      height: 130px;
+      padding-right: 0; }
+    html.sc header[role=banner] h1 {
+      text-transform: uppercase;
+      font-size: 34px;
+      font-size: 1.88889rem;
+      margin: 0px;
+      margin: 0rem;
+      padding-top: 27px;
+      padding-top: 1.5rem;
+      font-family: "OfficinaSerifITCW01-Bol 734534", Georgia, "Times New Roman", Times, serif; }
+      html.sc header[role=banner] h1 a:link, html.sc header[role=banner] h1 a:visited {
+        padding: 5px 20px;
+        color: white;
+        background: #2c2c2c;
+        text-decoration: none; }
+      html.sc header[role=banner] h1 a:hover {
+        text-decoration: none;
+        background: #74a290; }
+    html.sc header[role=banner] h2 {
+      font-family: "Officina", Georgia, "Times New Roman", Times, serif;
+      font-weight: normal;
+      color: gray;
+      font-size: 24px;
+      font-size: 1.33333rem;
+      line-height: 18px;
+      line-height: 1rem;
+      margin: 5px 0 0 0; }
+    html.sc header[role=banner] div.social-links {
+      position: absolute;
+      left: 0;
+      bottom: 0px; }
+      html.sc header[role=banner] div.social-links a:link, html.sc header[role=banner] div.social-links a:active, html.sc header[role=banner] div.social-links a:visited {
+        color: gray;
+        padding: 9px;
+        padding: 0.5rem; }
+      html.sc header[role=banner] div.social-links a:hover {
+        color: #1e9cee; }
+    html.sc header[role=banner] div.util-links {
+      position: absolute;
+      right: 0;
+      bottom: 0px; }
+      html.sc header[role=banner] div.util-links a:link, html.sc header[role=banner] div.util-links a:active, html.sc header[role=banner] div.util-links a:visited {
+        padding: 9px;
+        padding: 0.5rem;
+        color: gray; }
+      html.sc header[role=banner] div.util-links a:hover {
+        color: #1e9cee; }
+  html.sc main {
+    margin-top: 0px;
+    margin-top: 0rem; }
+  html.sc aside nav {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-bottom: 27px;
+    margin-bottom: 1.5rem;
+    margin-left: 0px;
+    margin-left: 0rem;
     font-size: 16px;
     font-size: 0.88889rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem; }
-    html.sc main.site-main article .entry-meta a:link, html.sc main.site-main article .entry-meta a:visited, html.sc main.site-main article .entry-meta a:active {
-      color: gray;
-      text-decoration: none; }
-    html.sc main.site-main article .entry-meta a:hover {
-      color: #2c2c2c;
-      text-decoration: underline; }
-    html.sc main.site-main article .entry-meta .avatar {
-      width: auto;
-      -webkit-border-radius: 100%;
-      -moz-border-radius: 100%;
-      border-radius: 100%;
-      margin-right: 10px; }
-    html.sc main.site-main article .entry-meta a.tag {
-      position: absolute;
-      left: -128px;
-      z-index: 1;
-      top: 145px;
-      font-weight: bold;
-      border-radius: 5px;
-      min-width: 84px;
-      text-align: center;
-      font-size: 12px;
-      font-size: 0.66667rem;
-      padding: 4.5px 4.5px 4.5px 6.3px;
-      padding: 0.25rem 0.25rem 0.25rem 0.35rem;
-      line-height: 0px;
-      line-height: 0rem;
-      font-style: normal;
-      text-decoration: none;
-      box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25);
-      background: gray;
-      color: white; }
-      html.sc main.site-main article .entry-meta a.tag:hover {
-        background: #1e9cee; }
-    html.sc main.site-main article .entry-meta time:before {
-      content: " - "; }
-  html.sc main.site-main article h1 {
-    font-size: 24px;
-    font-size: 1.33333rem;
-    line-height: 27px;
-    line-height: 1.5rem;
-    margin-top: 9px;
-    margin-top: 0.5rem;
-    margin-bottom: 18px;
-    margin-bottom: 1rem; }
-  html.sc main.site-main article p {
-    margin: none;
-    color: black; }
-  html.sc main.site-main article figure {
-    position: absolute;
-    top: 31.5px;
-    top: 1.75rem;
-    left: 0;
-    margin: 0; }
-    html.sc main.site-main article figure img {
-      vertical-align: middle;
-      border-radius: 5px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      width: inherit; }
-      @media only screen and (max-width: 480px) {
-        html.sc main.site-main article figure img {
-          width: 80px;
-          height: 80px; } }
-html.sc main.site-main article.image {
-  padding-left: 150px; }
-html.sc .screen-reader-text {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-html.sc footer[role=contentinfo] {
-  color: white; }
-  html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
-    color: white;
-    text-deocration: none; }
-  html.sc footer[role=contentinfo] .site-info {
+    position: relative;
+    right: 0;
+    width: 100%; }
+    html.sc aside nav ol {
+      padding: 0;
+      margin: -5px 0 0 -5px; }
+      html.sc aside nav ol li {
+        list-style-type: none;
+        float: left;
+        margin: 8px 5px;
+        margin: 0.44444rem 0.27778rem; }
+        html.sc aside nav ol li a:link {
+          font-size: 18px;
+          font-size: 1rem;
+          padding: 5px 10px;
+          padding: 0.27778rem 0.55556rem;
+          background: #e2e2e2; }
+        html.sc aside nav ol li a:hover, html.sc aside nav ol li a.active {
+          text-decoration: none;
+          background: #74a290;
+          color: white; }
+    html.sc aside nav p:last-of-type {
+      margin-bottom: 0; }
+    html.sc aside nav article:not(:last-of-type) {
+      border-bottom: 1px solid black; }
+    html.sc aside nav h1 {
+      font-size: 20px;
+      font-size: 1.11111rem;
+      line-height: 36px;
+      line-height: 2rem;
+      margin-bottom: 9px;
+      margin-bottom: 0.5rem;
+      clear: both;
+      color: gray; }
+    html.sc aside nav h2 {
+      font-size: 18px;
+      font-size: 1rem;
+      line-height: 36px;
+      line-height: 2rem;
+      margin-bottom: 9px;
+      margin-bottom: 0.5rem; }
+  html.sc nav#site-navigation {
+    display: none; }
+  html.sc div#content {
     width: 90%;
-    margin: 0 auto; }
-    html.sc footer[role=contentinfo] .site-info ol {
-      padding-left: 0px; }
-      html.sc footer[role=contentinfo] .site-info ol li {
-        list-style-type: none; }
-    html.sc footer[role=contentinfo] .site-info .third {
-      float: left;
-      width: 33.33333%; }
-      html.sc footer[role=contentinfo] .site-info .third:last-of-type {
-        width: 31%;
-        padding-left: 2.33333%; }
-html.sc #commentform p.form-allowed-tags {
-  display: none; }
-html.sc #primary form[role=search] {
-  display: block;
-  background: #f2f2f2;
-  padding: 10px;
-  padding: 0.55556rem;
-  width: 100%;
-  overflow: auto;
-  display: inline-block;
-  margin: 0; }
-  html.sc #primary form[role=search] label {
-    display: block;
-    width: 40%;
-    line-height: normal;
-    vertical-align: middle; }
-  html.sc #primary form[role=search] input[type=search] {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%; }
-  html.sc #primary form[role=search] input[type=submit] {
-    padding: 8px;
-    padding: 0.44444rem; }
-html.sc #primary .comment-form {
-  width: auto;
-  line-height: normal;
-  padding-right: 18px;
-  padding-right: 1rem; }
-  html.sc #primary .comment-form label {
-    text-align: left; }
-  html.sc #primary .comment-form textarea {
-    width: 100%; }
-  html.sc #primary .comment-form input[type="submit"] {
-    margin: 0px;
-    margin: 0rem; }
-html.sc .pullquote {
-  font-size: 18px;
-  font-size: 1rem;
-  font-style: italic;
-  border-left: 10px solid #f2f2f2;
-  float: right;
-  width: 50%;
-  margin: 0px -27px 27px -27px;
-  margin: 0rem -1.5rem 1.5rem -1.5rem;
-  background: #f2f2f2;
-  padding: 27px;
-  padding: 1.5rem;
-  border: 0;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  margin: 0px 0px 18px 18px;
-  margin: 0rem 0rem 1rem 1rem; }
-  @media only screen and (max-width: 480px) {
-    html.sc .pullquote {
-      margin: 0px -18px 27px -18px;
-      margin: 0rem -1rem 1.5rem -1rem;
-      padding: 18px;
-      padding: 1rem;
-      border-radius: 0; } }
-  html.sc .pullquote *:last-child {
-    margin-bottom: 0px;
-    margin-bottom: 0rem; }
-  @media only screen and (max-width: 480px) {
-    html.sc .pullquote {
+    margin: 0 auto;
+    overflow: hidden; }
+  html.sc div#primary {
+    float: left;
+    width: 66.66667%; }
+    @media only screen and (max-width: 480px) {
+      html.sc div#primary {
+        float: none;
+        width: 100%; } }
+  html.sc div#secondary {
+    float: left;
+    width: 31%;
+    padding-left: 2.33333%; }
+    @media only screen and (max-width: 480px) {
+      html.sc div#secondary {
+        float: none;
+        width: 100%; } }
+    html.sc div#secondary aside {
       width: 100%;
+      margin-left: 0; }
+    html.sc div#secondary h1 {
+      font-size: 22px;
+      font-size: 1.22222rem;
+      font-weight: normal;
+      color: gray; }
+    html.sc div#secondary form[role=search] {
+      position: relative;
+      display: initial; }
+      html.sc div#secondary form[role=search] label {
+        display: inline-block;
+        width: 100%;
+        padding: 27px 0px;
+        padding: 1.5rem 0rem; }
+      html.sc div#secondary form[role=search] input[type=search] {
+        -webkit-appearance: textfield;
+        padding: 9px 4.5px 4.5px 27px;
+        padding: 0.5rem 0.25rem 0.25rem 1.5rem;
+        position: relative;
+        width: 100%;
+        border: 1px solid #e2e2e2;
+        font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
+        box-sizing: border-box;
+        background: white url("ui/search-ico.png") no-repeat 8px center; }
+      html.sc div#secondary form[role=search] input[type=submit] {
+        display: none; }
+  html.sc main.site-main article {
+    position: relative;
+    padding: 27px 0px;
+    padding: 1.5rem 0rem; }
+    html.sc main.site-main article .entry-meta {
+      color: gray;
+      font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
+      font-weight: normal;
+      font-size: 16px;
+      font-size: 0.88889rem;
+      margin-bottom: 0px;
+      margin-bottom: 0rem; }
+      html.sc main.site-main article .entry-meta a:link, html.sc main.site-main article .entry-meta a:visited, html.sc main.site-main article .entry-meta a:active {
+        color: gray;
+        text-decoration: none; }
+      html.sc main.site-main article .entry-meta a:hover {
+        color: #2c2c2c;
+        text-decoration: underline; }
+      html.sc main.site-main article .entry-meta .avatar {
+        width: auto;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        margin-right: 10px; }
+      html.sc main.site-main article .entry-meta a.tag {
+        position: absolute;
+        left: -128px;
+        z-index: 1;
+        top: 145px;
+        font-weight: bold;
+        border-radius: 5px;
+        min-width: 84px;
+        text-align: center;
+        font-size: 12px;
+        font-size: 0.66667rem;
+        padding: 4.5px 4.5px 4.5px 6.3px;
+        padding: 0.25rem 0.25rem 0.25rem 0.35rem;
+        line-height: 0px;
+        line-height: 0rem;
+        font-style: normal;
+        text-decoration: none;
+        box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25);
+        background: gray;
+        color: white; }
+        html.sc main.site-main article .entry-meta a.tag:hover {
+          background: #1e9cee; }
+      html.sc main.site-main article .entry-meta time:before {
+        content: " - "; }
+    html.sc main.site-main article h1 {
+      font-size: 24px;
+      font-size: 1.33333rem;
+      line-height: 27px;
+      line-height: 1.5rem;
+      margin-top: 9px;
+      margin-top: 0.5rem;
+      margin-bottom: 18px;
+      margin-bottom: 1rem; }
+    html.sc main.site-main article p {
+      margin: none;
+      color: black; }
+    html.sc main.site-main article figure.thumb {
+      position: absolute;
+      top: 31.5px;
+      top: 1.75rem;
+      left: 0;
+      margin: 0; }
+      html.sc main.site-main article figure.thumb img {
+        vertical-align: middle; }
+        @media only screen and (max-width: 480px) {
+          html.sc main.site-main article figure.thumb img {
+            width: 80px;
+            height: 80px; } }
+  html.sc main.site-main article.image {
+    padding-left: 150px; }
+  html.sc .screen-reader-text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+  html.sc footer[role=contentinfo] {
+    color: white; }
+    html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
+      color: white;
+      text-deocration: none; }
+    html.sc footer[role=contentinfo] .site-info {
+      width: 90%;
+      margin: 0 auto; }
+      html.sc footer[role=contentinfo] .site-info ol {
+        padding-left: 0px; }
+        html.sc footer[role=contentinfo] .site-info ol li {
+          list-style-type: none; }
+      html.sc footer[role=contentinfo] .site-info .third {
+        float: left;
+        width: 33.33333%; }
+        html.sc footer[role=contentinfo] .site-info .third:last-of-type {
+          width: 31%;
+          padding-left: 2.33333%; }
+    html.sc footer[role=contentinfo] p.logo .iser-logo, html.sc footer[role=contentinfo] p.logo .essex-logo {
+      text-indent: -3000em;
+      display: block;
+      overflow: hidden; }
+    html.sc footer[role=contentinfo] p.logo .iser-logo {
+      background: url("ui/iser-logo.png") no-repeat;
+      height: 60px;
+      width: 120px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        html.sc footer[role=contentinfo] p.logo .iser-logo {
+          background-image: url("ui/iser-logo2x.png");
+          background-size: 120px 60px; } }
+    html.sc footer[role=contentinfo] p.logo .essex-logo {
+      background: url("ui/essex-logo.png") no-repeat;
+      height: 48px;
+      width: 138px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        html.sc footer[role=contentinfo] p.logo .essex-logo {
+          background-image: url("ui/essex-logo2x.png");
+          background-size: 138px 48px; } }
+  html.sc #commentform p.form-allowed-tags {
+    display: none; }
+  html.sc #primary form[role=search] {
+    display: block;
+    background: #f2f2f2;
+    padding: 10px;
+    padding: 0.55556rem;
+    width: 100%;
+    overflow: auto;
+    display: inline-block;
+    margin: 0; }
+    html.sc #primary form[role=search] label {
+      display: block;
+      width: 40%;
+      line-height: normal;
+      vertical-align: middle; }
+    html.sc #primary form[role=search] input[type=search] {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%; }
+    html.sc #primary form[role=search] input[type=submit] {
+      padding: 8px;
+      padding: 0.44444rem; }
+  html.sc #primary .comment-form {
+    width: auto;
+    line-height: normal;
+    padding-right: 18px;
+    padding-right: 1rem; }
+    html.sc #primary .comment-form label {
+      text-align: left; }
+    html.sc #primary .comment-form textarea {
+      width: 100%; }
+    html.sc #primary .comment-form input[type="submit"] {
       margin: 0px;
-      margin: 0rem; } }
-html.sc body.home span.comments-link, html.sc body.home span.edit-link {
-  display: none; }
+      margin: 0rem; }
+  html.sc .pullquote {
+    font-size: 18px;
+    font-size: 1rem;
+    font-style: italic;
+    border-left: 10px solid #f2f2f2;
+    float: right;
+    width: 50%;
+    margin: 0px -27px 27px -27px;
+    margin: 0rem -1.5rem 1.5rem -1.5rem;
+    background: #f2f2f2;
+    padding: 27px;
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin: 0px 0px 18px 18px;
+    margin: 0rem 0rem 1rem 1rem; }
+    @media only screen and (max-width: 480px) {
+      html.sc .pullquote {
+        margin: 0px -18px 27px -18px;
+        margin: 0rem -1rem 1.5rem -1rem;
+        padding: 18px;
+        padding: 1rem;
+        border-radius: 0; } }
+    html.sc .pullquote *:last-child {
+      margin-bottom: 0px;
+      margin-bottom: 0rem; }
+    @media only screen and (max-width: 480px) {
+      html.sc .pullquote {
+        width: 100%;
+        margin: 0px;
+        margin: 0rem; } }
+  html.sc body.home span.comments-link, html.sc body.home span.edit-link {
+    display: none; }
 
 html.sc.grid {
   z-index: 10;

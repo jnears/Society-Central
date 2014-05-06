@@ -10,8 +10,7 @@
 
 		<div class="entry-meta">
 			
-						<?php echo get_avatar( get_the_author_meta( 'user_email' ), 32 ); ?>
-				
+			<?php echo get_avatar( get_the_author_meta( 'user_email' ), 32 ); ?>
 	
 			<?php societycentral_posted_on(); ?>
 
