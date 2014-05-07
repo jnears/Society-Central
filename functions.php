@@ -249,6 +249,16 @@ function add_my_post_types_to_query( $query ) {
 }
 
 
+//add single-post class to post_class for single posts
+function add_post_class_to_single_post( $classes ) {
+    if ( is_single() ) {
+        array_push( $classes, 'single-post' );
+    } // end if
+    return $classes;
+}
+add_filter( 'post_class', 'add_post_class_to_single_post' );
+
+
 
  //add extra author twitter and facebook fields
 add_filter('user_contactmethods', 'my_user_contactmethods');
