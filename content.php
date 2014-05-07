@@ -18,9 +18,7 @@
 		<div class="entry-meta">
 		
 			<?php societycentral_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-		<?php
+			<?php
 
 		// print out the taxomomy term and apply dynamic class (used for coloured lozenge)
 
@@ -36,6 +34,9 @@
 		endif;
 		?>
 
+		</div><!-- .entry-meta -->
+		<?php endif; ?>
+		
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 	</header><!-- .entry-header -->

@@ -196,7 +196,9 @@ function create_post_type() {
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'news-in-brief'),
 			'menu_position' => 5,
-			'taxonomies' => array('category','post_tag','feature','content_types') //add multiple existing categories to this custom post type
+			'taxonomies' => array('category','post_tag','feature','content_types'), //add multiple existing categories to this custom post type
+            'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+
 		)
 	);
 }
@@ -410,4 +412,14 @@ function truncate_title($limit) {
 
 if (!wp_next_scheduled('relevanssi_build_index')) {
     wp_schedule_event( time(), 'daily', 'relevanssi_build_index' );
+}
+
+
+add_filter( 'post_thumbnail_html', 'make_post_thumbnail_link', 10, 3 );
+
+function make_post_thumbnail_link( $html, $post_id, $post_image_id ) {
+
+    $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+
+    return $html;
 }

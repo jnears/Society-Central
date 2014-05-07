@@ -33,7 +33,7 @@
 <?php endif; // end sidebar widget area ?>
 <aside id="headlines" class="widget">
 
-		<h1>Topics</h1>
+		<h3>Headlines</h3>
 		<?php echo headline_list(10); ?>
 	</aside>
 	<!-- <aside>

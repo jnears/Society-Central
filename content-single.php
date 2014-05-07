@@ -35,7 +35,7 @@ endif;
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content entry-content-single">
 
 		<?php
 			if ( has_post_thumbnail() ) {
