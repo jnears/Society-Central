@@ -33,10 +33,14 @@
 </div>
 
 <nav id="site-navigation" class="main-navigation" role="navigation">
-<h1 class="menu-toggle"><?php _e( 'Menu', 'societycentral' ); ?></h1>
-<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'societycentral' ); ?></a>
+	<ul>
+<!-- <h1 class="menu-toggle"><?php _e( 'Menu', 'societycentral' ); ?></h1> -->
+<li><a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'societycentral' ); ?></a></li>
 
-<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+<?//php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+<li><a class="search-toggle" href="/search" >Search</a></li>
+</ul><?php get_search_form(); ?>
 </nav><!-- #site-navigation -->
 </header><!-- #masthead -->
 

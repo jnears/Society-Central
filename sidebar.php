@@ -8,7 +8,7 @@
 <div id="secondary" class="widget-area" role="complementary">
 <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
-	<aside id="search" class="widget widget_search">
+<!-- 	<aside id="search" class="widget widget_search">
 		<?php get_search_form(); ?>
 	</aside>
 
@@ -28,7 +28,7 @@
 			<?php wp_meta(); ?>
 		</ul>
 	</aside>
-
+ -->
 <?php endif; // end sidebar widget area ?>
 <aside id="headlines" class="widget">
 

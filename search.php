@@ -37,16 +37,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<div id="secondary" class="widget-area" role="complementary">
-
-
-			<aside id="search" class="widget widget_search">
-				<?php get_search_form(); ?>
-			</aside>
-
-			
-
-	
-
-	</div><!-- #secondary -->
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
