@@ -22,7 +22,6 @@
 
 
 	<aside id="meta" class="widget">
-		<h1 class="widget-title"><?php _e( 'Meta', 'societycentral' ); ?></h1>
 		<ul>
 			<?php wp_register(); ?>
 			<li><?php wp_loginout(); ?></li>
@@ -36,6 +35,17 @@
 		<h3>Headlines</h3>
 		<?php echo headline_list(10); ?>
 	</aside>
+
+
+	<?php if ( is_home() ) : // show events listing on homepage?>
+	<aside id="headlines" class="widget">
+	  <?php  echo events_sidebar(5); ?>
+	</aside>
+	<?php endif;  ?>
+
+
+
+
 	<!-- <aside>
 		<h1>News in brief</h1>
 			<?php

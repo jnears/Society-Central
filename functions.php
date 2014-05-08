@@ -433,3 +433,5 @@ function make_post_thumbnail_link( $html, $post_id, $post_image_id ) {
 
     return $html;
 }
+
+remove_filter('pre_user_description', 'wp_filter_kses');

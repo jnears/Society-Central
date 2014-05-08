@@ -7,9 +7,9 @@
 <!-- set a different class if the post has an image thumbnail (to prevent a big white space on left hand side.) -->
 
 <?php if  (has_post_thumbnail()): ?>
-	<article id="post-<?php the_ID(); ?>" class="excerpt image" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt image'); ?> >
 <?php else: ?>
-	<article id="post-<?php the_ID(); ?>" class="excerpt" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt'); ?> >
 <?php endif; ?>
 	<header class="entry-header">
 

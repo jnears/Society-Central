@@ -19,12 +19,6 @@ get_header(); ?>
 			
 			</header><!-- .page-header -->
 
-			   
-    
-      <ol class="breadcrumb">
-      <li><a href="<?php echo home_url(); ?>">Home</a></li>
-      <li><a href="<?php echo site_url(); ?>/archives">Archives</a></li>
-      </ol>
     
       <?php wp_get_archives('type=monthly'); ?>
     

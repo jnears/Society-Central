@@ -11,8 +11,11 @@
     $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
     ?>
 
-    <?php echo get_avatar( get_the_author_meta( 'user_email' ), 150 ); ?>
-
+    <div id="author-profile">
+    <figure>
+    <?php echo get_avatar( get_the_author_meta( 'user_email' ), 189 ); ?>
+    </figure>
+   <?php echo $curauth->user_description; ?>
     <dl>
         <dt>Website</dt>
         <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
@@ -37,7 +40,9 @@
 		<?php } // End check for email ?>   
     </dl>
 
-    <?php echo $curauth->user_description; ?>
+   
+
+</div>
 
     <h3>Posts by <?php echo $curauth->nickname; ?></h3>
 
