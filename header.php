@@ -40,8 +40,11 @@
 <?//php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
 <li><a class="search-toggle" href="/search" >Search</a></li>
-</ul><?php get_search_form(); ?>
+<li><a class="menu-toggle" href="#" >Headlines</a></li>
+</ul>
 </nav><!-- #site-navigation -->
+<?php echo headline_list(10); ?>
+<?php get_search_form(); ?>
 </header><!-- #masthead -->
 
 <div id="content" class="site-content">

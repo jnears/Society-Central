@@ -2479,6 +2479,34 @@ html.sc {
         color: gray; }
       html.sc header[role=banner] div.util-links a:hover {
         color: #1e9cee; }
+    html.sc header[role=banner] nav.categories {
+      float: none; }
+    html.sc header[role=banner] nav.categories ol {
+      display: none;
+      margin-bottom: 0; }
+      html.sc header[role=banner] nav.categories ol li {
+        list-style-type: none;
+        float: none;
+        border-bottom: 1px solid white;
+        line-height: 3rem;
+        text-align: left; }
+        html.sc header[role=banner] nav.categories ol li a:link, html.sc header[role=banner] nav.categories ol li a:visited {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          font-weight: normal; }
+        html.sc header[role=banner] nav.categories ol li a:hover {
+          background: #74a290;
+          color: white; }
+    html.sc header[role=banner] form[role=search] {
+      margin-top: 0; }
+      html.sc header[role=banner] form[role=search] #clear-search {
+        text-indent: -3000rem;
+        display: none;
+        background: white url("ui/clear-ico.png") no-repeat center;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        left: -50px; }
   html.sc main {
     margin-top: 0px;
     margin-top: 0rem; }
