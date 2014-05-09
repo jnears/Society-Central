@@ -38,7 +38,7 @@
 
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
-	<aside id="headlines" class="widget">
+	<aside id="events" class="widget">
 	  <?php  echo events_sidebar(5); ?>
 	</aside>
 	<?php endif;  ?>

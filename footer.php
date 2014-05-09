@@ -36,12 +36,22 @@ Colchester CO4 3SQ<br>
 </div>
 
 <div class="third twitter" data-twttr-id="twttr-sandbox-0">
-<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" title="Twitter Timeline" width="469" height="400" style="border: none; max-width: 100%; min-width: 180px;"></iframe>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-</script>
+ <a class="twitter-timeline" href="https://twitter.com/societycentral" data-widget-id="349462495188090881">Tweets by @societycentral</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 
 <a href="#" id="show-grid" class="btn">Toggle grid</a>
+
+<div class="closing">
+<ul>
+<li><a href="<?php echo site_url(); ?>/archives">Archives</a></li>
+<li><a href="<?php echo site_url(); ?>/author/society-central/">About</a></li>
+<li><a href="<?php echo site_url(); ?>/privacy">Privacy and Cookies</a></li>
+</ul>
+</div>
+
+
+
 <!-- <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'societycentral' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'societycentral' ), 'WordPress' ); ?></a>
 <span class="sep"> | </span>
 <?php printf( __( 'Theme: %1$s by %2$s.', 'societycentral' ), 'societycentral', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?> -->

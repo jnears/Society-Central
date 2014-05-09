@@ -2430,6 +2430,10 @@ html.sc {
     margin-bottom: 2.5rem;
     background: #f2f2f2;
     position: relative; }
+    @media only screen and (max-width: 480px) {
+      html.sc header[role=banner] {
+        margin-bottom: 18px;
+        margin-bottom: 1rem; } }
     html.sc header[role=banner] .container {
       height: 130px;
       padding-right: 0; }
@@ -2441,7 +2445,7 @@ html.sc {
       margin: 0rem;
       padding-top: 27px;
       padding-top: 1.5rem;
-      font-family: "OfficinaSerifITCW01-Bol 734534", Georgia, "Times New Roman", Times, serif; }
+      font-family: "Officina", Georgia, "Times New Roman", Times, serif; }
       html.sc header[role=banner] h1 a:link, html.sc header[role=banner] h1 a:visited {
         padding: 5px 20px;
         color: white;
@@ -2570,6 +2574,9 @@ html.sc {
     width: 90%;
     margin: 0 auto;
     overflow: hidden; }
+    @media only screen and (max-width: 480px) {
+      html.sc div#content {
+        width: 100%; } }
   html.sc div#primary {
     float: left;
     width: 66.66667%; }
@@ -2593,6 +2600,18 @@ html.sc {
     html.sc div#secondary aside.widget_search {
       min-height: 81px;
       min-height: 4.5rem; }
+    @media only screen and (max-width: 480px) {
+      html.sc div#secondary aside#headlines {
+        display: none; } }
+    html.sc div#secondary aside#events ul {
+      padding-left: 0; }
+      html.sc div#secondary aside#events ul li {
+        margin-bottom: 1.5rem;
+        list-style-type: none; }
+        html.sc div#secondary aside#events ul li span {
+          color: gray;
+          font-size: 16px;
+          font-size: 0.88889rem; }
     html.sc div#secondary h3 {
       font-size: 22px;
       font-size: 1.22222rem;
@@ -2628,6 +2647,10 @@ html.sc {
     margin-bottom: 27px;
     margin-bottom: 1.5rem;
     clear: both; }
+    @media only screen and (max-width: 480px) {
+      html.sc main.site-main h1.page-title {
+        font-size: 27px;
+        font-size: 1.5rem; } }
   html.sc main.site-main article.single-post {
     margin: 0px;
     margin: 0rem; }
@@ -2643,8 +2666,9 @@ html.sc {
       margin-bottom: 27px;
       margin-bottom: 1.5rem; }
   html.sc main.site-main article.essexuni_news {
-    padding: 0.75rem;
-    background: #f2f2f2; }
+    padding: 0px 13.5px;
+    padding: 0rem 0.75rem;
+    border-left: 4px solid #cccccc; }
   html.sc main.site-main article {
     position: relative;
     margin: 0px 0px 54px 0px;
@@ -2666,6 +2690,7 @@ html.sc {
       html.sc main.site-main article .entry-meta i.tag {
         position: absolute;
         right: 0;
+        top: 0;
         margin-top: 0px;
         margin-top: 0rem; }
         @media only screen and (max-width: 480px) {
@@ -2745,7 +2770,11 @@ html.sc {
     margin-top: 27px;
     margin-top: 1.5rem; }
   html.sc footer[role=contentinfo] {
-    color: white; }
+    color: white;
+    margin-top: 0px;
+    margin-top: 0rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem; }
     html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
       color: white;
       text-deocration: none; }
@@ -2758,7 +2787,9 @@ html.sc {
           list-style-type: none; }
       html.sc footer[role=contentinfo] .site-info .third {
         float: left;
-        width: 33.33333%; }
+        width: 33.33333%;
+        padding-bottom: 27px;
+        padding-bottom: 1.5rem; }
         @media only screen and (max-width: 480px) {
           html.sc footer[role=contentinfo] .site-info .third {
             width: 100%; } }
@@ -2768,6 +2799,26 @@ html.sc {
           @media only screen and (max-width: 480px) {
             html.sc footer[role=contentinfo] .site-info .third:last-of-type {
               width: 100%; } }
+      html.sc footer[role=contentinfo] .site-info .closing {
+        display: block;
+        clear: both;
+        border-top: 1px solid rgba(0, 0, 0, 0.26); }
+        html.sc footer[role=contentinfo] .site-info .closing ul {
+          float: right;
+          padding: 13.5px 0px;
+          padding: 0.75rem 0rem;
+          margin-bottom: 0; }
+          @media only screen and (max-width: 480px) {
+            html.sc footer[role=contentinfo] .site-info .closing ul {
+              float: left; } }
+          html.sc footer[role=contentinfo] .site-info .closing ul li {
+            display: inline;
+            padding: 0px 0px 0px 20px;
+            padding: 0rem 0rem 0rem 1.11111rem; }
+            @media only screen and (max-width: 480px) {
+              html.sc footer[role=contentinfo] .site-info .closing ul li {
+                padding: 0px 20px 0px 0px;
+                padding: 0rem 1.11111rem 0rem 0rem; } }
     html.sc footer[role=contentinfo] p.logo .iser-logo, html.sc footer[role=contentinfo] p.logo .essex-logo {
       text-indent: -3000em;
       display: block;
