@@ -10,7 +10,7 @@
 
 		<div class="entry-meta">
 			
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ), 32 ); ?>
+			<?//php echo get_avatar( get_the_author_meta( 'user_email' ), 32 ); ?>
 	
 			<?php societycentral_posted_on(); ?>
 
@@ -25,7 +25,7 @@ if ( !empty( $terms ) ) :
 	foreach ( $terms as $term ) {
 		$link = get_term_link( $term, $taxonomy );
 		if ( !is_wp_error( $link ) )
-			echo '<i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
+			echo ' | <i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
 	}
 endif;
 ?>

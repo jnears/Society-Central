@@ -29,7 +29,7 @@
 			foreach ( $terms as $term ) {
 				$link = get_term_link( $term, $taxonomy );
 				if ( !is_wp_error( $link ) )
-					echo '<i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
+					echo ' | <i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
 			}
 		endif;
 		?>

@@ -2403,6 +2403,10 @@ img {
 
 html.sc {
   height: auto !important; }
+  @media only screen and (max-width: 480px) {
+    html.sc {
+      font-size: 18px;
+      font-size: 1rem; } }
   html.sc img, html.sc object {
     border: 0;
     width: 100%;
@@ -2415,7 +2419,7 @@ html.sc {
   html.sc .lt-ie9 img, html.sc .lt-ie9 object {
     height: 100% !important; }
   html.sc a:link, html.sc a:visited {
-    color: #2c2c2c;
+    color: #005ea5;
     text-decoration: none; }
   html.sc a:hover {
     text-decoration: underline; }
@@ -2446,6 +2450,10 @@ html.sc {
       padding-top: 27px;
       padding-top: 1.5rem;
       font-family: "Officina", Georgia, "Times New Roman", Times, serif; }
+      @media only screen and (max-width: 480px) {
+        html.sc header[role=banner] h1 {
+          font-size: 26px;
+          font-size: 1.44444rem; } }
       html.sc header[role=banner] h1 a:link, html.sc header[role=banner] h1 a:visited {
         padding: 5px 20px;
         color: white;
@@ -2463,6 +2471,11 @@ html.sc {
       line-height: 18px;
       line-height: 1rem;
       margin: 5px 0 0 0; }
+      @media only screen and (max-width: 480px) {
+        html.sc header[role=banner] h2 {
+          font-size: 18px;
+          font-size: 1rem;
+          margin: 0; } }
     html.sc header[role=banner] div.social-links {
       position: absolute;
       left: 0;
@@ -2514,7 +2527,7 @@ html.sc {
   html.sc main {
     margin-top: 0px;
     margin-top: 0rem; }
-  html.sc aside nav {
+  html.sc aside#headlines nav {
     margin-top: 0px;
     margin-top: 0rem;
     margin-bottom: 27px;
@@ -2526,30 +2539,33 @@ html.sc {
     position: relative;
     right: 0;
     width: 100%; }
-    html.sc aside nav ol {
+    html.sc aside#headlines nav ol {
       padding: 0;
       margin: 0px;
       margin: 0rem; }
-      html.sc aside nav ol li {
+      html.sc aside#headlines nav ol li {
         list-style-type: none;
         float: left;
         margin: 0px 18px 27px 0px;
         margin: 0rem 1rem 1.5rem 0rem; }
-        html.sc aside nav ol li a:link {
+        html.sc aside#headlines nav ol li a:link {
           font-size: 18px;
           font-size: 1rem;
           padding: 8px 10px;
           padding: 0.44444rem 0.55556rem;
           background: #e2e2e2; }
-        html.sc aside nav ol li a:hover, html.sc aside nav ol li a.active {
+        html.sc aside#headlines nav ol li a:link, html.sc aside#headlines nav ol li a:visited {
+          text-decoration: none;
+          color: #2c2c2c; }
+        html.sc aside#headlines nav ol li a:hover, html.sc aside#headlines nav ol li a.active {
           text-decoration: none;
           background: #74a290;
           color: white; }
-    html.sc aside nav p:last-of-type {
+    html.sc aside#headlines nav p:last-of-type {
       margin-bottom: 0; }
-    html.sc aside nav article:not(:last-of-type) {
+    html.sc aside#headlines nav article:not(:last-of-type) {
       border-bottom: 1px solid black; }
-    html.sc aside nav h1 {
+    html.sc aside#headlines nav h1 {
       font-size: 20px;
       font-size: 1.11111rem;
       line-height: 36px;
@@ -2558,7 +2574,7 @@ html.sc {
       margin-bottom: 0.5rem;
       clear: both;
       color: gray; }
-    html.sc aside nav h2 {
+    html.sc aside#headlines nav h2 {
       font-size: 18px;
       font-size: 1rem;
       line-height: 36px;
@@ -2573,14 +2589,15 @@ html.sc {
   html.sc div#content {
     width: 90%;
     margin: 0 auto;
-    overflow: hidden; }
+    overflow: hidden;
+    max-width: 1185px; }
     @media only screen and (max-width: 480px) {
       html.sc div#content {
         width: 100%; } }
   html.sc div#primary {
     float: left;
     width: 66.66667%; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 768px) {
       html.sc div#primary {
         float: none;
         width: 100%; } }
@@ -2588,7 +2605,7 @@ html.sc {
     float: left;
     width: 31%;
     padding-left: 2.33333%; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 768px) {
       html.sc div#secondary {
         float: none;
         width: 100%; } }
@@ -2600,9 +2617,14 @@ html.sc {
     html.sc div#secondary aside.widget_search {
       min-height: 81px;
       min-height: 4.5rem; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 768px) {
       html.sc div#secondary aside#headlines {
         display: none; } }
+    @media only screen and (max-width: 768px) {
+      html.sc div#secondary aside#events {
+        border-top: 2px solid #cccccc;
+        padding-top: 27px;
+        padding-top: 1.5rem; } }
     html.sc div#secondary aside#events ul {
       padding-left: 0; }
       html.sc div#secondary aside#events ul li {
@@ -2639,6 +2661,11 @@ html.sc {
         background: white url("ui/search-ico.png") no-repeat 8px center; }
       html.sc div#secondary form[role=search] input[type=submit] {
         display: none; }
+  html.sc main.site-main h1 a:link, html.sc main.site-main h1 a:visited {
+    color: #2c2c2c; }
+  html.sc main.site-main h1 a:hover {
+    color: #2c2c2c;
+    text-decoration: underline; }
   html.sc main.site-main h1.page-title {
     font-size: 36px;
     font-size: 2rem;
@@ -2647,10 +2674,6 @@ html.sc {
     margin-bottom: 27px;
     margin-bottom: 1.5rem;
     clear: both; }
-    @media only screen and (max-width: 480px) {
-      html.sc main.site-main h1.page-title {
-        font-size: 27px;
-        font-size: 1.5rem; } }
   html.sc main.site-main article.single-post {
     margin: 0px;
     margin: 0rem; }
@@ -2659,6 +2682,12 @@ html.sc {
       font-size: 2rem;
       line-height: 54px;
       line-height: 3rem; }
+      @media only screen and (max-width: 480px) {
+        html.sc main.site-main article.single-post h1 {
+          font-size: 24px;
+          font-size: 1.33333rem;
+          line-height: 27px;
+          line-height: 1.5rem; } }
     html.sc main.site-main article.single-post figure {
       margin-bottom: 27px;
       margin-bottom: 1.5rem; }
@@ -2668,7 +2697,7 @@ html.sc {
   html.sc main.site-main article.essexuni_news {
     padding: 0px 13.5px;
     padding: 0rem 0.75rem;
-    border-left: 4px solid #cccccc; }
+    border-left: 2px dotted #cccccc; }
   html.sc main.site-main article {
     position: relative;
     margin: 0px 0px 54px 0px;
@@ -2677,6 +2706,8 @@ html.sc {
       color: gray;
       font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
       font-weight: normal;
+      line-height: 27px;
+      line-height: 1.5rem;
       font-size: 16px;
       font-size: 0.88889rem;
       margin-bottom: 0px;
@@ -2688,16 +2719,9 @@ html.sc {
         color: #2c2c2c;
         text-decoration: underline; }
       html.sc main.site-main article .entry-meta i.tag {
-        position: absolute;
-        right: 0;
-        top: 0;
+        position: relative;
         margin-top: 0px;
         margin-top: 0rem; }
-        @media only screen and (max-width: 480px) {
-          html.sc main.site-main article .entry-meta i.tag {
-            position: relative;
-            display: block;
-            left: 0; } }
       html.sc main.site-main article .entry-meta a.tag {
         position: absolute;
         left: -128px;
@@ -2755,6 +2779,9 @@ html.sc {
     margin-bottom: 0rem; }
   html.sc main.site-main #author-profile {
     padding-left: 210px; }
+    @media only screen and (max-width: 480px) {
+      html.sc main.site-main #author-profile {
+        padding-left: 100px; } }
     html.sc main.site-main #author-profile figure {
       position: absolute;
       left: 0;
@@ -2777,10 +2804,22 @@ html.sc {
     padding-bottom: 0rem; }
     html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
       color: white;
-      text-deocration: none; }
+      text-decoration: none; }
+    @media only screen and (max-width: 480px) {
+      html.sc footer[role=contentinfo] {
+        padding: 27px 0px;
+        padding: 1.5rem 0rem; } }
     html.sc footer[role=contentinfo] .site-info {
       width: 90%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      max-width: 1185px; }
+      @media only screen and (max-width: 480px) {
+        html.sc footer[role=contentinfo] .site-info {
+          width: 100%;
+          margin-left: 9px;
+          margin-left: 0.5rem;
+          margin-right: 9px;
+          margin-right: 0.5rem; } }
       html.sc footer[role=contentinfo] .site-info ol {
         padding-left: 0px; }
         html.sc footer[role=contentinfo] .site-info ol li {
@@ -2841,7 +2880,8 @@ html.sc {
           background-size: 138px 48px; } }
   html.sc form[role=search] fieldset {
     width: 90%;
-    text-align: left; }
+    text-align: left;
+    max-width: 1185px; }
   html.sc form[role=search] input[type=search] {
     width: 85%; }
   html.sc #commentform p.form-allowed-tags {
@@ -2941,6 +2981,9 @@ html.sc {
     width: auto;
     border-radius: 5px;
     margin-right: 10px; }
+    @media only screen and (max-width: 480px) {
+      html.sc .avatar {
+        width: 80px; } }
   html.sc body.home span.comments-link, html.sc body.home span.edit-link {
     display: none; }
 
