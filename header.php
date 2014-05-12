@@ -6,7 +6,14 @@
 *
 * @package societycentral
 */
-?><!DOCTYPE html>
+?><!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="sc no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <html class="sc" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -24,6 +31,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="outer-wrap">
+<div id="inner-wrap">
 <div id="page" class="hfeed site">
 
 <header id="masthead" class="site-header" role="banner">
@@ -39,12 +48,13 @@
 
 <?//php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
-<li><a class="search-toggle" href="/search" >Search</a></li>
-<li><a class="menu-toggle" href="#" >Headlines</a></li>
+
 </ul>
 </nav><!-- #site-navigation -->
-<?php echo headline_list(10); ?>
+
 <?php get_search_form(); ?>
 </header><!-- #masthead -->
-
+<a id="nav-menu-btn" class="nav-btn closed" href="/">Menu</a>
+<?php echo headline_list(10); ?>
+<a id="nav-search-btn" class="search-toggle active" href="/search">Search</a>
 <div id="content" class="site-content">

@@ -52,12 +52,22 @@ Colchester CO4 3SQ<br>
 
 
 
-<!-- <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'societycentral' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'societycentral' ), 'WordPress' ); ?></a>
-<span class="sep"> | </span>
-<?php printf( __( 'Theme: %1$s by %2$s.', 'societycentral' ), 'societycentral', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?> -->
+
 </div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
+</div><!-- #outerwrap -->
+</div><!-- #innerwrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.8.2.min.js"><\/script>')</script>
+<script src="<?php echo plugins_url(); ?>/jetpack/modules/sharedaddy/sharing.js" type="text/javascript"></script>
+<script>
+var _gaq=[['_setAccount','UA-27334759-2'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
 
 <?php wp_footer(); ?>
 

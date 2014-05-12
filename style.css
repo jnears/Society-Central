@@ -2423,6 +2423,69 @@ html.sc {
     text-decoration: none; }
   html.sc a:hover {
     text-decoration: underline; }
+  html.sc #outer-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: #2c2c2c; }
+  html.sc #inner-wrap {
+    position: relative;
+    width: 100%; }
+    html.sc #inner-wrap #page {
+      background: white; }
+      html.sc #inner-wrap #page #nav-search-btn {
+        z-index: 99999;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        padding-top: 27px;
+        padding-top: 1.5rem;
+        line-height: 54px;
+        line-height: 3rem; }
+      html.sc #inner-wrap #page #nav-menu-btn {
+        display: none;
+        z-index: 99999;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        padding-top: 27px;
+        padding-top: 1.5rem;
+        line-height: 54px;
+        line-height: 3rem; }
+        @media only screen and (max-width: 480px) {
+          html.sc #inner-wrap #page #nav-menu-btn {
+            display: inline; } }
+        @media only screen and (max-width: 768px) {
+          html.sc #inner-wrap #page #nav-menu-btn {
+            display: inline; } }
+    html.sc #inner-wrap #page > nav.categories {
+      left: -70%;
+      position: absolute;
+      width: 70%;
+      top: 0;
+      padding-top: 50px;
+      background: #2c2c2c; }
+      html.sc #inner-wrap #page > nav.categories ol {
+        margin-bottom: 0;
+        padding-left: 0; }
+        html.sc #inner-wrap #page > nav.categories ol li {
+          list-style-type: none;
+          float: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          line-height: 3rem;
+          text-align: left; }
+          html.sc #inner-wrap #page > nav.categories ol li a:link, html.sc #inner-wrap #page > nav.categories ol li a:visited {
+            padding: 18px;
+            padding: 1rem;
+            line-height: 27px;
+            line-height: 1.5rem;
+            font-weight: normal;
+            color: white;
+            display: block; }
+          html.sc #inner-wrap #page > nav.categories ol li a:hover, html.sc #inner-wrap #page > nav.categories ol li a.active {
+            background: gray;
+            color: white;
+            text-decoration: none; }
   html.sc header[role=banner] {
     border-top: 0px;
     border-bottom: 1px solid #cccccc;
@@ -2815,7 +2878,7 @@ html.sc {
       max-width: 1185px; }
       @media only screen and (max-width: 480px) {
         html.sc footer[role=contentinfo] .site-info {
-          width: 100%;
+          width: auto;
           margin-left: 9px;
           margin-left: 0.5rem;
           margin-right: 9px;
