@@ -1,0 +1,29 @@
+/* Print Style Sheet */
+@media print {
+body { background:white; color:black; margin:0 }
+html.sc div#content {width:auto; }
+html.sc #main {width:auto; }
+html.sc #header { height:75px; 
+     font-size: 24pt; 
+     color:black }
+#nav-search-btn, #nav-menu-btn { display: none;}
+html.sc div#primary { margin-left:0; 
+	margin-right:0; 
+     width:100%;
+     color:black; 
+     font-size:12pt; }
+#comments { display:none;}
+#inner-wrap #page > nav.categories { display: none; }
+.site-main article.single-post { width:auto; }
+html.sc #secondary { display: none; width: 0; }
+html.sc #colophon { display: none; }
+h1, h2, h3, h4, h5, h6 { page-break-after:avoid; 
+     page-break-inside:avoid }
+html.sc main.site-main article{ page-break-inside:avoid; 
+     page-break-after:avoid; }
+img, p { page-break-inside:avoid; 
+     page-break-after:avoid; }
+blockquote, table, pre { page-break-inside:avoid }
+ul, ol, dl  { page-break-before:avoid }
+
+}

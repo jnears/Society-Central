@@ -19,11 +19,11 @@ jQuery(document).ready(function( $ ){
   	event.preventDefault()
 });
 
-  	$( "#clear-search" ).click(function() {
-  	$( "#s" ).val("").focus();
-  	$("#clear-search").css("display", "none");
-  	event.preventDefault()
-});
+//   	$( "#clear-search" ).click(function() {
+//   	$( "#s" ).val("").focus();
+//   	$("#clear-search").css("display", "none");
+//   	event.preventDefault()
+// });
 
 
   	$("#s").keyup(function(){
