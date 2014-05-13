@@ -2673,12 +2673,17 @@ html.sc {
     @media only screen and (max-width: 768px) {
       html.sc div#secondary {
         float: none;
-        width: 100%; } }
+        width: 100%;
+        padding-left: 0; } }
     html.sc div#secondary aside {
       width: 100%;
       margin-left: 0;
       font-size: 18px;
       font-size: 1rem; }
+      @media only screen and (max-width: 480px) {
+        html.sc div#secondary aside {
+          margin-left: 9px;
+          margin-left: 0.5rem; } }
     html.sc div#secondary aside.widget_search {
       min-height: 81px;
       min-height: 4.5rem; }
@@ -2762,7 +2767,7 @@ html.sc {
   html.sc main.site-main article.essexuni_news {
     padding: 0px 13.5px;
     padding: 0rem 0.75rem;
-    border-left: 2px dotted #cccccc; }
+    border-left: 2px solid #cccccc; }
   html.sc main.site-main article {
     position: relative;
     margin: 0px 0px 54px 0px;
@@ -2894,6 +2899,9 @@ html.sc {
         width: 33.33333%;
         padding-bottom: 27px;
         padding-bottom: 1.5rem; }
+        @media only screen and (max-width: 768px) {
+          html.sc footer[role=contentinfo] .site-info .third {
+            width: 100%; } }
         @media only screen and (max-width: 480px) {
           html.sc footer[role=contentinfo] .site-info .third {
             width: 100%; } }
@@ -2930,19 +2938,19 @@ html.sc {
     html.sc footer[role=contentinfo] p.logo .iser-logo {
       background: url("ui/iser-logo.png") no-repeat;
       height: 60px;
-      width: 120px; }
+      width: 72px; }
       @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
         html.sc footer[role=contentinfo] p.logo .iser-logo {
           background-image: url("ui/iser-logo2x.png");
-          background-size: 120px 60px; } }
+          background-size: 144px 120px; } }
     html.sc footer[role=contentinfo] p.logo .essex-logo {
       background: url("ui/essex-logo.png") no-repeat;
       height: 48px;
-      width: 138px; }
+      width: 133px; }
       @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
         html.sc footer[role=contentinfo] p.logo .essex-logo {
           background-image: url("ui/essex-logo2x.png");
-          background-size: 138px 48px; } }
+          background-size: 166px 96px; } }
   html.sc form[role=search] fieldset {
     width: 90%;
     text-align: left;

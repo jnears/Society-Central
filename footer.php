@@ -14,6 +14,14 @@
 <div class="site-info">
 
 <div class="third">
+<h3>Departments</h3>
+<nav class="topics"><ol>
+<?php top_level_category_list(); ?>
+</ol>
+</nav>
+</div>
+
+<div class="third">
 <h3>Contact</h3>
 <p>
 Institute for Social &amp; Economic Research<br>
@@ -25,14 +33,6 @@ Colchester CO4 3SQ<br>
 </p>
 <p class="logo"><a class="iser-logo" href="https://iser.essex.ac.uk">ISER</a></p>
 <p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
-</div>
-
-<div class="third">
-<h3>Departments</h3>
-<nav class="topics"><ol>
-<?php top_level_category_list(); ?>
-</ol>
-</nav>
 </div>
 
 <div class="third twitter" data-twttr-id="twttr-sandbox-0">
