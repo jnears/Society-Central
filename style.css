@@ -2403,6 +2403,17 @@ img {
 
 html.sc {
   height: auto !important; }
+  html.sc h1 {
+    font-size: 36px;
+    font-size: 2rem; }
+    html.sc h1 span {
+      font-size: 25px;
+      font-size: 1.38889rem;
+      line-height: 27px;
+      line-height: 1.5rem; }
+  html.sc h2 {
+    font-size: 30px;
+    font-size: 1.66667rem; }
   html.sc .clearable {
     background: #fafafa url("ui/close-ico.png") no-repeat right -10px center;
     border: 1px solid #999999;
@@ -2587,8 +2598,6 @@ html.sc {
         html.sc header[role=banner] nav.categories ol li a:hover {
           background: #74a290;
           color: white; }
-    html.sc header[role=banner] form[role=search] {
-      margin-top: 0; }
   html.sc main {
     margin-top: 0px;
     margin-top: 0rem; }
@@ -2847,6 +2856,12 @@ html.sc {
   html.sc main.site-main article.excerpt p {
     margin-bottom: 0px;
     margin-bottom: 0rem; }
+  html.sc main.site-main ol.comment-list {
+    margin-left: 1.8px;
+    margin-left: 0.1rem; }
+    html.sc main.site-main ol.comment-list ol.children {
+      margin-left: 27px;
+      margin-left: 1.5rem; }
   html.sc main.site-main #author-profile {
     padding-left: 210px; }
     @media only screen and (max-width: 480px) {
@@ -2951,38 +2966,52 @@ html.sc {
         html.sc footer[role=contentinfo] p.logo .essex-logo {
           background-image: url("ui/essex-logo2x.png");
           background-size: 166px 96px; } }
-  html.sc form[role=search] fieldset {
-    width: 90%;
-    text-align: left;
-    max-width: 1185px; }
-    @media only screen and (max-width: 480px) {
-      html.sc form[role=search] fieldset {
-        width: 100%;
-        padding: 0px 9px;
-        padding: 0rem 0.5rem; } }
-  html.sc form[role=search] input[type=search] {
-    width: 84%;
-    margin-right: 1%;
-    padding: 0 1%; }
-    @media only screen and (max-width: 480px) {
-      html.sc form[role=search] input[type=search] {
-        width: 76%;
-        margin-right: 0; } }
-    @media only screen and (max-width: 768px) {
-      html.sc form[role=search] input[type=search] {
-        width: 80%;
-        margin-right: 1%; } }
-  html.sc form[role=search] input[type=submit] {
-    width: 12%;
-    float: right;
-    margin: 0; }
-    @media only screen and (max-width: 480px) {
-      html.sc form[role=search] input[type=submit] {
-        width: 18%;
-        margin-right: 0; } }
-    @media only screen and (max-width: 768px) {
-      html.sc form[role=search] input[type=submit] {
-        width: 15%; } }
+  html.sc form input:focus, html.sc form textarea:focus, html.sc form select:focus {
+    outline: 0;
+    outline: thin dotted \9;
+    -moz-box-shadow: 0px 0px 6px 0px #cccccc;
+    -webkit-box-shadow: 0px 0px 6px 0px #cccccc;
+    box-shadow: 0px 0px 6px 0px #cccccc; }
+  html.sc form[role=search] {
+    background: none; }
+    html.sc form[role=search] fieldset {
+      width: 90%;
+      text-align: left;
+      max-width: 1185px; }
+      @media only screen and (max-width: 480px) {
+        html.sc form[role=search] fieldset {
+          width: 100%;
+          padding: 0px 9px;
+          padding: 0rem 0.5rem; } }
+    html.sc form[role=search] input[type=search] {
+      border: 1px solid #cccccc;
+      width: 80%;
+      margin-right: 1%;
+      padding: 0 1%;
+      padding-right: 5%; }
+      @media only screen and (max-width: 480px) {
+        html.sc form[role=search] input[type=search] {
+          width: 73%;
+          margin-right: 0; } }
+      @media only screen and (max-width: 768px) {
+        html.sc form[role=search] input[type=search] {
+          width: 73%;
+          margin-right: 1%; } }
+    html.sc form[role=search] input[type=submit] {
+      background: gray;
+      width: 12%;
+      float: right;
+      margin: 0; }
+      @media only screen and (max-width: 480px) {
+        html.sc form[role=search] input[type=submit] {
+          width: 18%;
+          margin-right: 0; } }
+      @media only screen and (max-width: 768px) {
+        html.sc form[role=search] input[type=submit] {
+          width: 18%; } }
+      html.sc form[role=search] input[type=submit]:hover, html.sc form[role=search] input[type=submit]:focus {
+        background: #74a290;
+        outline: 0; }
   html.sc #commentform p.form-allowed-tags {
     display: none; }
   html.sc #primary input[type=submit] {
@@ -2995,23 +3024,19 @@ html.sc {
     font-family: "Officina", Georgia, "Times New Roman", Times, serif;
     font-weight: normal;
     text-align: center;
-    color: #005ea5;
+    color: white;
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
     border: none;
     outline: 0;
-    background-color: #fcfcfc;
+    background-color: gray;
     padding: 13.5px 18px;
     padding: 0.75rem 1rem;
     line-height: 18px;
     line-height: 1rem;
     margin: 4.5px 0px;
-    margin: 0.25rem 0rem;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
-    border-color: #2c2c2c; }
+    margin: 0.25rem 0rem; }
   html.sc #primary form[role=search] {
     display: block;
     background: #f2f2f2;

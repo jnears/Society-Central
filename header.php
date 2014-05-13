@@ -29,6 +29,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<a class="skip-link visuallyhidden" href="#content" accesskey="s"><?php _e( 'Skip to content', 'societycentral' ); ?></a>
 <div id="outer-wrap">
 <div id="inner-wrap">
 <div id="page" class="hfeed site">
@@ -39,16 +40,16 @@
 <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 </div>
 
-<nav id="site-navigation" class="main-navigation" role="navigation">
+<!-- <nav id="site-navigation" class="main-navigation" role="navigation">
 	<ul>
-<!-- <h1 class="menu-toggle"><?php _e( 'Menu', 'societycentral' ); ?></h1> -->
-<li><a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'societycentral' ); ?></a></li>
+<h1 class="menu-toggle"><?php _e( 'Menu', 'societycentral' ); ?></h1> 
 
 <?//php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
 
 </ul>
-</nav><!-- #site-navigation -->
+</nav><!-- #site-navigation --> 
+
 
 <?php get_search_form(); ?>
 </header><!-- #masthead -->
