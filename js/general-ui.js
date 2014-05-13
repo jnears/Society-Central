@@ -13,11 +13,11 @@ jQuery(document).ready(function( $ ){
   	event.preventDefault()
 });
 
-  	$( "#site-navigation .menu-toggle" ).click(function() {
-	$( this ).toggleClass('active');
-  	$( "header[role=banner] nav.categories ol" ).slideToggle('fast');
-  	event.preventDefault()
-});
+//   	$( "#site-navigation .menu-toggle" ).click(function() {
+// 	$( this ).toggleClass('active');
+//   	$( "header[role=banner] nav.categories ol" ).slideToggle('fast');
+//   	event.preventDefault()
+// });
 
 //   	$( "#clear-search" ).click(function() {
 //   	$( "#s" ).val("").focus();
@@ -60,13 +60,21 @@ else if ($ ("#nav-menu-btn").hasClass("open")) {
     
 });
 
-
+$(window).on('resize', function(){
+  if ( $("#nav-menu-btn").hasClass("open") && $(window).width()> 768) {
+    $( "#nav-menu-btn" ).removeClass('open');
+    $( "#nav-menu-btn" ).addClass('closed');
+    $('#inner-wrap').animate({left:'0'}, 500);
+  }
+});
 
 
 //  * Set topics menu li to '.active' if h1 matches the text of the list item
 	var currentTitle = $('h1.page-title').html();
 	$('ol.headline-archive li a:contains('+currentTitle+')').addClass('active');
   $('#page > nav.categories ol li a:contains('+currentTitle+')').addClass('active');
+
+
 
 //put x in search box
 
