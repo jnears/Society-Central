@@ -260,14 +260,42 @@ add_filter( 'post_class', 'add_post_class_to_single_post' );
 
 
 
- //add extra author twitter and facebook fields
-add_filter('user_contactmethods', 'my_user_contactmethods');
+add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
+add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
 
-function my_user_contactmethods($user_contactmethods){
-$user_contactmethods['twitter'] = 'Twitter Username';
-$user_contactmethods['facebook'] = 'Facebook URL';
-return $user_contactmethods;
+function my_show_extra_profile_fields( $user ) { ?>
+
+    <h3>Extra profile information</h3>
+
+    <table class="form-table">
+
+        <tr>
+            <th><label for="jobtitle">Job Title</label></th>
+
+            <td>
+                <input type="text" name="jobtitle" id="jobtitle" value="<?php echo esc_attr( get_the_author_meta( 'jobtitle', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">Please enter your job.</span>
+            </td>
+        </tr>
+
+    </table>
+<?php }
+
+
+
+add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+
+function my_save_extra_profile_fields( $user_id ) {
+
+    if ( !current_user_can( 'edit_user', $user_id ) )
+        return false;
+
+    /* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
+    update_usermeta( $user_id, 'jobtitle', $_POST['jobtitle'] );
 }
+
+
 
 
 
