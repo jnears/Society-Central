@@ -6,9 +6,9 @@
  */
 ?>
 <div id="secondary" class="widget-area" role="complementary">
-<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
-<!-- 	<aside id="search" class="widget widget_search">
+	<!-- 	<aside id="search" class="widget widget_search">
 		<?php get_search_form(); ?>
 	</aside>
 
@@ -28,13 +28,17 @@
 			<?php wp_meta(); ?>
 		</ul>
 	</aside>
- -->
-<?php endif; // end sidebar widget area ?>
-<aside id="headlines" class="widget">
+ 	-->
+	<?php endif; // end sidebar widget area ?>
 
-		<h3>Headlines</h3>
-		<?php echo headline_list(10); ?>
-	</aside>
+
+	<!-- Dont show navigation on single page -->
+	<?php if ( ! is_single() ){?>
+	 <aside id="headlines" class="widget">
+			<h3>Headlines</h3>
+			<?php echo headline_list(10); ?>
+		</aside>
+	<?php }?>
 
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
@@ -42,7 +46,6 @@
 	  <?php  echo events_sidebar(5); ?>
 	</aside>
 	<?php endif;  ?>
-
 
 
 
