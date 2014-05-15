@@ -2619,22 +2619,25 @@ html.sc {
       margin: 0rem; }
       html.sc aside#headlines nav ol li {
         list-style-type: none;
-        float: left;
-        margin: 0px 18px 27px 0px;
-        margin: 0rem 1rem 1.5rem 0rem; }
+        margin: 0px;
+        margin: 0rem;
+        border-top: 1px solid #cccccc; }
+        html.sc aside#headlines nav ol li:last-of-type {
+          border-bottom: 1px solid #cccccc; }
         html.sc aside#headlines nav ol li a:link {
           font-size: 18px;
           font-size: 1rem;
-          padding: 8px 10px;
-          padding: 0.44444rem 0.55556rem;
-          background: #e2e2e2; }
+          padding: 9px;
+          padding: 0.5rem;
+          background: #f2f2f2;
+          display: block; }
         html.sc aside#headlines nav ol li a:link, html.sc aside#headlines nav ol li a:visited {
           text-decoration: none;
           color: #2c2c2c; }
         html.sc aside#headlines nav ol li a:hover, html.sc aside#headlines nav ol li a.active {
           text-decoration: none;
-          background: #74a290;
-          color: white; }
+          background: #dfdfdf;
+          color: #2c2c2c; }
     html.sc aside#headlines nav p:last-of-type {
       margin-bottom: 0; }
     html.sc aside#headlines nav article:not(:last-of-type) {
@@ -2670,14 +2673,14 @@ html.sc {
         width: 100%; } }
   html.sc div#primary {
     float: left;
-    width: 66.66667%; }
+    width: 70%; }
     @media only screen and (max-width: 768px) {
       html.sc div#primary {
         float: none;
         width: 100%; } }
   html.sc div#secondary {
     float: left;
-    width: 31%;
+    width: 30%;
     padding-left: 2.33333%; }
     @media only screen and (max-width: 768px) {
       html.sc div#secondary {
@@ -2787,8 +2790,8 @@ html.sc {
       font-weight: normal;
       line-height: 27px;
       line-height: 1.5rem;
-      font-size: 16px;
-      font-size: 0.88889rem;
+      font-size: 19px;
+      font-size: 1.05556rem;
       margin-bottom: 0px;
       margin-bottom: 0rem; }
       html.sc main.site-main article .entry-meta a:link, html.sc main.site-main article .entry-meta a:visited, html.sc main.site-main article .entry-meta a:active {
@@ -2888,8 +2891,7 @@ html.sc {
     padding-bottom: 0px;
     padding-bottom: 0rem; }
     html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
-      color: white;
-      text-decoration: none; }
+      color: white; }
     @media only screen and (max-width: 480px) {
       html.sc footer[role=contentinfo] {
         padding: 27px 0px;
@@ -3042,10 +3044,13 @@ html.sc {
     background: #f2f2f2;
     padding: 13.5px;
     padding: 0.75rem;
+    width: 90%;
     width: 100%;
     overflow: auto;
     display: inline-block;
     margin: 0; }
+    html.sc #primary form[role=search] fieldset {
+      margin: 0; }
     html.sc #primary form[role=search] label {
       display: block;
       width: 40%;
@@ -3054,10 +3059,13 @@ html.sc {
     html.sc #primary form[role=search] input[type=search] {
       display: inline-block;
       vertical-align: middle;
-      width: 100%; }
+      width: 100%;
+      width: 90%; }
     html.sc #primary form[role=search] input[type=submit] {
       padding: 8px;
-      padding: 0.44444rem; }
+      padding: 0.44444rem;
+      float: left;
+      width: autof; }
   html.sc #primary .comment-form {
     width: auto;
     line-height: normal;
