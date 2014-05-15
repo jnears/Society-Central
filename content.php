@@ -19,7 +19,7 @@
 		<div class="entry-meta">
 		
 			<?php societycentral_posted_on(); ?>
-			<?php
+		<!-- 	<?php
 
 		// print out the taxomomy term and apply dynamic class (used for coloured lozenge)
 
@@ -33,7 +33,7 @@
 					echo ' | <i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
 			}
 		endif;
-		?>
+		?> -->
 
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
