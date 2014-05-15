@@ -7,6 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		
+<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
 			
@@ -18,21 +19,20 @@
 
 // print out the taxomomy term and apply dynamic class (used for coloured lozenge)
 
-$taxonomy = 'content_types';
-$terms = get_the_terms( $post->ID , $taxonomy );
+// $taxonomy = 'content_types';
+// $terms = get_the_terms( $post->ID , $taxonomy );
 
-if ( !empty( $terms ) ) :
-	foreach ( $terms as $term ) {
-		$link = get_term_link( $term, $taxonomy );
-		if ( !is_wp_error( $link ) )
-			echo ' | <i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
-	}
-endif;
+// if ( !empty( $terms ) ) :
+// 	foreach ( $terms as $term ) {
+// 		$link = get_term_link( $term, $taxonomy );
+// 		if ( !is_wp_error( $link ) )
+// 			echo ' | <i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
+// 	}
+// endif;
 ?>
 
 		</div><!-- .entry-meta -->
-	<h1 class="entry-title"><?php the_title(); ?></h1>
-
+	
 	</header><!-- .entry-header -->
 
 	<div class="entry-content entry-content-single">
