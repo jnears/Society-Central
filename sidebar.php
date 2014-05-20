@@ -31,7 +31,6 @@
  	-->
 	<?php endif; // end sidebar widget area ?>
 
-<?php get_the_author_meta('user_email', 1); ?>
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
 	<aside class="widget">

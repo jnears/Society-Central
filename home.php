@@ -15,6 +15,12 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+	
+
+
+
+
+<div class="colgroup-2">
 <?php // Get 4 featured posts ?>
 <?php
 
@@ -37,21 +43,35 @@ while ( $loop->have_posts() ) : $loop->the_post();
 <?php
 if ( has_post_thumbnail() ) {
 ?>
-<div class="g4">
-<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-<figure><div><?php the_post_thumbnail(); ?></div>
-<figcaption><?php truncate_title(55); ?><div class="author">by <?php the_author(); ?></div> </figcaption>
+<article class="span1 featured">
+<figure><?php the_post_thumbnail(); ?>
+<figcaption>
+	<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+	<div class="entry-content">
+		<?php the_excerpt(); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'societycentral' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
+	<div class="author">by <?php the_author(); ?></div> </figcaption>
 </figure>
-
-</a>
-</div>
+</article>
 <?php
 } // end if loop
 endwhile;
 wp_reset_query();
-
 ?>
-		<?php if ( have_posts() ) : ?>
+</div>
+
+
+
+
+
+
+<?php if ( have_posts() ) : ?>
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(

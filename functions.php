@@ -442,6 +442,16 @@ wp_enqueue_script(
 }
 add_action( 'wp_enqueue_scripts', 'add_general_ui' );
 
+//baseline.js - set image margins to
+function add_baseline() {
+wp_enqueue_script(
+    'baseline', // name your script so that you can attach other scripts and de-register, etc.
+    get_template_directory_uri() . '/js/baseline.js', // this is the location of your script file
+    array('jquery') // this array lists the scripts upon which your script depends
+);
+}
+add_action( 'wp_enqueue_scripts', 'add_baseline' );
+
 
 /* add style snippets dropdown to text editor */
 

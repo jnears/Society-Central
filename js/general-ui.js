@@ -88,4 +88,7 @@ function tog(v){return v?'addClass':'removeClass';}
     $(this).removeClass('x onX').val('');
   });
 
+
+//baseline
+$('img').baseline(27);
 });

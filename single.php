@@ -48,6 +48,7 @@ echo $taxo_text;
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+	<div id="secondary" role="complementary">
+<?php societycentral_posted_on(); ?>
+</div>
 <?php get_footer(); ?>
