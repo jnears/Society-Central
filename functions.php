@@ -153,6 +153,37 @@ function headline_init() {
 add_action( 'init', 'headline_init' );
 
 
+/* custom taxonomy for featured posts - PG 25 Sep 2012 */
+
+function features_init() {
+    // create a new taxonomy
+    $labels = array(
+    'name' => _x( 'Features', 'taxonomy general name' ),
+    'singular_name' => _x( 'Feature', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Features' ),
+    'all_items' => __( 'All Features' ),
+    'parent_item' => __( 'Parent Feature' ),
+    'parent_item_colon' => __( 'Parent Feature:' ),
+    'edit_item' => __( 'Edit Feature' ),
+    'update_item' => __( 'Update Feature' ),
+    'add_new_item' => __( 'Add New Feature' ),
+    'new_item_name' => __( 'New Feature' ),
+    'menu_name' => __( 'Feature' ),
+  );
+
+    register_taxonomy(
+        'feature',
+        array('post','essexuni_news'),
+        array(
+            'labels' => $labels,
+            'hierarchical' => true,
+            'rewrite' => array( 'slug' => 'feature' )
+        )
+    );
+}
+add_action( 'init', 'features_init' );
+
+
 
 /* custom taxonomy for sections (for post icons) */
 
@@ -259,7 +290,7 @@ function add_post_class_to_single_post( $classes ) {
 add_filter( 'post_class', 'add_post_class_to_single_post' );
 
 
-
+//add extra fields to the user profile
 add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
 
@@ -274,7 +305,15 @@ function my_show_extra_profile_fields( $user ) { ?>
 
             <td>
                 <input type="text" name="jobtitle" id="jobtitle" value="<?php echo esc_attr( get_the_author_meta( 'jobtitle', $user->ID ) ); ?>" class="regular-text" /><br />
-                <span class="description">Please enter your job.</span>
+                <span class="description">Please enter your job title.</span>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="excerpt">Brief Excerpt</label></th>
+
+            <td>
+                <input type="text" name="excerpt" id="excerpt" value="<?php echo esc_attr( get_the_author_meta( 'excerpt', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">Please enter a brief excerpt.</span>
             </td>
         </tr>
 
@@ -293,6 +332,7 @@ function my_save_extra_profile_fields( $user_id ) {
 
     /* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
     update_usermeta( $user_id, 'jobtitle', $_POST['jobtitle'] );
+    update_usermeta( $user_id, 'excerpt', $_POST['excerpt'] );
 }
 
 

@@ -31,6 +31,14 @@
  	-->
 	<?php endif; // end sidebar widget area ?>
 
+<?php get_the_author_meta('user_email', 1); ?>
+
+	<?php if ( is_home() ) : // show events listing on homepage?>
+	<aside class="widget">
+	<h3>What is Society Central</h3>
+	  <?php  the_author_meta('excerpt',2); ?>
+	</aside>
+	<?php endif;  ?>
 
 	<!-- Dont show navigation on single page -->
 	<?php if ( ! is_single() ){?>
@@ -42,6 +50,7 @@
 
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
+
 	<aside id="events" class="widget">
 	  <?php  echo events_sidebar(5); ?>
 	</aside>

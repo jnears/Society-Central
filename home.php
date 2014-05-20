@@ -15,11 +15,64 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+<?php // Get 4 featured posts ?>
+<?php
 
+$args = array(
+    'posts_per_page' => 4,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'feature',
+            'terms' => array('homepage-feature'),
+            'field' => 'slug',
+            'operator' => 'IN'
+        ),
+    )
+);
+
+
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
+?>
+<?php
+if ( has_post_thumbnail() ) {
+?>
+<div class="g4">
+<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+<figure><div><?php the_post_thumbnail(); ?></div>
+<figcaption><?php truncate_title(55); ?><div class="author">by <?php the_author(); ?></div> </figcaption>
+</figure>
+
+</a>
+</div>
+<?php
+} // end if loop
+endwhile;
+wp_reset_query();
+
+?>
 		<?php if ( have_posts() ) : ?>
-
+<?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array(
+    'posts_per_page' => 10,
+    'paged' => $paged,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'feature',
+            'terms' => array('homepage-feature'),
+            'field' => 'slug',
+            'operator' => 'NOT IN'
+        ),
+    )
+);
+query_posts($args);
+?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
+
+<div class="home-featured noprint">
+
 
 				<?php
 					/* Include the Post-Format-specific template for the content.

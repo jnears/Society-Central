@@ -70,6 +70,13 @@ function societycentral_posted_on() {
 	if ( get_the_author_meta( 'jobtitle' ) ) { 
 		$author_jobtitle =  '(' . esc_html(get_the_author_meta( 'jobtitle' )) . ')' ;
 	};
+	// if ( get_the_author_meta( 'user_firstname' ) ) { 
+	// 	$author_firstname =  esc_html(get_the_author_meta( 'user_firstname' )) ;
+	// };
+
+	// if ( get_the_author_meta( 'user_lastname' ) ) { 
+	// 	$author_lastname =  esc_html(get_the_author_meta( 'user_lastname' )) ;
+	// };
 	// if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 	// 	$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 	// }
@@ -86,10 +93,11 @@ function societycentral_posted_on() {
 			esc_url( get_permalink() ),
 			$time_string
 		),
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s %3$s</a></span>',
+		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s %3$s %4$s</a></span>',
 			
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_html( get_the_author() ),
+			esc_html(get_the_author_meta( 'user_firstname' )),
+			esc_html(get_the_author_meta( 'user_lastname' )),
 			$author_jobtitle
 		)
 	);

@@ -2545,7 +2545,7 @@ html.sc {
         text-decoration: none; }
       html.sc header[role=banner] h1 a:hover {
         text-decoration: none;
-        background: #74a290; }
+        background: gray; }
     html.sc header[role=banner] h2 {
       font-family: "Officina", Georgia, "Times New Roman", Times, serif;
       font-weight: normal;
@@ -2604,8 +2604,8 @@ html.sc {
   html.sc aside#headlines nav {
     margin-top: 0px;
     margin-top: 0rem;
-    margin-bottom: 27px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 26px;
+    margin-bottom: 1.44444rem;
     margin-left: 0px;
     margin-left: 0rem;
     font-size: 16px;
@@ -2627,8 +2627,8 @@ html.sc {
         html.sc aside#headlines nav ol li a:link {
           font-size: 18px;
           font-size: 1rem;
-          padding: 9px;
-          padding: 0.5rem;
+          padding: 13px;
+          padding: 0.72222rem;
           background: #f2f2f2;
           display: block; }
         html.sc aside#headlines nav ol li a:link, html.sc aside#headlines nav ol li a:visited {
@@ -2782,8 +2782,8 @@ html.sc {
     border-left: 2px solid #cccccc; }
   html.sc main.site-main article {
     position: relative;
-    margin: 0px 0px 54px 0px;
-    margin: 0rem 0rem 3rem 0rem; }
+    margin: 0px 0px 63px 0px;
+    margin: 0rem 0rem 3.5rem 0rem; }
     html.sc main.site-main article .entry-meta {
       color: gray;
       font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
