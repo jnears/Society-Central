@@ -31,8 +31,7 @@ Colchester CO4 3SQ<br>
 +44 (0) 1206 873684<br>
 <a href="mailto:societycentral@essex.ac.uk">societycentral@essex.ac.uk</a><br>
 </p>
-<p class="logo"><a class="iser-logo" href="https://iser.essex.ac.uk">ISER</a></p>
-<p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
+
 </div>
 
 <div class="third twitter" data-twttr-id="twttr-sandbox-0">
@@ -43,6 +42,8 @@ Colchester CO4 3SQ<br>
 <a href="#" id="show-grid" class="btn">Toggle grid</a>
 
 <div class="closing">
+<p class="logo"><a class="iser-logo" href="https://iser.essex.ac.uk">ISER</a></p>
+<p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
 <ul>
 <li><a href="<?php echo site_url(); ?>/archives">Archives</a></li>
 <li><a href="<?php echo site_url(); ?>/author/society-central/">About</a></li>
