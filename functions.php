@@ -471,8 +471,8 @@ function my_mce_before_init( $settings ) {
     $style_formats = array(
     	array(
     		'title' => 'Pullquote',
-    		'block' => 'div',
-    		'classes' => 'pullquote'
+    		'block' => 'blockquote',
+    		'classes' => 'pull-quote'
 
         )
     );
