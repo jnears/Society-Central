@@ -34,8 +34,8 @@
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
 	<aside class="widget">
-	<h3>What is Society Central</h3>
-	  <?php  the_author_meta('excerpt',2); ?>
+<p class="lead">
+	  <?php  the_author_meta('excerpt',2); ?></p>
 	</aside>
 	<?php endif;  ?>
 
