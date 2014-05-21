@@ -47,7 +47,10 @@ if ( has_post_thumbnail() ) {
 <figure><?php the_post_thumbnail(); ?>
 <figcaption>
 	<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-	<div class="entry-content">
+	 <div class="entry-meta">
+	 <?php societycentral_posted_on(); ?>
+</div>
+	<!-- <div class="entry-content">
 		<?php the_excerpt(); ?>
 		<?php
 			wp_link_pages( array(
@@ -55,8 +58,8 @@ if ( has_post_thumbnail() ) {
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
-	<div class="author">by <?php the_author(); ?></div> </figcaption>
+	</div><!-- .entry-content --> 
+	</figcaption>
 </figure>
 </article>
 <?php
