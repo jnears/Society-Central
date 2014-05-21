@@ -1253,12 +1253,11 @@ form[role=search] {
     min-height: 2rem; }
 
 ol.multi {
-  width: 75%;
-  margin-left: 25%;
   margin-bottom: 0px;
   margin-bottom: 0rem;
   display: block;
   border: 1px solid #cccccc;
+  width: auto;
   padding: 9px;
   padding: 0.5rem;
   max-height: 350px;
@@ -1280,6 +1279,8 @@ ol.multi {
         left: 0.5rem;
         top: 25%;
         margin-right: 0.5rem; }
+    ol.multi li a:visited.active, ol.multi li a:link.active {
+      background: #f2f2f2; }
 
 div.field_with_errors {
   display: inline; }
@@ -1478,20 +1479,29 @@ ol.tag-list {
     ol.tag-list li:nth-last-of-type(2):before {
       content: none; }
     ol.tag-list li:nth-last-of-type(2):after {
-      content: "\00a0 and\00a0"; }
+      content: " and\00a0"; }
 
 ol#publications {
   padding-left: 0; }
+  ol#publications p {
+    margin: 0; }
   ol#publications > li {
     list-style-type: none;
-    padding: 18px 0px;
-    padding: 1rem 0rem; }
-    ol#publications > li h6 {
-      float: left;
-      display: inline-block;
-      clear: left; }
-    ol#publications > li p, ol#publications > li h6 {
-      margin-bottom: 0rem; }
+    padding: 4.5px 0px;
+    padding: 0.25rem 0rem; }
+  ol#publications dt, ol#publications dd {
+    margin: 0; }
+  ol#publications dd.publication-date {
+    color: gray;
+    font-size: 14.4px;
+    font-size: 0.8rem;
+    font-style: italic; }
+  ol#publications i {
+    color: #cccccc; }
+  ol#publications cite a:link, ol#publications cite a:visited {
+    color: gray;
+    font-size: 14.4px;
+    font-size: 0.8rem; }
 
 table {
   width: 100%;
@@ -1886,6 +1896,25 @@ fieldset.property {
 img.preview {
   max-width: 200px; }
 
+.meta {
+  color: gray;
+  font-size: 14.4px;
+  font-size: 0.8rem; }
+
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #dddddd;
+  border-radius: 5px; }
+
 @font-face {
   font-family: "Officina";
   src: url("https://fast.fonts.com/dv2/2/d29a1003-aa62-4492-a4ab-3b649c7efccd.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
@@ -2070,6 +2099,50 @@ nav.guide {
   position: absolute;
   right: 0;
   top: 0; }
+
+nav.section {
+  overflow: auto;
+  background: #2c2c2c;
+  font-family: "Officina", Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 45px;
+  margin-bottom: 2.5rem; }
+  nav.section ol {
+    padding-left: 0px;
+    padding-left: 0rem; }
+    nav.section ol li {
+      float: left;
+      font-size: 16px;
+      font-size: 0.88889rem;
+      line-height: 36px;
+      line-height: 2rem; }
+      nav.section ol li:not(:first-of-type) {
+        border-left: 1px solid #525252; }
+      nav.section ol li a:link, nav.section ol li a:visited {
+        color: white;
+        display: block;
+        padding: 0px 18px;
+        padding: 0rem 1rem;
+        font-weight: bold; }
+        nav.section ol li a:link.active, nav.section ol li a:visited.active {
+          background: #464646; }
+      nav.section ol li a:hover {
+        text-decoration: none;
+        background: #464646; }
+
+nav.breadcrumb {
+  overflow: auto; }
+  nav.breadcrumb ol {
+    padding-left: 0px;
+    padding-left: 0rem; }
+    nav.breadcrumb ol li {
+      float: left;
+      color: gray;
+      font-size: 14px;
+      font-size: 0.77778rem;
+      line-height: 14.0px;
+      line-height: 0.77778rem; }
+      nav.breadcrumb ol li:not(:last-of-type):after {
+        content: "\E602\003E\E602"; }
 
 main {
   position: relative; }
@@ -2792,8 +2865,8 @@ html.sc {
       line-height: 1.5rem;
       font-size: 19px;
       font-size: 1.05556rem;
-      margin-bottom: 0px;
-      margin-bottom: 0rem; }
+      margin-bottom: 13.5px;
+      margin-bottom: 0.75rem; }
       html.sc main.site-main article .entry-meta a:link, html.sc main.site-main article .entry-meta a:visited, html.sc main.site-main article .entry-meta a:active {
         color: gray;
         text-decoration: none; }
@@ -2833,8 +2906,8 @@ html.sc {
       font-size: 1.33333rem;
       line-height: 27px;
       line-height: 1.5rem;
-      margin-bottom: 27px;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 13.5px;
+      margin-bottom: 0.75rem; }
     html.sc main.site-main article p {
       color: black; }
     html.sc main.site-main article figure.thumb {
@@ -2928,7 +3001,9 @@ html.sc {
       html.sc footer[role=contentinfo] .site-info .closing {
         display: block;
         clear: both;
-        border-top: 1px solid rgba(0, 0, 0, 0.26); }
+        border-top: 1px solid rgba(0, 0, 0, 0.26);
+        padding-top: 9px;
+        padding-top: 0.5rem; }
         html.sc footer[role=contentinfo] .site-info .closing ul {
           float: right;
           padding: 13.5px 0px;
@@ -2945,26 +3020,33 @@ html.sc {
               html.sc footer[role=contentinfo] .site-info .closing ul li {
                 padding: 0px 20px 0px 0px;
                 padding: 0rem 1.11111rem 0rem 0rem; } }
-    html.sc footer[role=contentinfo] p.logo .iser-logo, html.sc footer[role=contentinfo] p.logo .essex-logo {
-      text-indent: -3000em;
-      display: block;
-      overflow: hidden; }
-    html.sc footer[role=contentinfo] p.logo .iser-logo {
-      background: url("ui/iser-logo.png") no-repeat;
-      height: 60px;
-      width: 72px; }
-      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-        html.sc footer[role=contentinfo] p.logo .iser-logo {
-          background-image: url("ui/iser-logo2x.png");
-          background-size: 144px 120px; } }
-    html.sc footer[role=contentinfo] p.logo .essex-logo {
-      background: url("ui/essex-logo.png") no-repeat;
-      height: 48px;
-      width: 133px; }
-      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-        html.sc footer[role=contentinfo] p.logo .essex-logo {
-          background-image: url("ui/essex-logo2x.png");
-          background-size: 166px 96px; } }
+    html.sc footer[role=contentinfo] p.logo {
+      display: inline-block;
+      margin-right: 27px;
+      margin-right: 1.5rem;
+      margin-bottom: 0px;
+      margin-bottom: 0rem; }
+      html.sc footer[role=contentinfo] p.logo .iser-logo, html.sc footer[role=contentinfo] p.logo .essex-logo {
+        text-indent: -3000em;
+        display: block;
+        overflow: hidden;
+        float: left; }
+      html.sc footer[role=contentinfo] p.logo .iser-logo {
+        background: url("ui/iser-logo.png") no-repeat;
+        height: 60px;
+        width: 72px; }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          html.sc footer[role=contentinfo] p.logo .iser-logo {
+            background-image: url("ui/iser-logo2x.png");
+            background-size: 144px 120px; } }
+      html.sc footer[role=contentinfo] p.logo .essex-logo {
+        background: url("ui/essex-logo.png") no-repeat;
+        height: 48px;
+        width: 133px; }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          html.sc footer[role=contentinfo] p.logo .essex-logo {
+            background-image: url("ui/essex-logo2x.png");
+            background-size: 166px 96px; } }
   html.sc form input:focus, html.sc form textarea:focus, html.sc form select:focus {
     outline: 0;
     outline: thin dotted \9;
