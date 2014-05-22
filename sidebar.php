@@ -49,9 +49,9 @@
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
 
-	<aside id="events" class="widget">
-	  <?php  echo events_sidebar(5); ?>
-	</aside>
+<aside id="events-list" class="widget">
+<?php the_widget('TribeEventsListWidget'); ?>
+</aside>
 	<?php endif;  ?>
 
 

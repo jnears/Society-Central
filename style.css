@@ -2487,6 +2487,16 @@ html.sc {
   html.sc h2 {
     font-size: 30px;
     font-size: 1.66667rem; }
+  html.sc h1 a:link, html.sc h1 a:visited, html.sc h2 a:link, html.sc h2 a:visited, html.sc h3 a:link, html.sc h3 a:visited, html.sc h4 a:link, html.sc h4 a:visited {
+    color: #2c2c2c; }
+  html.sc h1 a:hover, html.sc h2 a:hover, html.sc h3 a:hover, html.sc h4 a:hover {
+    color: #2c2c2c;
+    text-decoration: underline; }
+  html.sc a:link, html.sc a:visited {
+    color: #005ea5;
+    text-decoration: none; }
+  html.sc a:hover {
+    text-decoration: underline; }
   html.sc .clearable {
     background: #fafafa url("ui/close-ico.png") no-repeat right -10px center;
     border: 1px solid #999999;
@@ -2512,11 +2522,6 @@ html.sc {
     -webkit-border-radius: 5px; }
   html.sc .lt-ie9 img, html.sc .lt-ie9 object {
     height: 100% !important; }
-  html.sc a:link, html.sc a:visited {
-    color: #005ea5;
-    text-decoration: none; }
-  html.sc a:hover {
-    text-decoration: underline; }
   html.sc #outer-wrap {
     position: relative;
     overflow: hidden;
@@ -2678,8 +2683,6 @@ html.sc {
     font-weight: normal;
     line-height: 27px;
     line-height: 1.5rem;
-    font-size: 19px;
-    font-size: 1.05556rem;
     margin-bottom: 13.5px;
     margin-bottom: 0.75rem; }
     html.sc .entry-meta a:link, html.sc .entry-meta a:visited, html.sc .entry-meta a:active {
@@ -2847,9 +2850,9 @@ html.sc {
       font-size: 22px;
       font-size: 1.22222rem;
       font-weight: normal;
-      color: gray;
-      line-height-size: 27px;
-      line-height-size: 1.5rem; }
+      color: #2c2c2c;
+      margin-bottom: 0px;
+      margin-bottom: 0rem; }
     html.sc div#secondary form[role=search] {
       position: relative;
       display: initial; }
@@ -2870,11 +2873,6 @@ html.sc {
         background: white url("ui/search-ico.png") no-repeat 8px center; }
       html.sc div#secondary form[role=search] input[type=submit] {
         display: none; }
-  html.sc main.site-main h1 a:link, html.sc main.site-main h1 a:visited {
-    color: #2c2c2c; }
-  html.sc main.site-main h1 a:hover {
-    color: #2c2c2c;
-    text-decoration: underline; }
   html.sc main.site-main h1.page-title {
     font-size: 36px;
     font-size: 2rem;
