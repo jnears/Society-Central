@@ -8,7 +8,7 @@
 	<header class="entry-header">
 		
 
-		<div class="entry-meta">
+		<!-- <div class="entry-meta"> -->
 			
 			<?//php echo get_avatar( get_the_author_meta( 'user_email' ), 32 ); ?>
 	
@@ -30,7 +30,7 @@
 // endif;
 ?>
 
-		</div><!-- .entry-meta -->
+		<!-- </div>.entry-meta -->
 	<h1 class="entry-title"><?php the_title(); ?></h1>
 
 	</header><!-- .entry-header -->
@@ -78,11 +78,11 @@
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'societycentral' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'societycentral' );
-				}
+				// if ( '' != $tag_list ) {
+				// 	$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'societycentral' );
+				// } else {
+				// 	$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'societycentral' );
+				// }
 
 			} // end check for categories on this blog
 
