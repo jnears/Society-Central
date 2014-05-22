@@ -46,6 +46,7 @@ Colchester CO4 3SQ<br>
 <p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
 <ul>
 <li><a href="<?php echo site_url(); ?>/archives">Archives</a></li>
+<li><a href="<?php echo site_url(); ?>/events">Events</a></li>
 <li><a href="<?php echo site_url(); ?>/author/society-central/">About</a></li>
 <li><a href="<?php echo site_url(); ?>/privacy">Privacy and Cookies</a></li>
 </ul>
