@@ -42,7 +42,6 @@
 	<!-- Dont show navigation on single page -->
 	<?php if ( ! is_single() ){?>
 	 <aside id="headlines" class="widget">
-			<h3>Headlines</h3>
 			<?php echo headline_list(10); ?>
 		</aside>
 	<?php }?>
