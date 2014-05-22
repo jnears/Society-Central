@@ -20,12 +20,12 @@ get_header(); ?>
 
 
 
-<div class="colgroup-2">
+<div class="colgroup-3">
 <?php // Get 4 featured posts ?>
 <?php
 
 $args = array(
-    'posts_per_page' => 4,
+    'posts_per_page' => 3,
     'tax_query' => array(
         array(
             'taxonomy' => 'feature',
