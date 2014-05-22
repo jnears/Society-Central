@@ -16,24 +16,24 @@ get_header(); ?>
 
 			<?php  
 
-$taxo_text = "";  
+// $taxo_text = "";  
 
-$os_list = get_the_term_list( $post->ID, 'headline', '<strong>Headlines:</strong> ', ', ', '' ); 
+// $os_list = get_the_term_list( $post->ID, 'headline', '<strong>Headlines:</strong> ', ', ', '' ); 
 
 
-if ( '' != $os_list ) {  
-$taxo_text .= "$os_list<br />\n";  
-}  
+// if ( '' != $os_list ) {  
+// $taxo_text .= "$os_list<br />\n";  
+// }  
 
-if ( '' != $taxo_text ) {  
+// if ( '' != $taxo_text ) {  
 ?>  
 <div class="entry-utility">  
 <?php  
-echo $taxo_text;  
+// echo $taxo_text;  
 ?>  
 </div>  
 <?  
-} // endif  
+// } // endif  
 ?>  
 
 			 <?//php societycentral_post_nav(); ?>
@@ -49,6 +49,6 @@ echo $taxo_text;
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<div id="secondary" role="complementary">
-<?php societycentral_posted_on(); ?>
+		<div class="entry-meta"><?php societycentral_posted_on(); ?></div> 
 </div>
 <?php get_footer(); ?>
