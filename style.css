@@ -636,7 +636,7 @@ html {
       margin-top: 0%; } }
   .colgroup-6 > .span1 {
     width: 13.66667%; }
-    @media only screen and (min-width: 769px) and (max-width: 979px) {
+    @media only screen and (max-width: 1280px) {
       .colgroup-6 > .span1 {
         width: 30.33333%; }
         .colgroup-6 > .span1:nth-child(3n+1) {
@@ -661,7 +661,7 @@ html {
           margin-top: 1.5rem; } }
   .colgroup-6 > .span2 {
     width: 30.33333%; }
-    @media only screen and (min-width: 769px) and (max-width: 979px) {
+    @media only screen and (max-width: 1280px) {
       .colgroup-6 > .span2 {
         width: 30.33333%; }
         .colgroup-6 > .span2:nth-child(3n+1) {
@@ -686,7 +686,7 @@ html {
           margin-top: 1.5rem; } }
   .colgroup-6 > .span3 {
     width: 47%; }
-    @media only screen and (min-width: 769px) and (max-width: 979px) {
+    @media only screen and (max-width: 1280px) {
       .colgroup-6 > .span3 {
         width: 30.33333%; }
         .colgroup-6 > .span3:nth-child(3n+1) {
@@ -711,7 +711,7 @@ html {
           margin-top: 1.5rem; } }
   .colgroup-6 > .span4 {
     width: 63.66667%; }
-    @media only screen and (min-width: 769px) and (max-width: 979px) {
+    @media only screen and (max-width: 1280px) {
       .colgroup-6 > .span4 {
         width: 30.33333%; }
         .colgroup-6 > .span4:nth-child(3n+1) {
@@ -736,7 +736,7 @@ html {
           margin-top: 1.5rem; } }
   .colgroup-6 > .span5 {
     width: 80.33333%; }
-    @media only screen and (min-width: 769px) and (max-width: 979px) {
+    @media only screen and (max-width: 1280px) {
       .colgroup-6 > .span5 {
         width: 30.33333%; }
         .colgroup-6 > .span5:nth-child(3n+1) {
@@ -761,7 +761,7 @@ html {
           margin-top: 1.5rem; } }
   .colgroup-6 > .span6 {
     width: 97%; }
-    @media only screen and (min-width: 769px) and (max-width: 979px) {
+    @media only screen and (max-width: 1280px) {
       .colgroup-6 > .span6 {
         width: 30.33333%; }
         .colgroup-6 > .span6:nth-child(3n+1) {
@@ -1296,8 +1296,10 @@ header[role=banner] {
   top: 0;
   left: 0;
   right: 0;
+  position: relative;
   z-index: 2;
   color: #2c2c2c;
+  background: white;
   border-top: 4px solid #2c2c2c;
   border-bottom: 1px solid #e2e2e2;
   padding: 13.5px 0px 0px 0px;
@@ -1313,7 +1315,9 @@ header[role=banner] {
     width: 80px;
     height: 72px;
     height: 4rem;
-    background: url(asset-path("iser-logo.gif", image)) no-repeat 0 50%;
+    padding: 18px;
+    padding: 1rem;
+    background: white url(asset-path("iser-logo.gif", image)) no-repeat 0 50%;
     text-indent: -3000em;
     overflow: hidden;
     display: block; }
@@ -1915,6 +1919,39 @@ img.preview {
   background-color: #dddddd;
   border-radius: 5px; }
 
+.circ-border {
+  margin-top: -10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #dddddd;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30px;
+  display: inline-block; }
+
+.hero header {
+  position: absolute;
+  color: white;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  bottom: 18px;
+  bottom: 1rem; }
+  .hero header a:link, .hero header a:visited {
+    position: relative;
+    z-index: 1;
+    color: white; }
+  .hero header a:hover {
+    color: #1e9cee; }
+  .hero header h1 {
+    margin: 0 auto 2rem auto;
+    font-size: 36px;
+    font-size: 2rem;
+    padding: 18px 72px;
+    padding: 1rem 4rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); }
+
 @font-face {
   font-family: "Officina";
   src: url("https://fast.fonts.com/dv2/2/d29a1003-aa62-4492-a4ab-3b649c7efccd.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
@@ -2030,6 +2067,8 @@ header[role=banner] nav {
       font-size: 16px;
       font-size: 0.88889rem;
       float: left;
+      margin-left: 18px;
+      margin-left: 1rem;
       line-height: 2.2rem; }
       header[role=banner] nav ol li a:link, header[role=banner] nav ol li a:visited {
         font-family: "Officina", Georgia, "Times New Roman", Times, serif;
@@ -2038,6 +2077,7 @@ header[role=banner] nav {
         padding: 0 1em;
         display: block;
         color: #2c2c2c;
+        background: white;
         text-decoration: none; }
         header[role=banner] nav ol li a:link.active, header[role=banner] nav ol li a:visited.active {
           background: #e2e2e2; }
@@ -2136,13 +2176,15 @@ nav.breadcrumb {
     padding-left: 0rem; }
     nav.breadcrumb ol li {
       float: left;
-      color: gray;
+      color: #cccccc;
       font-size: 14px;
       font-size: 0.77778rem;
       line-height: 14.0px;
       line-height: 0.77778rem; }
       nav.breadcrumb ol li:not(:last-of-type):after {
         content: "\E602\003E\E602"; }
+      nav.breadcrumb ol li a:link, nav.breadcrumb ol li a:visited {
+        font-weight: bold; }
 
 main {
   position: relative; }
@@ -2300,10 +2342,13 @@ footer[role=contentinfo] {
   footer[role=contentinfo] nav.utilities {
     float: right; }
     footer[role=contentinfo] nav.utilities ul li {
+      font-size: 14px;
+      font-size: 0.77778rem;
       list-style-type: none;
-      display: inline;
-      margin-right: 18px;
-      margin-right: 1rem; }
+      float: left;
+      margin-left: 9px;
+      margin-left: 0.5rem;
+      vertical-align: middle; }
   footer[role=contentinfo] a.esrc {
     float: left;
     margin-right: 36px;
@@ -2323,8 +2368,20 @@ footer[role=contentinfo] {
     text-indent: -3000em;
     background: url(asset-path("university_of_essex.svg", image)) no-repeat 50% 50%; }
 
+.font20 {
+  font-size: 20px;
+  font-size: 1.11111rem; }
+
+.font18 {
+  font-size: 18px;
+  font-size: 1rem; }
+
 img {
   width: 100%; }
+
+.hero {
+  margin-top: -36px;
+  margin-top: -2rem; }
 
 .stories p {
   font-size: 16.0px;
@@ -2719,6 +2776,46 @@ html.sc {
         background: #1e9cee; }
     html.sc .entry-meta time:before {
       content: " - "; }
+  html.sc #tribe-events .tribe-events-content p, html.sc #tribe-events .tribe-events-before-html p, html.sc #tribe-events .tribe-events-after-html p {
+    margin: 0 0 1.5rem 0;
+    line-height: 1.5rem; }
+  html.sc .events-list .tribe-events-loop {
+    max-width: 100%;
+    margin: 0; }
+  html.sc .tribe-events-list-separator-month {
+    display: none; }
+  html.sc .tribe-events-list .excerpt p {
+    margin-bottom: 0; }
+  html.sc .single-tribe_events .tribe-events-event-meta {
+    padding: 0.75rem;
+    text-align: left;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    font-size: 100%;
+    margin-top: 1.5rem; }
+    html.sc .single-tribe_events .tribe-events-event-meta dl {
+      margin-top: 1.5rem;
+      font-size: 16px;
+      font-size: 0.88889rem; }
+    html.sc .single-tribe_events .tribe-events-event-meta abbr[title] {
+      border-bottom: 0; }
+    html.sc .single-tribe_events .tribe-events-event-meta .tribe-events-meta-group {
+      width: 100%;
+      padding: 0;
+      margin: 0; }
+  html.sc .single-tribe_events .tribe-events-venue-map {
+    width: 100%;
+    margin: 0; }
+  html.sc .single-tribe_events .tribe-events-single-section-title {
+    margin: 0; }
+  html.sc .event-meta-group {
+    zoom: 1;
+    vertical-align: top; }
+  html.sc .tribe-events-sub-nav li a {
+    background: none; }
+  html.sc .tribe-events-list-separator-month + .vevent.hentry.tribe-events-first {
+    padding-top: 0; }
   @media only screen and (max-width: 480px) {
     html.sc blockquote.pull-quote {
       margin: 0px 0px 27px 0px;
@@ -2797,7 +2894,7 @@ html.sc {
     max-width: 1185px; }
     @media only screen and (max-width: 480px) {
       html.sc div#content {
-        width: 100%; } }
+        width: 96%; } }
   html.sc div#primary {
     float: left;
     width: 70%; }
@@ -2819,10 +2916,6 @@ html.sc {
       margin-left: 0;
       font-size: 18px;
       font-size: 1rem; }
-      @media only screen and (max-width: 480px) {
-        html.sc div#secondary aside {
-          margin-left: 9px;
-          margin-left: 0.5rem; } }
       html.sc div#secondary aside p.lead {
         color: gray;
         font-style: italic; }
@@ -2833,16 +2926,26 @@ html.sc {
       html.sc div#secondary aside#headlines {
         display: none; } }
     @media only screen and (max-width: 768px) {
-      html.sc div#secondary aside#events {
-        border-top: 2px solid #cccccc;
-        padding-top: 27px;
-        padding-top: 1.5rem; } }
-    html.sc div#secondary aside#events ul {
+      html.sc div#secondary aside#events-list {
+        border-top: 2px solid #cccccc; } }
+    html.sc div#secondary aside#events-list ol {
       padding-left: 0; }
-      html.sc div#secondary aside#events ul li {
-        margin-bottom: 1.5rem;
-        list-style-type: none; }
-        html.sc div#secondary aside#events ul li span {
+      html.sc div#secondary aside#events-list ol li {
+        padding: 13.5px 0px;
+        padding: 0.75rem 0rem;
+        list-style-type: none;
+        position: relative;
+        padding-left: 80px; }
+        html.sc div#secondary aside#events-list ol li .entry-meta {
+          margin-bottom: 0px;
+          margin-bottom: 0rem;
+          position: absolute;
+          width: 70px;
+          left: 0;
+          top: 0.75rem;
+          border-right: 1px solid #cccccc;
+          padding: 3px; }
+        html.sc div#secondary aside#events-list ol li span {
           color: gray;
           font-size: 16px;
           font-size: 0.88889rem; }
@@ -2853,6 +2956,9 @@ html.sc {
       color: #2c2c2c;
       margin-bottom: 0px;
       margin-bottom: 0rem; }
+    html.sc div#secondary h4 {
+      font-size: 20px;
+      font-size: 1.11111rem; }
     html.sc div#secondary form[role=search] {
       position: relative;
       display: initial; }
@@ -2909,6 +3015,10 @@ html.sc {
     position: relative;
     margin-bottom: 54px;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 480px) {
+      html.sc main.site-main article {
+        margin-bottom: 27px;
+        margin-bottom: 1.5rem; } }
     html.sc main.site-main article.featured {
       background-color: #f2f2f2;
       min-height: 378px;

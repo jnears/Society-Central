@@ -26,9 +26,9 @@
 
 <li class="tribe-events-list-widget-events <?php tribe_events_event_classes() ?>">
 	
-	<div itemscope itemtype="http://data-vocabulary.org/Event">
+	
 	<h4 class="entry-title summary">
-			<a href="<?php echo tribe_get_event_link(); ?>" rel="bookmark" itemprop="url"><span itemprop="summary"><?php the_title(); ?></span></a>
+			<a href="<?php echo tribe_get_event_link(); ?>" rel="bookmark"><?php the_title(); ?></a>
 	</h4>
 	
 	<?php do_action( 'tribe_events_list_widget_after_the_event_title' ); ?>	
@@ -40,10 +40,10 @@
 		<?php echo tribe_events_event_schedule_details(); ?>
 	</div>
 
-	<span itemprop="description" >
+	<div class="excerpt">
 		<?php echo tribe_events_get_the_excerpt(); ?>
 	</div>
 	
 	<?php do_action( 'tribe_events_list_widget_before_the_meta' ) ?>
-	</div>
+	
 </li>
