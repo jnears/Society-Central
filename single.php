@@ -7,13 +7,13 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main single-post" role="main">
+	
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
+<div id="primary" class="content-area">
+		<main id="main" class="site-main single-post" role="main">
 			<?php get_template_part( 'content', 'single' ); ?>
-
+			
 			<?php  
 
 // $taxo_text = "";  
@@ -44,11 +44,21 @@ get_header(); ?>
 			comments_template( '', true );
 			?>
 
-		<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
+	</main><!-- #main -->
 	</div><!-- #primary -->
 	<div id="secondary" role="complementary">
+		<aside id="meta">
 		<div class="entry-meta"><?php societycentral_posted_on(); ?></div> 
+		<a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>">Share on twitter</a>
+
+<a title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>">Share on faceboook</a>
+<a title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>">Email this</a>
+<a id="embed-link" title="Embed link"  onclick="select_all(this)" href="#">Embed</a>
+<div id="embed-modal" ><textarea wrap="soft" rows="3" cols="25" id="embed-text" name="embed-link" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?></textarea>
 </div>
+</aside>
+</div>
+		<?php endwhile; // end of the loop. ?>
+
+	
 <?php get_footer(); ?>

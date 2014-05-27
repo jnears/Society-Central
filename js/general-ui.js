@@ -1,17 +1,33 @@
 jQuery(document).ready(function( $ ){
 
   $("html").removeClass("no-js");
+
+  
+
   
 	$( "#show-grid" ).click(function() {
 	$( "html" ).toggleClass( "grid" );
+
+
 });
 
+  
+
 	$( "#nav-search-btn" ).click(function() {
-	$( this ).toggleClass('active');
+	  $( this ).toggleClass('active');
   	$( "#search" ).toggleClass('show');
   	$( "#s" ).focus();
   	event.preventDefault()
-});
+  });
+
+  $( "#embed-link" ).click(function() {
+    $( this ).toggleClass('active');
+    $( "#embed-modal" ).toggleClass('show');
+    $("#embed-text").select();
+    event.preventDefault()
+  });
+
+
 
 //   	$( "#site-navigation .menu-toggle" ).click(function() {
 // 	$( this ).toggleClass('active');
