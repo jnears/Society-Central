@@ -58,7 +58,7 @@
 
         <li>
             <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
-            <?php the_title(); ?></a>,
+            <?php the_title(); ?></a>
   			<!--  <div class="entry-meta"><span class="posted-on"><time class="entry-date published" datetime="%1$s"><?php the_time('d M Y'); ?></time></span> in <?php the_category(' ');?></div> -->
   		</li>
 

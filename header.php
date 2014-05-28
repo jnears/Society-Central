@@ -36,8 +36,10 @@
 
 <header id="masthead" class="site-header" role="banner">
 <div class="site-branding">
-<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+	<a id="nav-menu-btn" class="nav-btn closed circ-border" href="/"><i class="fa fa-bars"></i></a>
+	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+	<a id="nav-search-btn" class="search-toggle circ-border " href="/search"><i class="fa fa-search"></i></a>
 </div>
 
 <!-- <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -53,7 +55,7 @@
 
 <?php get_search_form(); ?>
 </header><!-- #masthead -->
-<a id="nav-menu-btn" class="nav-btn closed" href="/">Menu</a>
+
 <?php echo headline_list(10); ?>
-<a id="nav-search-btn" class="search-toggle active" href="/search">Search</a>
+
 <div id="content" class="site-content">

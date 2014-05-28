@@ -284,15 +284,17 @@ html {
   float: left;
   min-height: 1px;
   margin-left: 3%; }
-  [class*="span"] *:first-of-type {
+  [class*="span"] span:first-of-type {
     margin-top: 0; }
-  [class*="span"] *:last-of-type {
+  [class*="span"] span:last-of-type {
     margin-bottom: 0; }
 
 .container {
   margin: 3% auto;
   margin: 0 auto;
-  width: 90%; }
+  width: 90%;
+  position: relative;
+  overflow: auto; }
   @media only screen and (max-width: 480px) {
     .container {
       width: 92%; } }
@@ -1900,11 +1902,6 @@ fieldset.property {
 img.preview {
   max-width: 200px; }
 
-.meta {
-  color: gray;
-  font-size: 14.4px;
-  font-size: 0.8rem; }
-
 .badge {
   display: inline-block;
   min-width: 10px;
@@ -2186,30 +2183,28 @@ nav.breadcrumb {
       nav.breadcrumb ol li a:link, nav.breadcrumb ol li a:visited {
         font-weight: bold; }
 
-main {
-  position: relative; }
-  @media only screen and (max-width: 768px) {
-    main {
-      float: none;
-      width: auto;
-      margin-left: 9px;
-      margin-left: 0.5rem;
-      margin-right: 9px;
-      margin-right: 0.5rem; } }
+nav.related ol {
+  padding-left: 0px;
+  padding-left: 0rem; }
+  nav.related ol li {
+    font-weight: bold;
+    list-style-type: none;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 16px;
+    font-size: 0.88889rem; }
+    nav.related ol li a:link, nav.related ol li a:visited {
+      display: block;
+      padding: 0.5em 0; }
 
-section.main {
-  float: left;
-  max-width: 540px;
-  max-width: 30rem;
-  margin: 0 auto 0 10%; }
-  @media only screen and (max-width: 768px) {
-    section.main {
-      float: none;
-      width: auto;
-      margin-left: 9px;
-      margin-left: 0.5rem;
-      margin-right: 9px;
-      margin-right: 0.5rem; } }
+main {
+  max-width: 630px;
+  max-width: 35rem;
+  margin: 0 auto; }
+
+div.meta {
+  font-size: 14px;
+  font-size: 0.77778rem;
+  color: gray !important; }
 
 body.app main {
   float: none;
@@ -2218,18 +2213,6 @@ body.app main {
   max-width: none;
   margin-left: auto;
   margin-right: auto; }
-
-aside {
-  float: left;
-  right: 5%;
-  top: 0px;
-  width: 300px;
-  margin-left: 90px;
-  margin-left: 5rem;
-  width: 360px;
-  width: 20rem;
-  font-size: 14px;
-  font-size: 0.77778rem; }
 
 a#show-grid {
   position: fixed;
@@ -2531,193 +2514,193 @@ img {
 .pygment .il {
   color: #666666; }
 
-html.sc {
+html.sc h1 {
+  font-size: 36px;
+  font-size: 2rem; }
+  html.sc h1 span {
+    font-size: 25px;
+    font-size: 1.38889rem;
+    line-height: 27px;
+    line-height: 1.5rem; }
+html.sc h2 {
+  font-size: 30px;
+  font-size: 1.66667rem; }
+html.sc h1 a:link, html.sc h1 a:visited, html.sc h2 a:link, html.sc h2 a:visited, html.sc h3 a:link, html.sc h3 a:visited, html.sc h4 a:link, html.sc h4 a:visited {
+  color: #2c2c2c; }
+html.sc h1 a:hover, html.sc h2 a:hover, html.sc h3 a:hover, html.sc h4 a:hover {
+  color: #2c2c2c;
+  text-decoration: underline; }
+html.sc a:link, html.sc a:visited {
+  color: #005ea5;
+  text-decoration: none; }
+html.sc a:hover {
+  text-decoration: underline; }
+html.sc .clearable {
+  background: #fafafa url("ui/close-ico.png") no-repeat right -10px center;
+  border: 1px solid #999999;
+  padding: 3px 18px 3px 4px;
+  border-radius: 3px;
+  transition: background 0.4s; }
+html.sc .clearable.x {
+  background-position: right 10px center; }
+html.sc .clearable.onX {
+  cursor: pointer; }
+@media only screen and (max-width: 480px) {
+  html.sc {
+    font-size: 18px;
+    font-size: 1rem; } }
+html.sc img, html.sc object {
+  border: 0;
+  width: 100%;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+  height: auto !important;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+html.sc .lt-ie9 img, html.sc .lt-ie9 object {
+  height: 100% !important; }
+html.sc .lt-ie8 img, html.sc .lt-ie8 object {
   height: auto !important; }
-  html.sc h1 {
-    font-size: 36px;
-    font-size: 2rem; }
-    html.sc h1 span {
-      font-size: 25px;
-      font-size: 1.38889rem;
-      line-height: 27px;
-      line-height: 1.5rem; }
-  html.sc h2 {
-    font-size: 30px;
-    font-size: 1.66667rem; }
-  html.sc h1 a:link, html.sc h1 a:visited, html.sc h2 a:link, html.sc h2 a:visited, html.sc h3 a:link, html.sc h3 a:visited, html.sc h4 a:link, html.sc h4 a:visited {
-    color: #2c2c2c; }
-  html.sc h1 a:hover, html.sc h2 a:hover, html.sc h3 a:hover, html.sc h4 a:hover {
-    color: #2c2c2c;
-    text-decoration: underline; }
-  html.sc a:link, html.sc a:visited {
-    color: #005ea5;
-    text-decoration: none; }
-  html.sc a:hover {
-    text-decoration: underline; }
-  html.sc .clearable {
-    background: #fafafa url("ui/close-ico.png") no-repeat right -10px center;
-    border: 1px solid #999999;
-    padding: 3px 18px 3px 4px;
-    border-radius: 3px;
-    transition: background 0.4s; }
-  html.sc .clearable.x {
-    background-position: right 10px center; }
-  html.sc .clearable.onX {
-    cursor: pointer; }
+html.sc #outer-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #2c2c2c; }
+html.sc #inner-wrap {
+  position: relative;
+  width: 100%; }
+  html.sc #inner-wrap #page {
+    background: white; }
+  html.sc #inner-wrap #page > nav.categories {
+    left: -70%;
+    position: absolute;
+    width: 70%;
+    top: 0;
+    padding-top: 72px;
+    padding-top: 4rem;
+    background: #2c2c2c; }
+    html.sc #inner-wrap #page > nav.categories ol {
+      margin-bottom: 0;
+      padding-left: 0; }
+      html.sc #inner-wrap #page > nav.categories ol li {
+        list-style-type: none;
+        float: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        line-height: 3rem;
+        text-align: left; }
+        html.sc #inner-wrap #page > nav.categories ol li a:link, html.sc #inner-wrap #page > nav.categories ol li a:visited {
+          padding: 13px;
+          padding: 0.72222rem;
+          line-height: 27px;
+          line-height: 1.5rem;
+          font-weight: normal;
+          color: white;
+          display: block; }
+        html.sc #inner-wrap #page > nav.categories ol li a:hover, html.sc #inner-wrap #page > nav.categories ol li a.active {
+          background: gray;
+          color: white;
+          text-decoration: none; }
+html.sc header[role=banner] {
+  border-top: 0px;
+  border-bottom: 1px solid #cccccc;
+  padding-top: 0;
+  min-height: 126px;
+  min-height: 7rem;
+  text-align: center;
+  margin-bottom: 45px;
+  margin-bottom: 2.5rem;
+  background: #f2f2f2;
+  position: relative; }
   @media only screen and (max-width: 480px) {
-    html.sc {
-      font-size: 18px;
-      font-size: 1rem; } }
-  html.sc img, html.sc object {
-    border: 0;
-    width: 100%;
-    -ms-interpolation-mode: bicubic;
-    vertical-align: middle;
-    height: auto !important;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px; }
-  html.sc .lt-ie9 img, html.sc .lt-ie9 object {
-    height: 100% !important; }
-  html.sc #outer-wrap {
+    html.sc header[role=banner] {
+      margin-bottom: 18px;
+      margin-bottom: 1rem; } }
+  html.sc header[role=banner] .site-branding {
+    margin: 0 auto;
+    width: 90%;
     position: relative;
     overflow: hidden;
-    width: 100%;
-    background: #2c2c2c; }
-  html.sc #inner-wrap {
-    position: relative;
-    width: 100%; }
-    html.sc #inner-wrap #page {
-      background: white; }
-      html.sc #inner-wrap #page #nav-search-btn {
-        z-index: 99999;
-        position: absolute;
-        top: 0;
-        right: 10px;
-        padding-top: 27px;
-        padding-top: 1.5rem;
-        line-height: 54px;
-        line-height: 3rem; }
-      html.sc #inner-wrap #page #nav-menu-btn {
-        display: none;
-        z-index: 99999;
-        position: absolute;
-        top: 0;
-        left: 10px;
-        padding-top: 27px;
-        padding-top: 1.5rem;
-        line-height: 54px;
-        line-height: 3rem; }
-        @media only screen and (max-width: 480px) {
-          html.sc #inner-wrap #page #nav-menu-btn {
-            display: inline; } }
-        @media only screen and (max-width: 768px) {
-          html.sc #inner-wrap #page #nav-menu-btn {
-            display: inline; } }
-    html.sc #inner-wrap #page > nav.categories {
-      left: -70%;
-      position: absolute;
-      width: 70%;
-      top: 0;
-      padding-top: 72px;
-      padding-top: 4rem;
-      background: #2c2c2c; }
-      html.sc #inner-wrap #page > nav.categories ol {
-        margin-bottom: 0;
-        padding-left: 0; }
-        html.sc #inner-wrap #page > nav.categories ol li {
-          list-style-type: none;
-          float: none;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-          line-height: 3rem;
-          text-align: left; }
-          html.sc #inner-wrap #page > nav.categories ol li a:link, html.sc #inner-wrap #page > nav.categories ol li a:visited {
-            padding: 13px;
-            padding: 0.72222rem;
-            line-height: 27px;
-            line-height: 1.5rem;
-            font-weight: normal;
-            color: white;
-            display: block; }
-          html.sc #inner-wrap #page > nav.categories ol li a:hover, html.sc #inner-wrap #page > nav.categories ol li a.active {
-            background: gray;
-            color: white;
-            text-decoration: none; }
-  html.sc header[role=banner] {
-    border-top: 0px;
-    border-bottom: 1px solid #cccccc;
-    padding-top: 0;
-    min-height: 126px;
-    min-height: 7rem;
-    text-align: center;
-    margin-bottom: 45px;
-    margin-bottom: 2.5rem;
-    background: #f2f2f2;
-    position: relative; }
+    max-width: 1185px; }
     @media only screen and (max-width: 480px) {
-      html.sc header[role=banner] {
-        margin-bottom: 18px;
-        margin-bottom: 1rem; } }
-    html.sc header[role=banner] .container {
-      height: 130px;
-      padding-right: 0; }
-    html.sc header[role=banner] h1 {
-      text-transform: uppercase;
-      font-size: 34px;
-      font-size: 1.88889rem;
-      margin: 0px;
-      margin: 0rem;
-      padding-top: 27px;
-      padding-top: 1.5rem;
-      font-family: "Officina", Georgia, "Times New Roman", Times, serif; }
-      @media only screen and (max-width: 480px) {
-        html.sc header[role=banner] h1 {
-          font-size: 26px;
-          font-size: 1.44444rem; } }
-      html.sc header[role=banner] h1 a:link, html.sc header[role=banner] h1 a:visited {
-        padding: 5px 20px;
-        color: white;
-        background: #2c2c2c;
-        text-decoration: none; }
-      html.sc header[role=banner] h1 a:hover {
-        text-decoration: none;
-        background: gray; }
-    html.sc header[role=banner] h2 {
-      font-family: "Officina", Georgia, "Times New Roman", Times, serif;
-      font-weight: normal;
+      html.sc header[role=banner] .site-branding {
+        width: 96%; } }
+    html.sc header[role=banner] .site-branding #nav-menu-btn {
+      display: none;
+      position: absolute;
+      top: 50px;
+      top: 2.77778rem;
+      left: 0; }
+      @media only screen and (max-width: 768px) {
+        html.sc header[role=banner] .site-branding #nav-menu-btn {
+          display: inline;
+          z-index: 99999; } }
+    html.sc header[role=banner] .site-branding #nav-search-btn {
+      position: absolute;
+      top: 50px;
+      top: 2.77778rem;
+      right: 0; }
+  html.sc header[role=banner] .container {
+    height: 130px;
+    padding-right: 0; }
+  html.sc header[role=banner] h1 {
+    text-transform: uppercase;
+    font-size: 34px;
+    font-size: 1.88889rem;
+    margin: 0px;
+    margin: 0rem;
+    padding-top: 27px;
+    padding-top: 1.5rem;
+    font-family: "Officina", Georgia, "Times New Roman", Times, serif; }
+    @media only screen and (max-width: 480px) {
+      html.sc header[role=banner] h1 {
+        font-size: 26px;
+        font-size: 1.44444rem; } }
+    html.sc header[role=banner] h1 a:link, html.sc header[role=banner] h1 a:visited {
+      padding: 5px 20px;
+      padding: 0.27778rem 1.11111rem;
+      color: white;
+      background: #2c2c2c;
+      text-decoration: none; }
+    html.sc header[role=banner] h1 a:hover {
+      text-decoration: none;
+      background: gray; }
+  html.sc header[role=banner] h2 {
+    font-family: "Officina", Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    color: gray;
+    font-size: 22px;
+    font-size: 1.22222rem;
+    line-height: 27px;
+    line-height: 1.5rem;
+    margin: 0; }
+    @media only screen and (max-width: 480px) {
+      html.sc header[role=banner] h2 {
+        font-size: 18px;
+        font-size: 1rem;
+        margin: 0; } }
+  html.sc header[role=banner] div.social-links {
+    position: absolute;
+    left: 0;
+    bottom: 0px; }
+    html.sc header[role=banner] div.social-links a:link, html.sc header[role=banner] div.social-links a:active, html.sc header[role=banner] div.social-links a:visited {
       color: gray;
-      font-size: 24px;
-      font-size: 1.33333rem;
-      line-height: 18px;
-      line-height: 1rem;
-      margin: 5px 0 0 0; }
-      @media only screen and (max-width: 480px) {
-        html.sc header[role=banner] h2 {
-          font-size: 18px;
-          font-size: 1rem;
-          margin: 0; } }
-    html.sc header[role=banner] div.social-links {
-      position: absolute;
-      left: 0;
-      bottom: 0px; }
-      html.sc header[role=banner] div.social-links a:link, html.sc header[role=banner] div.social-links a:active, html.sc header[role=banner] div.social-links a:visited {
-        color: gray;
-        padding: 9px;
-        padding: 0.5rem; }
-      html.sc header[role=banner] div.social-links a:hover {
-        color: #1e9cee; }
-    html.sc header[role=banner] div.util-links {
-      position: absolute;
-      right: 0;
-      bottom: 0px; }
-      html.sc header[role=banner] div.util-links a:link, html.sc header[role=banner] div.util-links a:active, html.sc header[role=banner] div.util-links a:visited {
-        padding: 9px;
-        padding: 0.5rem;
-        color: gray; }
-      html.sc header[role=banner] div.util-links a:hover {
-        color: #1e9cee; }
-    html.sc header[role=banner] nav.categories {
-      float: none; }
+      padding: 9px;
+      padding: 0.5rem; }
+    html.sc header[role=banner] div.social-links a:hover {
+      color: #1e9cee; }
+  html.sc header[role=banner] div.util-links {
+    position: absolute;
+    right: 0;
+    bottom: 0px; }
+    html.sc header[role=banner] div.util-links a:link, html.sc header[role=banner] div.util-links a:active, html.sc header[role=banner] div.util-links a:visited {
+      padding: 9px;
+      padding: 0.5rem;
+      color: gray; }
+    html.sc header[role=banner] div.util-links a:hover {
+      color: #1e9cee; }
+  html.sc header[role=banner] nav.categories {
+    float: none; }
     html.sc header[role=banner] nav.categories ol {
       display: none;
       margin-bottom: 0; }
@@ -2725,587 +2708,625 @@ html.sc {
         list-style-type: none;
         float: none;
         border-bottom: 1px solid white;
+        line-height: 54px;
         line-height: 3rem;
         text-align: left; }
         html.sc header[role=banner] nav.categories ol li a:link, html.sc header[role=banner] nav.categories ol li a:visited {
+          padding-left: 18px;
           padding-left: 1rem;
+          padding-right: 18px;
           padding-right: 1rem;
           font-weight: normal; }
         html.sc header[role=banner] nav.categories ol li a:hover {
           background: #74a290;
           color: white; }
-  html.sc .entry-meta {
+html.sc .entry-meta {
+  color: gray;
+  font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  line-height: 27px;
+  line-height: 1.5rem;
+  margin-bottom: 13.5px;
+  margin-bottom: 0.75rem; }
+  html.sc .entry-meta a:link, html.sc .entry-meta a:visited, html.sc .entry-meta a:active {
     color: gray;
-    font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
-    font-weight: normal;
-    line-height: 27px;
-    line-height: 1.5rem;
-    margin-bottom: 13.5px;
-    margin-bottom: 0.75rem; }
-    html.sc .entry-meta a:link, html.sc .entry-meta a:visited, html.sc .entry-meta a:active {
-      color: gray;
-      text-decoration: none; }
-    html.sc .entry-meta a:hover {
-      color: #2c2c2c;
-      text-decoration: underline; }
-    html.sc .entry-meta i.tag {
-      position: relative;
-      margin-top: 0px;
-      margin-top: 0rem; }
-    html.sc .entry-meta a.tag {
-      position: absolute;
-      left: -128px;
-      z-index: 1;
-      top: 145px;
-      font-weight: bold;
-      border-radius: 5px;
-      min-width: 84px;
-      text-align: center;
-      font-size: 12px;
-      font-size: 0.66667rem;
-      padding: 4.5px 4.5px 4.5px 6.3px;
-      padding: 0.25rem 0.25rem 0.25rem 0.35rem;
-      line-height: 0px;
-      line-height: 0rem;
-      font-style: normal;
-      text-decoration: none;
-      box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25);
-      background: gray;
-      color: white; }
-      html.sc .entry-meta a.tag:hover {
-        background: #1e9cee; }
-    html.sc .entry-meta time:before {
-      content: " - "; }
-  html.sc #tribe-events .tribe-events-content p, html.sc #tribe-events .tribe-events-before-html p, html.sc #tribe-events .tribe-events-after-html p {
-    margin: 0 0 1.5rem 0;
-    line-height: 1.5rem; }
-  html.sc .events-list .tribe-events-loop {
-    max-width: 100%;
-    margin: 0; }
-  html.sc .tribe-events-list-separator-month {
-    display: none; }
-  html.sc .tribe-events-list .excerpt p {
-    margin-bottom: 0; }
-  html.sc .single-tribe_events .tribe-events-event-meta {
-    padding: 0.75rem;
-    text-align: left;
-    margin: 0;
-    display: inline-block;
-    width: 100%;
-    font-size: 100%;
-    margin-top: 1.5rem; }
-    html.sc .single-tribe_events .tribe-events-event-meta dl {
-      margin-top: 1.5rem;
-      font-size: 16px;
-      font-size: 0.88889rem; }
-    html.sc .single-tribe_events .tribe-events-event-meta abbr[title] {
-      border-bottom: 0; }
-    html.sc .single-tribe_events .tribe-events-event-meta .tribe-events-meta-group {
-      width: 100%;
-      padding: 0;
-      margin: 0; }
-  html.sc .single-tribe_events .tribe-events-venue-map {
-    width: 100%;
-    margin: 0; }
-  html.sc .single-tribe_events .tribe-events-single-section-title {
-    margin: 0; }
-  html.sc .event-meta-group {
-    zoom: 1;
-    vertical-align: top; }
-  html.sc .tribe-events-sub-nav li a {
-    background: none; }
-  html.sc .tribe-events-list-separator-month + .vevent.hentry.tribe-events-first {
-    padding-top: 0; }
-  @media only screen and (max-width: 480px) {
-    html.sc blockquote.pull-quote {
-      margin: 0px 0px 27px 0px;
-      margin: 0rem 0rem 1.5rem 0rem;
-      width: 100%;
-      float: none; } }
-  html.sc main {
+    text-decoration: none; }
+  html.sc .entry-meta a:hover {
+    color: #2c2c2c;
+    text-decoration: underline; }
+  html.sc .entry-meta i.tag {
+    position: relative;
     margin-top: 0px;
     margin-top: 0rem; }
-  html.sc aside#headlines nav {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-bottom: 26px;
-    margin-bottom: 1.44444rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    font-size: 16px;
-    font-size: 0.88889rem;
-    position: relative;
-    right: 0;
-    width: 100%; }
-    html.sc aside#headlines nav ol {
-      padding: 0;
-      margin: 0px;
-      margin: 0rem; }
-      html.sc aside#headlines nav ol li {
-        list-style-type: none;
-        margin: 0px;
-        margin: 0rem;
-        border-top: 1px solid #cccccc; }
-        html.sc aside#headlines nav ol li:last-of-type {
-          border-bottom: 1px solid #cccccc; }
-        html.sc aside#headlines nav ol li a:link {
-          font-size: 18px;
-          font-size: 1rem;
-          padding: 13px;
-          padding: 0.72222rem;
-          background: #f2f2f2;
-          display: block; }
-        html.sc aside#headlines nav ol li a:link, html.sc aside#headlines nav ol li a:visited {
-          text-decoration: none;
-          color: #2c2c2c; }
-        html.sc aside#headlines nav ol li a:hover, html.sc aside#headlines nav ol li a.active {
-          text-decoration: none;
-          background: #dfdfdf;
-          color: #2c2c2c; }
-    html.sc aside#headlines nav p:last-of-type {
-      margin-bottom: 0; }
-    html.sc aside#headlines nav article:not(:last-of-type) {
-      border-bottom: 1px solid black; }
-    html.sc aside#headlines nav h1 {
-      font-size: 20px;
-      font-size: 1.11111rem;
-      line-height: 36px;
-      line-height: 2rem;
-      margin-bottom: 9px;
-      margin-bottom: 0.5rem;
-      clear: both;
-      color: gray; }
-    html.sc aside#headlines nav h2 {
-      font-size: 18px;
-      font-size: 1rem;
-      line-height: 36px;
-      line-height: 2rem;
-      margin-bottom: 9px;
-      margin-bottom: 0.5rem; }
-  html.sc nav#site-navigation {
-    display: block;
-    float: none; }
-    html.sc nav#site-navigation ul li .active {
-      background: blue; }
-  html.sc div#content {
-    width: 90%;
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 1185px; }
-    @media only screen and (max-width: 480px) {
-      html.sc div#content {
-        width: 96%; } }
-  html.sc div#primary {
-    float: left;
-    width: 70%; }
-    @media only screen and (max-width: 768px) {
-      html.sc div#primary {
-        float: none;
-        width: 100%; } }
-  html.sc div#secondary {
-    float: left;
-    width: 30%;
-    padding-left: 2.33333%; }
-    @media only screen and (max-width: 768px) {
-      html.sc div#secondary {
-        float: none;
-        width: 100%;
-        padding-left: 0; } }
-    html.sc div#secondary aside {
-      width: 100%;
-      margin-left: 0;
-      font-size: 18px;
-      font-size: 1rem; }
-      html.sc div#secondary aside p.lead {
-        color: gray;
-        font-style: italic; }
-    html.sc div#secondary aside.widget_search {
-      min-height: 81px;
-      min-height: 4.5rem; }
-    @media only screen and (max-width: 768px) {
-      html.sc div#secondary aside#headlines {
-        display: none; } }
-    html.sc div#secondary aside#meta #embed-modal {
-      display: none;
-      border: 1px solid #cccccc;
-      background: #f2f2f2;
-      display: none;
-      overflow: hidden;
-      border: 2px solid #d4d4d4;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-      z-index: 1001;
-      padding: 1em; }
-    @media only screen and (max-width: 768px) {
-      html.sc div#secondary aside#events-list {
-        border-top: 2px solid #cccccc; } }
-    html.sc div#secondary aside#events-list ol {
-      padding-left: 0; }
-      html.sc div#secondary aside#events-list ol li {
-        padding: 13.5px 0px;
-        padding: 0.75rem 0rem;
-        list-style-type: none;
-        position: relative;
-        padding-left: 80px; }
-        html.sc div#secondary aside#events-list ol li .entry-meta {
-          margin-bottom: 0px;
-          margin-bottom: 0rem;
-          position: absolute;
-          width: 70px;
-          left: 0;
-          top: 0.75rem;
-          border-right: 1px solid #cccccc;
-          padding: 3px; }
-        html.sc div#secondary aside#events-list ol li span {
-          color: gray;
-          font-size: 16px;
-          font-size: 0.88889rem; }
-    html.sc div#secondary h3 {
-      font-size: 22px;
-      font-size: 1.22222rem;
-      font-weight: normal;
-      color: #2c2c2c;
-      margin-bottom: 0px;
-      margin-bottom: 0rem; }
-    html.sc div#secondary h4 {
-      font-size: 20px;
-      font-size: 1.11111rem; }
-    html.sc div#secondary form[role=search] {
+  html.sc .entry-meta a.tag {
+    position: absolute;
+    left: -128px;
+    z-index: 1;
+    top: 145px;
+    top: 8.05556rem;
+    font-weight: bold;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    min-width: 84px;
+    text-align: center;
+    font-size: 12px;
+    font-size: 0.66667rem;
+    padding: 4.5px 4.5px 4.5px 6.3px;
+    padding: 0.25rem 0.25rem 0.25rem 0.35rem;
+    line-height: 0px;
+    line-height: 0rem;
+    font-style: normal;
+    text-decoration: none;
+    box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25);
+    background: gray;
+    color: white; }
+    html.sc .entry-meta a.tag:hover {
+      background: #1e9cee; }
+  html.sc .entry-meta time:before {
+    content: " - "; }
+html.sc .meta-container {
+  position: absolute;
+  top: 13.5px;
+  top: 0.75rem;
+  right: -40%;
+  width: 30%; }
+  @media only screen and (max-width: 768px) {
+    html.sc .meta-container {
       position: relative;
-      display: initial; }
-      html.sc div#secondary form[role=search] label {
-        display: inline-block;
-        width: 100%;
-        padding: 0px;
-        padding: 0rem; }
-      html.sc div#secondary form[role=search] input[type=search] {
-        -webkit-appearance: textfield;
-        padding: 9px 4.5px 4.5px 27px;
-        padding: 0.5rem 0.25rem 0.25rem 1.5rem;
-        position: relative;
-        width: 100%;
-        border: 1px solid #e2e2e2;
-        font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
-        box-sizing: border-box;
-        background: white url("ui/search-ico.png") no-repeat 8px center; }
-      html.sc div#secondary form[role=search] input[type=submit] {
-        display: none; }
-  html.sc main.site-main h1.page-title {
+      width: 100%;
+      margin-right: 0;
+      right: 0;
+      top: 0; } }
+html.sc .social-wrapper {
+  overflow: hidden;
+  margin-left: -4px;
+  height: 54px;
+  height: 3rem; }
+  html.sc .social-wrapper ul {
+    list-style: none;
+    list-style-image: none;
+    padding: 0; }
+    html.sc .social-wrapper ul li {
+      float: left;
+      width: 36px;
+      padding: 0 4px; }
+      html.sc .social-wrapper ul li .circ-border {
+        margin-top: 0;
+        border: 1px solid #cccccc; }
+html.sc #embed-modal {
+  display: none;
+  background: #f2f2f2;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  z-index: 1001;
+  padding: 9px;
+  padding: 0.5rem;
+  max-width: 250px; }
+html.sc #tribe-events .tribe-events-content p, html.sc #tribe-events .tribe-events-before-html p, html.sc #tribe-events .tribe-events-after-html p {
+  margin: 0px 0px 27px 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+  line-height: 27px;
+  line-height: 1.5rem; }
+html.sc .events-list .tribe-events-loop {
+  max-width: 100%;
+  margin: 0; }
+html.sc .tribe-events-list-separator-month {
+  display: none; }
+html.sc .tribe-events-list .excerpt p {
+  margin-bottom: 0; }
+html.sc .single-tribe_events .tribe-events-event-meta {
+  padding: 13.5px;
+  padding: 0.75rem;
+  text-align: left;
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  font-size: 100%;
+  margin-top: 1.5rem; }
+  html.sc .single-tribe_events .tribe-events-event-meta dl {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    font-size: 0.88889rem; }
+  html.sc .single-tribe_events .tribe-events-event-meta abbr[title] {
+    border-bottom: 0; }
+  html.sc .single-tribe_events .tribe-events-event-meta .tribe-events-meta-group {
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+html.sc .single-tribe_events .tribe-events-venue-map {
+  width: 100%;
+  margin: 0; }
+html.sc .single-tribe_events .tribe-events-single-section-title {
+  margin: 0; }
+html.sc .event-meta-group {
+  zoom: 1;
+  vertical-align: top; }
+html.sc .tribe-events-sub-nav li a {
+  background: none; }
+html.sc .tribe-events-list-separator-month + .vevent.hentry.tribe-events-first {
+  padding-top: 0; }
+@media only screen and (max-width: 480px) {
+  html.sc blockquote.pull-quote {
+    margin: 0px 0px 27px 0px;
+    margin: 0rem 0rem 1.5rem 0rem;
+    width: 100%;
+    float: none; } }
+html.sc main {
+  margin: 0px;
+  margin: 0rem;
+  max-width: 100%; }
+html.sc aside#headlines nav {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 26px;
+  margin-bottom: 1.44444rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  font-size: 16px;
+  font-size: 0.88889rem;
+  position: relative;
+  right: 0;
+  width: 100%; }
+  html.sc aside#headlines nav ol {
+    padding: 0;
+    margin: 0px;
+    margin: 0rem; }
+    html.sc aside#headlines nav ol li {
+      list-style-type: none;
+      margin: 0px;
+      margin: 0rem;
+      border-top: 1px solid #cccccc; }
+      html.sc aside#headlines nav ol li:last-of-type {
+        border-bottom: 1px solid #cccccc; }
+      html.sc aside#headlines nav ol li a:link {
+        font-size: 18px;
+        font-size: 1rem;
+        padding: 13px;
+        padding: 0.72222rem;
+        background: #f2f2f2;
+        display: block; }
+      html.sc aside#headlines nav ol li a:link, html.sc aside#headlines nav ol li a:visited {
+        text-decoration: none;
+        color: #2c2c2c; }
+      html.sc aside#headlines nav ol li a:hover, html.sc aside#headlines nav ol li a.active {
+        text-decoration: none;
+        background: #dfdfdf;
+        color: #2c2c2c; }
+  html.sc aside#headlines nav p:last-of-type {
+    margin-bottom: 0; }
+  html.sc aside#headlines nav article:not(:last-of-type) {
+    border-bottom: 1px solid black; }
+  html.sc aside#headlines nav h1 {
+    font-size: 20px;
+    font-size: 1.11111rem;
+    line-height: 36px;
+    line-height: 2rem;
+    margin-bottom: 9px;
+    margin-bottom: 0.5rem;
+    clear: both;
+    color: gray; }
+  html.sc aside#headlines nav h2 {
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 36px;
+    line-height: 2rem;
+    margin-bottom: 9px;
+    margin-bottom: 0.5rem; }
+html.sc nav#site-navigation {
+  display: block;
+  float: none; }
+  html.sc nav#site-navigation ul li .active {
+    background: blue; }
+html.sc div#content {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 1185px; }
+  @media only screen and (max-width: 480px) {
+    html.sc div#content {
+      width: 96%; } }
+html.sc div#primary {
+  float: left;
+  width: 70%; }
+  @media only screen and (max-width: 768px) {
+    html.sc div#primary {
+      float: none;
+      width: 100%; } }
+html.sc div#secondary {
+  float: left;
+  width: 30%;
+  padding-left: 2.33333%; }
+  @media only screen and (max-width: 768px) {
+    html.sc div#secondary {
+      float: none;
+      width: 100%;
+      padding-left: 0; } }
+  html.sc div#secondary aside {
+    width: 100%;
+    margin-left: 0;
+    font-size: 18px;
+    font-size: 1rem; }
+    html.sc div#secondary aside p.lead {
+      color: gray;
+      font-style: italic; }
+  html.sc div#secondary aside.widget_search {
+    min-height: 81px;
+    min-height: 4.5rem; }
+  @media only screen and (max-width: 768px) {
+    html.sc div#secondary aside#headlines {
+      display: none; } }
+  @media only screen and (max-width: 768px) {
+    html.sc div#secondary aside#events-list {
+      border-top: 2px solid #cccccc; } }
+  html.sc div#secondary aside#events-list ol {
+    padding-left: 0; }
+    html.sc div#secondary aside#events-list ol li {
+      padding: 13.5px 0px;
+      padding: 0.75rem 0rem;
+      list-style-type: none;
+      position: relative;
+      padding-left: 80px; }
+      html.sc div#secondary aside#events-list ol li .entry-meta {
+        margin-bottom: 0px;
+        margin-bottom: 0rem;
+        position: absolute;
+        width: 70px;
+        left: 0;
+        top: 0.75rem;
+        border-right: 1px solid #cccccc;
+        padding: 3px; }
+      html.sc div#secondary aside#events-list ol li span {
+        color: gray;
+        font-size: 16px;
+        font-size: 0.88889rem; }
+  html.sc div#secondary h3 {
+    font-size: 22px;
+    font-size: 1.22222rem;
+    font-weight: normal;
+    color: #2c2c2c;
+    margin-bottom: 0px;
+    margin-bottom: 0rem; }
+  html.sc div#secondary h4 {
+    font-size: 20px;
+    font-size: 1.11111rem; }
+  html.sc div#secondary form[role=search] {
+    position: relative;
+    display: initial; }
+    html.sc div#secondary form[role=search] label {
+      display: inline-block;
+      width: 100%;
+      padding: 0px;
+      padding: 0rem; }
+    html.sc div#secondary form[role=search] input[type=search] {
+      -webkit-appearance: textfield;
+      padding: 9px 4.5px 4.5px 27px;
+      padding: 0.5rem 0.25rem 0.25rem 1.5rem;
+      position: relative;
+      width: 100%;
+      border: 1px solid #e2e2e2;
+      font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
+      box-sizing: border-box;
+      background: white url("ui/search-ico.png") no-repeat 8px center; }
+    html.sc div#secondary form[role=search] input[type=submit] {
+      display: none; }
+html.sc main.site-main h1.page-title {
+  font-size: 36px;
+  font-size: 2rem;
+  line-height: 54px;
+  line-height: 3rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem;
+  clear: both; }
+html.sc main.site-main article.single-post {
+  margin: 0px;
+  margin: 0rem; }
+  html.sc main.site-main article.single-post h1 {
     font-size: 36px;
     font-size: 2rem;
     line-height: 54px;
     line-height: 3rem;
     margin-bottom: 27px;
-    margin-bottom: 1.5rem;
-    clear: both; }
-  html.sc main.site-main article.single-post {
-    margin: 0px;
-    margin: 0rem; }
-    html.sc main.site-main article.single-post h1 {
-      font-size: 36px;
-      font-size: 2rem;
-      line-height: 54px;
-      line-height: 3rem; }
-      @media only screen and (max-width: 480px) {
-        html.sc main.site-main article.single-post h1 {
-          font-size: 24px;
-          font-size: 1.33333rem;
-          line-height: 27px;
-          line-height: 1.5rem; } }
-    html.sc main.site-main article.single-post figure {
+    margin-bottom: 1.5rem; }
+    @media only screen and (max-width: 480px) {
+      html.sc main.site-main article.single-post h1 {
+        font-size: 24px;
+        font-size: 1.33333rem;
+        line-height: 27px;
+        line-height: 1.5rem; } }
+  html.sc main.site-main article.single-post figure {
+    margin-bottom: 27px;
+    margin-bottom: 1.5rem; }
+  html.sc main.site-main article.single-post footer.entry-footer {
+    margin-bottom: 27px;
+    margin-bottom: 1.5rem; }
+html.sc main.site-main article.essexuni_news {
+  padding: 0px 13.5px;
+  padding: 0rem 0.75rem;
+  border-left: 2px solid #cccccc; }
+html.sc main.site-main article {
+  position: relative;
+  margin-bottom: 54px;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 480px) {
+    html.sc main.site-main article {
       margin-bottom: 27px;
-      margin-bottom: 1.5rem; }
-    html.sc main.site-main article.single-post footer.entry-footer {
-      margin-bottom: 27px;
-      margin-bottom: 1.5rem; }
-  html.sc main.site-main article.essexuni_news {
-    padding: 0px 13.5px;
-    padding: 0rem 0.75rem;
-    border-left: 2px solid #cccccc; }
-  html.sc main.site-main article {
-    position: relative;
-    margin-bottom: 54px;
-    margin-bottom: 3rem; }
-    @media only screen and (max-width: 480px) {
-      html.sc main.site-main article {
-        margin-bottom: 27px;
-        margin-bottom: 1.5rem; } }
-    html.sc main.site-main article.featured {
-      background-color: #f2f2f2;
-      min-height: 378px;
-      min-height: 21rem; }
-      html.sc main.site-main article.featured img {
-        -moz-border-radius: 0px;
-        -webkit-border-radius: 5px 5px 0px 0px;
-        border-radius: 5px 5px 0px 0px; }
-      html.sc main.site-main article.featured h1 {
-        font-size: 22px;
-        font-size: 1.22222rem; }
-      html.sc main.site-main article.featured figcaption {
-        padding: 9px 13.5px 18px;
-        padding: 0.5rem 0.75rem 1rem; }
-    html.sc main.site-main article h1 {
-      font-size: 24px;
-      font-size: 1.33333rem;
-      line-height: 27px;
-      line-height: 1.5rem;
-      margin-bottom: 13.5px;
-      margin-bottom: 0.75rem; }
-    html.sc main.site-main article p {
-      color: black; }
-    html.sc main.site-main article figure.thumb {
-      position: absolute;
-      top: 5px;
-      top: 0.27778rem;
-      left: 0;
-      margin: 0; }
-      html.sc main.site-main article figure.thumb img {
-        vertical-align: middle; }
-        @media only screen and (max-width: 480px) {
-          html.sc main.site-main article figure.thumb img {
-            width: 80px;
-            height: 80px; } }
-  html.sc main.site-main article.image {
-    padding-left: 150px; }
-    @media only screen and (max-width: 480px) {
-      html.sc main.site-main article.image {
-        padding-left: 100px; } }
-  html.sc main.site-main article.excerpt p {
-    margin-bottom: 0px;
-    margin-bottom: 0rem; }
-  html.sc main.site-main ol.comment-list {
-    margin-left: 1.8px;
-    margin-left: 0.1rem; }
-    html.sc main.site-main ol.comment-list ol.children {
-      margin-left: 27px;
-      margin-left: 1.5rem; }
-  html.sc main.site-main #author-profile {
-    padding-left: 210px; }
-    @media only screen and (max-width: 480px) {
-      html.sc main.site-main #author-profile {
-        padding-left: 100px; } }
-    html.sc main.site-main #author-profile figure {
-      position: absolute;
-      left: 0;
-      margin: 0; }
-  html.sc .entry-content figure figcaption {
-    font-size: 18px;
-    font-size: 1rem;
+      margin-bottom: 1.5rem; } }
+  html.sc main.site-main article.featured {
+    background-color: #f2f2f2;
+    min-height: 378px;
+    min-height: 21rem; }
+    html.sc main.site-main article.featured img {
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 5px 5px 0px 0px;
+      border-radius: 5px 5px 0px 0px; }
+    html.sc main.site-main article.featured h1 {
+      font-size: 22px;
+      font-size: 1.22222rem; }
+    html.sc main.site-main article.featured figcaption {
+      padding: 9px 13.5px 18px;
+      padding: 0.5rem 0.75rem 1rem; }
+  html.sc main.site-main article h1 {
+    font-size: 24px;
+    font-size: 1.33333rem;
     line-height: 27px;
     line-height: 1.5rem;
-    color: gray; }
-  html.sc #comments {
-    margin-top: 27px;
-    margin-top: 1.5rem; }
-  html.sc footer[role=contentinfo] {
-    color: white;
-    margin-top: 0px;
-    margin-top: 0rem;
-    padding-bottom: 0px;
-    padding-bottom: 0rem; }
-    html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
-      color: white; }
+    margin-bottom: 13.5px;
+    margin-bottom: 0.75rem; }
+  html.sc main.site-main article p {
+    color: black; }
+  html.sc main.site-main article figure.thumb {
+    position: absolute;
+    top: 5px;
+    top: 0.27778rem;
+    left: 0;
+    margin: 0; }
+    html.sc main.site-main article figure.thumb img {
+      vertical-align: middle; }
+      @media only screen and (max-width: 480px) {
+        html.sc main.site-main article figure.thumb img {
+          width: 80px;
+          height: 80px; } }
+html.sc main.site-main article.image {
+  padding-left: 150px; }
+  @media only screen and (max-width: 480px) {
+    html.sc main.site-main article.image {
+      padding-left: 100px; } }
+html.sc main.site-main article.excerpt p {
+  margin-bottom: 0px;
+  margin-bottom: 0rem; }
+html.sc main.site-main ol.comment-list {
+  margin-left: 1.8px;
+  margin-left: 0.1rem; }
+  html.sc main.site-main ol.comment-list ol.children {
+    margin-left: 27px;
+    margin-left: 1.5rem; }
+html.sc main.site-main #author-profile {
+  padding-left: 210px; }
+  @media only screen and (max-width: 480px) {
+    html.sc main.site-main #author-profile {
+      padding-left: 100px; } }
+  html.sc main.site-main #author-profile figure {
+    position: absolute;
+    left: 0;
+    margin: 0; }
+html.sc .entry-content figure figcaption {
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 27px;
+  line-height: 1.5rem;
+  color: gray; }
+html.sc #comments {
+  margin-top: 27px;
+  margin-top: 1.5rem; }
+html.sc footer[role=contentinfo] {
+  color: white;
+  margin-top: 0px;
+  margin-top: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem; }
+  html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
+    color: white; }
+  @media only screen and (max-width: 480px) {
+    html.sc footer[role=contentinfo] {
+      padding: 27px 0px;
+      padding: 1.5rem 0rem; } }
+  html.sc footer[role=contentinfo] .site-info {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1185px; }
     @media only screen and (max-width: 480px) {
-      html.sc footer[role=contentinfo] {
-        padding: 27px 0px;
-        padding: 1.5rem 0rem; } }
-    html.sc footer[role=contentinfo] .site-info {
-      width: 90%;
-      margin: 0 auto;
-      max-width: 1185px; }
+      html.sc footer[role=contentinfo] .site-info {
+        width: auto;
+        margin-left: 9px;
+        margin-left: 0.5rem;
+        margin-right: 9px;
+        margin-right: 0.5rem; } }
+    html.sc footer[role=contentinfo] .site-info ol {
+      padding-left: 0px; }
+      html.sc footer[role=contentinfo] .site-info ol li {
+        list-style-type: none; }
+    html.sc footer[role=contentinfo] .site-info .third {
+      float: left;
+      width: 33.33333%;
+      padding-bottom: 27px;
+      padding-bottom: 1.5rem; }
+      @media only screen and (max-width: 768px) {
+        html.sc footer[role=contentinfo] .site-info .third {
+          width: 100%; } }
       @media only screen and (max-width: 480px) {
-        html.sc footer[role=contentinfo] .site-info {
-          width: auto;
-          margin-left: 9px;
-          margin-left: 0.5rem;
-          margin-right: 9px;
-          margin-right: 0.5rem; } }
-      html.sc footer[role=contentinfo] .site-info ol {
-        padding-left: 0px; }
-        html.sc footer[role=contentinfo] .site-info ol li {
-          list-style-type: none; }
-      html.sc footer[role=contentinfo] .site-info .third {
-        float: left;
-        width: 33.33333%;
-        padding-bottom: 27px;
-        padding-bottom: 1.5rem; }
-        @media only screen and (max-width: 768px) {
-          html.sc footer[role=contentinfo] .site-info .third {
-            width: 100%; } }
+        html.sc footer[role=contentinfo] .site-info .third {
+          width: 100%; } }
+      html.sc footer[role=contentinfo] .site-info .third:last-of-type {
+        width: 31%;
+        padding-left: 2.33333%; }
         @media only screen and (max-width: 480px) {
-          html.sc footer[role=contentinfo] .site-info .third {
+          html.sc footer[role=contentinfo] .site-info .third:last-of-type {
             width: 100%; } }
-        html.sc footer[role=contentinfo] .site-info .third:last-of-type {
-          width: 31%;
-          padding-left: 2.33333%; }
+    html.sc footer[role=contentinfo] .site-info .closing {
+      display: block;
+      clear: both;
+      padding-top: 9px;
+      padding-top: 0.5rem; }
+      html.sc footer[role=contentinfo] .site-info .closing ul {
+        float: right;
+        padding: 13.5px 0px;
+        padding: 0.75rem 0rem;
+        margin-bottom: 0; }
+        @media only screen and (max-width: 480px) {
+          html.sc footer[role=contentinfo] .site-info .closing ul {
+            float: left; } }
+        html.sc footer[role=contentinfo] .site-info .closing ul li {
+          display: inline;
+          padding: 0px 0px 0px 20px;
+          padding: 0rem 0rem 0rem 1.11111rem; }
           @media only screen and (max-width: 480px) {
-            html.sc footer[role=contentinfo] .site-info .third:last-of-type {
-              width: 100%; } }
-      html.sc footer[role=contentinfo] .site-info .closing {
-        display: block;
-        clear: both;
-        padding-top: 9px;
-        padding-top: 0.5rem; }
-        html.sc footer[role=contentinfo] .site-info .closing ul {
-          float: right;
-          padding: 13.5px 0px;
-          padding: 0.75rem 0rem;
-          margin-bottom: 0; }
-          @media only screen and (max-width: 480px) {
-            html.sc footer[role=contentinfo] .site-info .closing ul {
-              float: left; } }
-          html.sc footer[role=contentinfo] .site-info .closing ul li {
-            display: inline;
-            padding: 0px 0px 0px 20px;
-            padding: 0rem 0rem 0rem 1.11111rem; }
-            @media only screen and (max-width: 480px) {
-              html.sc footer[role=contentinfo] .site-info .closing ul li {
-                padding: 0px 20px 0px 0px;
-                padding: 0rem 1.11111rem 0rem 0rem; } }
-    html.sc footer[role=contentinfo] p.logo {
-      display: inline-block;
-      margin-right: 27px;
-      margin-right: 1.5rem;
-      margin-bottom: 0px;
-      margin-bottom: 0rem; }
-      html.sc footer[role=contentinfo] p.logo .iser-logo, html.sc footer[role=contentinfo] p.logo .essex-logo {
-        text-indent: -3000em;
-        display: block;
-        overflow: hidden;
-        float: left; }
-      html.sc footer[role=contentinfo] p.logo .iser-logo {
-        background: url("ui/iser-logo.png") no-repeat;
-        height: 60px;
-        width: 72px; }
-        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-          html.sc footer[role=contentinfo] p.logo .iser-logo {
-            background-image: url("ui/iser-logo2x.png");
-            background-size: 144px 120px; } }
-      html.sc footer[role=contentinfo] p.logo .essex-logo {
-        background: url("ui/essex-logo.png") no-repeat;
-        height: 48px;
-        width: 133px; }
-        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-          html.sc footer[role=contentinfo] p.logo .essex-logo {
-            background-image: url("ui/essex-logo2x.png");
-            background-size: 166px 96px; } }
-  html.sc form input:focus, html.sc form textarea:focus, html.sc form select:focus {
-    outline: 0;
-    outline: thin dotted \9;
-    -moz-box-shadow: 0px 0px 6px 0px #cccccc;
-    -webkit-box-shadow: 0px 0px 6px 0px #cccccc;
-    box-shadow: 0px 0px 6px 0px #cccccc; }
-  html.sc form[role=search] {
-    background: none; }
-    html.sc form[role=search] fieldset {
-      width: 90%;
-      text-align: left;
-      max-width: 1185px; }
-      @media only screen and (max-width: 480px) {
-        html.sc form[role=search] fieldset {
-          width: 100%;
-          padding: 0px 9px;
-          padding: 0rem 0.5rem; } }
-    html.sc form[role=search] input[type=search] {
-      border: 1px solid #cccccc;
-      width: 80%;
-      margin-right: 1%;
-      padding: 0 1%;
-      padding-right: 5%; }
-      @media only screen and (max-width: 480px) {
-        html.sc form[role=search] input[type=search] {
-          width: 73%;
-          margin-right: 0; } }
-      @media only screen and (max-width: 768px) {
-        html.sc form[role=search] input[type=search] {
-          width: 73%;
-          margin-right: 1%; } }
-    html.sc form[role=search] input[type=submit] {
+            html.sc footer[role=contentinfo] .site-info .closing ul li {
+              padding: 0px 20px 0px 0px;
+              padding: 0rem 1.11111rem 0rem 0rem; } }
+  html.sc footer[role=contentinfo] p.logo {
+    display: inline-block;
+    margin-right: 27px;
+    margin-right: 1.5rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem; }
+    html.sc footer[role=contentinfo] p.logo .iser-logo, html.sc footer[role=contentinfo] p.logo .essex-logo {
+      text-indent: -3000em;
+      display: block;
+      overflow: hidden;
+      float: left; }
+    html.sc footer[role=contentinfo] p.logo .iser-logo {
+      background: url("ui/iser-logo.png") no-repeat;
+      height: 60px;
+      width: 72px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        html.sc footer[role=contentinfo] p.logo .iser-logo {
+          background-image: url("ui/iser-logo2x.png");
+          background-size: 144px 120px; } }
+    html.sc footer[role=contentinfo] p.logo .essex-logo {
+      background: url("ui/essex-logo.png") no-repeat;
+      height: 48px;
+      width: 133px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        html.sc footer[role=contentinfo] p.logo .essex-logo {
+          background-image: url("ui/essex-logo2x.png");
+          background-size: 166px 96px; } }
+html.sc form input:focus, html.sc form textarea:focus, html.sc form select:focus {
+  outline: 0;
+  outline: thin dotted \9;
+  -moz-box-shadow: 0px 0px 6px 0px #cccccc;
+  -webkit-box-shadow: 0px 0px 6px 0px #cccccc;
+  box-shadow: 0px 0px 6px 0px #cccccc; }
+html.sc form[role=search] {
+  background: none; }
+  html.sc form[role=search] fieldset {
+    width: 90%;
+    text-align: left;
+    max-width: 1185px; }
+    @media only screen and (max-width: 480px) {
+      html.sc form[role=search] fieldset {
+        width: 100%;
+        padding: 0px 9px;
+        padding: 0rem 0.5rem; } }
+  html.sc form[role=search] input[type=search] {
+    border: 1px solid #cccccc;
+    width: 80%;
+    margin-right: 1%;
+    padding: 0 1%;
+    padding-right: 5%; }
+    @media only screen and (max-width: 480px) {
+      html.sc form[role=search] input[type=search] {
+        width: 73%;
+        margin-right: 0; } }
+    @media only screen and (max-width: 768px) {
+      html.sc form[role=search] input[type=search] {
+        width: 73%;
+        margin-right: 1%; } }
+  html.sc form[role=search] input[type=submit] {
+    border: 1px solid #cccccc;
+    background: #fafafa;
+    width: 12%;
+    float: right;
+    margin: 0;
+    color: #2c2c2c; }
+    @media only screen and (max-width: 480px) {
+      html.sc form[role=search] input[type=submit] {
+        width: 18%;
+        margin-right: 0; } }
+    @media only screen and (max-width: 768px) {
+      html.sc form[role=search] input[type=submit] {
+        width: 18%; } }
+    html.sc form[role=search] input[type=submit]:hover, html.sc form[role=search] input[type=submit]:focus {
       background: gray;
-      width: 12%;
-      float: right;
-      margin: 0; }
-      @media only screen and (max-width: 480px) {
-        html.sc form[role=search] input[type=submit] {
-          width: 18%;
-          margin-right: 0; } }
-      @media only screen and (max-width: 768px) {
-        html.sc form[role=search] input[type=submit] {
-          width: 18%; } }
-      html.sc form[role=search] input[type=submit]:hover, html.sc form[role=search] input[type=submit]:focus {
-        background: #74a290;
-        outline: 0; }
-  html.sc textarea[name=embed-link] {
-    border: none;
-    resize: none;
-    font-size: 16px;
-    font-size: 0.88889rem;
-    background: none; }
-  html.sc #commentform p.form-allowed-tags {
-    display: none; }
-  html.sc #primary input[type=submit] {
+      outline: 0;
+      color: white; }
+html.sc #commentform p.form-allowed-tags {
+  display: none; }
+html.sc #primary input[type=submit] {
+  padding: 8px;
+  padding: 0.44444rem;
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  font-size: 1rem;
+  font-family: "Officina", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  background-color: gray;
+  padding: 13.5px 18px;
+  padding: 0.75rem 1rem;
+  line-height: 18px;
+  line-height: 1rem;
+  margin: 4.5px 0px;
+  margin: 0.25rem 0rem; }
+html.sc #primary form[role=search] {
+  display: block;
+  background: #f2f2f2;
+  padding: 13.5px;
+  padding: 0.75rem;
+  width: 90%;
+  width: 100%;
+  overflow: auto;
+  display: inline-block;
+  margin: 0; }
+  html.sc #primary form[role=search] fieldset {
+    margin: 0; }
+  html.sc #primary form[role=search] label {
+    display: block;
+    width: 40%;
+    line-height: normal;
+    vertical-align: middle; }
+  html.sc #primary form[role=search] input[type=search] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    width: 90%; }
+  html.sc #primary form[role=search] input[type=submit] {
     padding: 8px;
     padding: 0.44444rem;
-    display: inline-block;
-    position: relative;
-    font-size: 18px;
-    font-size: 1rem;
-    font-family: "Officina", Georgia, "Times New Roman", Times, serif;
-    font-weight: normal;
-    text-align: center;
-    color: white;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    border: none;
-    outline: 0;
-    background-color: gray;
-    padding: 13.5px 18px;
-    padding: 0.75rem 1rem;
-    line-height: 18px;
-    line-height: 1rem;
-    margin: 4.5px 0px;
-    margin: 0.25rem 0rem; }
-  html.sc #primary form[role=search] {
-    display: block;
-    background: #f2f2f2;
-    padding: 13.5px;
-    padding: 0.75rem;
-    width: 90%;
-    width: 100%;
-    overflow: auto;
-    display: inline-block;
-    margin: 0; }
-    html.sc #primary form[role=search] fieldset {
-      margin: 0; }
-    html.sc #primary form[role=search] label {
-      display: block;
-      width: 40%;
-      line-height: normal;
-      vertical-align: middle; }
-    html.sc #primary form[role=search] input[type=search] {
-      display: inline-block;
-      vertical-align: middle;
-      width: 100%;
-      width: 90%; }
-    html.sc #primary form[role=search] input[type=submit] {
-      padding: 8px;
-      padding: 0.44444rem;
-      float: left;
-      width: autof; }
-  html.sc #primary .comment-form {
-    width: auto;
-    line-height: normal;
-    padding-right: 18px;
-    padding-right: 1rem; }
-    html.sc #primary .comment-form label {
-      text-align: left; }
-    html.sc #primary .comment-form input[type="submit"] {
-      margin: 0px;
-      margin: 0rem; }
-  html.sc body.home span.comments-link, html.sc body.home span.edit-link {
-    display: none; }
+    float: left;
+    width: autof; }
+html.sc #primary .comment-form {
+  width: auto;
+  line-height: normal;
+  padding-right: 18px;
+  padding-right: 1rem; }
+  html.sc #primary .comment-form label {
+    text-align: left; }
+  html.sc #primary .comment-form input[type="submit"] {
+    margin: 0px;
+    margin: 0rem; }
+html.sc body.home span.comments-link, html.sc body.home span.edit-link {
+  display: none; }
 
 html.sc.grid {
   z-index: 10;

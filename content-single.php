@@ -39,6 +39,27 @@
 
 	<div class="entry-content entry-content-single">
 
+		<div class="meta-container">
+			<!-- meta information -->
+			<div class="entry-meta"><?php societycentral_posted_on(); ?></div>
+
+			<!-- social buttons -->
+			<div class="social-wrapper">
+				<ul>
+					<li>
+						<a class="circ-border" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="circ-border" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o"></i></a></li>
+					<li><a class="circ-border" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#"><i class="fa fa-code"></i></a></li>
+				</ul>
+			</div>
+			<div id="embed-modal" >
+				<textarea wrap="soft" rows="6" cols="18" id="embed-text" name="embed-link" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
+				</textarea>
+			</div>
+		</div>
+
 		<?php
 			if ( has_post_thumbnail() ) {
 				echo "<figure>";
@@ -52,7 +73,23 @@
 			} 
 		?><!-- insert featured image -->
 
+
 		<?php the_content(); ?>
+		<!-- social buttons -->
+			<div class="social-wrapper">
+				<ul>
+					<li>
+						<a class="circ-border" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="circ-border" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o"></a></i></li>
+					<li><a class="circ-border" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#"><i class="fa fa-code"></i></a></li>
+				</ul>
+			</div>
+			<div id="embed-modal" >
+				<textarea wrap="soft" rows="3" cols="25" id="embed-text" name="embed-link" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
+				</textarea>
+			</div>
 
 		<?php
 			// wp_link_pages( array(
