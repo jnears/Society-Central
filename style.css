@@ -2526,7 +2526,8 @@ html.sc h2 {
   font-size: 30px;
   font-size: 1.66667rem; }
 html.sc h1 a:link, html.sc h1 a:visited, html.sc h2 a:link, html.sc h2 a:visited, html.sc h3 a:link, html.sc h3 a:visited, html.sc h4 a:link, html.sc h4 a:visited {
-  color: #2c2c2c; }
+  color: #2c2c2c;
+  text-decoration: none; }
 html.sc h1 a:hover, html.sc h2 a:hover, html.sc h3 a:hover, html.sc h4 a:hover {
   color: #2c2c2c;
   text-decoration: underline; }
@@ -2721,8 +2722,12 @@ html.sc header[role=banner] {
           background: #74a290;
           color: white; }
 html.sc .paging-navigation {
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
+  padding-bottom: 27px;
+  padding-bottom: 1.5rem; }
+  html.sc .paging-navigation .nav-previous {
+    float: left; }
+  html.sc .paging-navigation .nav-next {
+    float: right; }
 html.sc .entry-meta {
   color: gray;
   font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
