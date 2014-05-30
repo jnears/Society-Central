@@ -12,23 +12,25 @@
 
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
-		<aside id="site-overview" class="widget">
-			<p class="lead">
-	  		<?php  the_author_meta('excerpt',2); ?></p>
-		</aside>
+	<aside class="widget">
+<p class="lead">
+	  <?php  the_author_meta('excerpt',8); ?></p>
+	</aside>
 	<?php endif;  ?>
 
 	<!-- Dont show navigation on single page -->
-		<?php if ( ! is_single() ){?>
-	 		<aside id="headlines" class="widget">
-				<?php echo headline_list(10); ?>
-			</aside>
-		<?php }?>
+	<?php if ( ! is_single() ){?>
+	 <aside id="headlines" class="widget">
+			<?php echo headline_list(10); ?>
+		</aside>
+	<?php }?>
+
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
-		<aside id="events-list" class="widget">
-			<?php the_widget('TribeEventsListWidget'); ?>
-		</aside>
+
+<aside id="events-list" class="widget">
+<?php the_widget('TribeEventsListWidget'); ?>
+</aside>
 	<?php endif;  ?>
 
 </div><!-- #secondary -->
