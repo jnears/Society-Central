@@ -2806,6 +2806,15 @@ html.sc #embed-modal {
   padding: 9px;
   padding: 0.5rem;
   max-width: 250px; }
+  html.sc #embed-modal textarea[name=embed-link] {
+    border: none;
+    resize: none;
+    font-size: 14px;
+    font-size: 0.77778rem;
+    background: none;
+    width: 100%; }
+    html.sc #embed-modal textarea[name=embed-link]:focus {
+      outline: 0; }
 html.sc #tribe-events .tribe-events-content p, html.sc #tribe-events .tribe-events-before-html p, html.sc #tribe-events .tribe-events-after-html p {
   margin: 0px 0px 27px 0px;
   margin: 0rem 0rem 1.5rem 0rem;
