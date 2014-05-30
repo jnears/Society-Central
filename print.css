@@ -17,7 +17,7 @@ html.sc div#primary { margin-left:0;
 .site-main article.single-post { width:auto; }
 html.sc #secondary { display: none; width: 0; }
 html.sc #colophon { display: none; }
-html.sc .meta-container {position: relative; width: 100%; margin-right: 0; margin-bottom: 27px right: 0; top: 0; }
+html.sc .meta-container {position: relative; width: 100%; margin-right: 0; margin-bottom: 27px; right: 0; top: 0; }
 html.sc .social-wrapper { display: none; }
 h1, h2, h3, h4, h5, h6 { page-break-after:avoid; 
      page-break-inside:avoid }
