@@ -30,32 +30,22 @@
 
 <body <?php body_class(); ?>>
 <a class="skip-link visuallyhidden" href="#content" accesskey="s"><?php _e( 'Skip to content', 'societycentral' ); ?></a>
-<div id="outer-wrap">
-<div id="inner-wrap">
-<div id="page" class="hfeed site">
+	<div id="outer-wrap">
+		<div id="inner-wrap">
+			<div id="page" class="hfeed site">
 
-<header id="masthead" class="site-header" role="banner">
-<div class="site-branding">
-	<a id="nav-menu-btn" class="nav-btn closed circ-border" href="/"><i class="fa fa-bars"></i></a>
-	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-	<a id="nav-search-btn" class="search-toggle circ-border " href="/search"><i class="fa fa-search"></i></a>
-</div>
-
-<!-- <nav id="site-navigation" class="main-navigation" role="navigation">
-	<ul>
-<h1 class="menu-toggle"><?php _e( 'Menu', 'societycentral' ); ?></h1> 
-
-<?//php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<header id="masthead" class="site-header" role="banner">
+				<div class="site-branding">
+					<a id="nav-menu-btn" class="nav-btn closed circ-border" href="/"><i class="fa fa-bars"></i></a>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+					<a id="nav-search-btn" class="search-toggle circ-border " href="/search"><i class="fa fa-search"></i></a>
+				</div>
 
 
-</ul>
-</nav><!-- #site-navigation --> 
+				<?php get_search_form(); ?>
+				</header><!-- #masthead -->
 
+			<?php echo headline_list(10); ?>
 
-<?php get_search_form(); ?>
-</header><!-- #masthead -->
-
-<?php echo headline_list(10); ?>
-
-<div id="content" class="site-content">
+		<div id="content" class="site-content">

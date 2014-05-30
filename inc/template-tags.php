@@ -18,7 +18,7 @@ function societycentral_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'societycentral' ); ?></h1>
+		<h1 class="visuallyhidden"><?php _e( 'Posts navigation', 'societycentral' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>

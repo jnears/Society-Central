@@ -4,56 +4,29 @@
  */
 ?>
 
-
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header class="entry-header">
-		
-
-		<!-- <div class="entry-meta"> -->
-			
-			<?//php echo get_avatar( get_the_author_meta( 'user_email' ), 32 ); ?>
-	
-			
-
-			<?php
-
-// print out the taxomomy term and apply dynamic class (used for coloured lozenge)
-
-// $taxonomy = 'content_types';
-// $terms = get_the_terms( $post->ID , $taxonomy );
-
-// if ( !empty( $terms ) ) :
-// 	foreach ( $terms as $term ) {
-// 		$link = get_term_link( $term, $taxonomy );
-// 		if ( !is_wp_error( $link ) )
-// 			echo ' | <i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
-// 	}
-// endif;
-?>
-
-		<!-- </div>.entry-meta -->
-	<h1 class="entry-title"><?php the_title(); ?></h1>
-
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content entry-content-single">
-
 		<div class="meta-container">
 			<!-- meta information -->
+			
 			<div class="entry-meta"><?php societycentral_posted_on(); ?></div>
 
 			<!-- social buttons -->
-			<div class="social-wrapper">
-				<ul>
-					<li>
-						<a class="circ-border" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-twitter"></i></a>
-					</li>
-					<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook"></i></a></li>
-					<li><a class="circ-border" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o"></i></a></li>
-					<li><a class="circ-border" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#"><i class="fa fa-code"></i></a></li>
-				</ul>
-			</div>
+				<div class="social-wrapper">
+					<ul>
+						<li>
+							<a class="circ-border" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook"></i></a></li>
+						<li><a class="circ-border" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o"></i></a></li>
+						<li><a class="circ-border" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#"><i class="fa fa-code"></i></a></li>
+					</ul>
+				</div>
 			<div id="embed-modal" >
 				<textarea wrap="soft" rows="6" cols="18" id="embed-text" name="embed-link" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
 				</textarea>
@@ -91,12 +64,6 @@
 				</textarea>
 			</div>
 
-		<?php
-			// wp_link_pages( array(
-				// 'before' => '<div class="page-links">' . __( 'Pages:', 'societycentral' ),
-				// 'after'  => '</div>',
-			// ) );
-		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
@@ -116,12 +83,6 @@
 				}
 
 			} else {
-				// But this blog has loads of categories so we should probably display them here
-				// if ( '' != $tag_list ) {
-				// 	$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'societycentral' );
-				// } else {
-				// 	$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'societycentral' );
-				// }
 
 			} // end check for categories on this blog
 

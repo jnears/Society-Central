@@ -11,40 +11,23 @@
 <?php else: ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt'); ?> >
 <?php endif; ?>
+
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
+		
 		<?php if ( 'post' == get_post_type()  or 'essexuni_news' == get_post_type() ) : ?>
-		
-		<div class="entry-meta">
-		
-			<?php societycentral_posted_on(); ?>
-		<!-- 	<?php
-
-		// print out the taxomomy term and apply dynamic class (used for coloured lozenge)
-
-		$taxonomy = 'content_types';
-		$terms = get_the_terms( $post->ID , $taxonomy );
-
-		if ( !empty( $terms ) ) :
-			foreach ( $terms as $term ) {
-				$link = get_term_link( $term, $taxonomy );
-				if ( !is_wp_error( $link ) )
-					echo ' | <i class="tag ' . $term->slug. '"><a href="' . $link . '" rel="tag">' . $term->name . '</a></i>';
-			}
-		endif;
-		?> -->
-
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-		
+			<div class="entry-meta">
+				<?php societycentral_posted_on(); ?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>	
 		
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
@@ -56,6 +39,7 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
+	
 	<?php 
 		if (has_post_thumbnail()) {
 			echo "<figure class=\"thumb\">";

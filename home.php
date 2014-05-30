@@ -12,91 +12,69 @@
  */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-	
+			<div class="colgroup-3">
+				<?php // Get 4 featured posts ?>
+				<?php
+
+				$args = array(
+				    'posts_per_page' => 3,
+				    'tax_query' => array(
+				        array(
+				            'taxonomy' => 'feature',
+				            'terms' => array('homepage-feature'),
+				            'field' => 'slug',
+				            'operator' => 'IN'
+				        ),
+				    )
+				);
 
 
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();
+				?>
+				<?php
+				if ( has_post_thumbnail() ) {
+				?>
+					<article class="span1 featured">
+						<figure><?php the_post_thumbnail(); ?>
+							<figcaption>
+								<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php truncate_title(55); ?></a></h1>
+					 		<div class="entry-meta">
+					 			<?php societycentral_posted_on(); ?>
+							</div>
+
+							</figcaption>
+						</figure>
+					</article>
+				<?php
+				} // end if loop
+				endwhile;
+				wp_reset_query();
+				?>
+			</div>
 
 
-<div class="colgroup-3">
-<?php // Get 4 featured posts ?>
-<?php
-
-$args = array(
-    'posts_per_page' => 3,
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'feature',
-            'terms' => array('homepage-feature'),
-            'field' => 'slug',
-            'operator' => 'IN'
-        ),
-    )
-);
-
-
-$loop = new WP_Query( $args );
-while ( $loop->have_posts() ) : $loop->the_post();
-?>
-<?php
-if ( has_post_thumbnail() ) {
-?>
-<article class="span1 featured">
-<figure><?php the_post_thumbnail(); ?>
-<figcaption>
-	<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php truncate_title(55); ?></a></h1>
-	 <div class="entry-meta">
-	 <?php societycentral_posted_on(); ?>
-</div>
-	<!-- <div class="entry-content">
-		<?php the_excerpt(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'societycentral' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content --> 
-	</figcaption>
-</figure>
-</article>
-<?php
-} // end if loop
-endwhile;
-wp_reset_query();
-?>
-</div>
-
-
-
-
-
-
-<?php if ( have_posts() ) : ?>
-<?php
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array(
-    'posts_per_page' => 10,
-    'paged' => $paged,
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'feature',
-            'terms' => array('homepage-feature'),
-            'field' => 'slug',
-            'operator' => 'NOT IN'
-        ),
-    )
-);
-query_posts($args);
-?>
+			<?php if ( have_posts() ) : ?>
+			<?php
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array(
+			    'posts_per_page' => 10,
+			    'paged' => $paged,
+			    'tax_query' => array(
+			        array(
+			            'taxonomy' => 'feature',
+			            'terms' => array('homepage-feature'),
+			            'field' => 'slug',
+			            'operator' => 'NOT IN'
+			        ),
+			    )
+			);
+			query_posts($args);
+			?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
-<div class="home-featured noprint">
-
-
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
@@ -104,16 +82,15 @@ query_posts($args);
 					 */
 					get_template_part( 'content', get_post_format() );
 				?>
-
 			<?php endwhile; ?>
 
 			<?php societycentral_paging_nav(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+				<?php get_template_part( 'content', 'none' ); ?>
 
-		<?php endif; ?>
+			<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
