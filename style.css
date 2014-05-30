@@ -2942,7 +2942,9 @@ html.sc div#content {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
-  max-width: 1185px; }
+  max-width: 1185px;
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem; }
   @media only screen and (max-width: 480px) {
     html.sc div#content {
       width: 96%; } }
