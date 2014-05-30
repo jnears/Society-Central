@@ -11,7 +11,7 @@
 	<?php endif; // end sidebar widget area ?>
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
-		<aside class="widget">
+		<aside id="site-overview" class="widget">
 			<p class="lead">
 	  	<?php  the_author_meta('excerpt',8); ?></p>
 		</aside>
