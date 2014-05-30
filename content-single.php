@@ -56,12 +56,7 @@
 					</li>
 					<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook"></i></a></li>
 					<li><a class="circ-border" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o"></a></i></li>
-					<li><a class="circ-border" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#"><i class="fa fa-code"></i></a></li>
 				</ul>
-			</div>
-			<div id="embed-modal" >
-				<textarea wrap="soft" rows="3" cols="25" id="embed-text" name="embed-link" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
-				</textarea>
 			</div>
 
 	</div><!-- .entry-content -->

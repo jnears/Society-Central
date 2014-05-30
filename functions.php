@@ -92,6 +92,8 @@ function societycentral_scripts() {
 
 	wp_enqueue_style( 'prefix-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.1.0' );
 
+    wp_enqueue_script( 'ui', get_template_directory_uri() . '/js/ui.js',  array('jquery'));
+
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -339,12 +341,6 @@ function my_save_extra_profile_fields( $user_id ) {
 }
 
 
-
-
-
-
-
-
 //Enqueueing retina.js (for retina images)
 function retina_support_enqueue_scripts() {
     wp_enqueue_script( 'retina_js', get_template_directory_uri() . '/js/retina.js', '', '', true );
@@ -417,17 +413,6 @@ function delete_retina_support_images( $attachment_id ) {
 }
 
 
-// function my_get_posts( $query ) {
-// 	if (  $query->is_main_query() )
-// 		$query->set( 'post_type', array( 'post', 'essexuni_news' ) );
-// 	return $query;
-// }
-// add_filter( 'pre_get_posts', 'my_get_posts' );
-
-
-
-
-
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
    wp_deregister_script('jquery');
@@ -435,15 +420,6 @@ function my_jquery_enqueue() {
    wp_enqueue_script('jquery');
 }
 
-//remove toggle grid prior to go live
-function add_general_ui() {
-wp_enqueue_script(
-    'general-ui', // name your script so that you can attach other scripts and de-register, etc.
-    get_template_directory_uri() . '/js/general-ui.js', // this is the location of your script file
-    array('jquery') // this array lists the scripts upon which your script depends
-);
-}
-add_action( 'wp_enqueue_scripts', 'add_general_ui' );
 
 //baseline.js - set image margins to
 function add_baseline() {
