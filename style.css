@@ -2799,9 +2799,6 @@ html.sc .social-wrapper {
       float: left;
       width: 36px;
       padding: 0 4px; }
-      html.sc .social-wrapper ul li .circ-border {
-        margin-top: 0;
-        border: 1px solid #cccccc; }
 html.sc #embed-modal {
   display: none;
   background: #f2f2f2;
@@ -3143,6 +3140,12 @@ html.sc .entry-content figure figcaption {
   line-height: 27px;
   line-height: 1.5rem;
   color: gray; }
+html.sc .circ-border {
+  margin-top: 0;
+  border: 1px solid #cccccc;
+  background: #fafafa; }
+  html.sc .circ-border .fa {
+    color: gray; }
 html.sc #comments {
   margin-top: 27px;
   margin-top: 1.5rem; }
