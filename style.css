@@ -2963,7 +2963,8 @@ html.sc div#secondary {
     html.sc div#secondary {
       float: none;
       width: 100%;
-      padding-left: 0; } }
+      padding-left: 0;
+      clear: both; } }
   html.sc div#secondary aside {
     width: 100%;
     margin-left: 0;
