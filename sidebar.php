@@ -35,7 +35,7 @@
 	<?php if ( is_home() ) : // show events listing on homepage?>
 	<aside class="widget">
 <p class="lead">
-	  <?php  the_author_meta('excerpt',2); ?></p>
+	  <?php  the_author_meta('excerpt',8); ?></p>
 	</aside>
 	<?php endif;  ?>
 
