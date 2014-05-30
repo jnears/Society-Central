@@ -39,7 +39,7 @@
 					<a id="nav-menu-btn" class="nav-btn closed circ-border" href="/"><i class="fa fa-bars"></i></a>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-					<a id="nav-search-btn" class="search-toggle circ-border " href="/search"><i class="fa fa-search"></i></a>
+					<a id="nav-search-btn" class="search-toggle circ-border " href="#"><i class="fa fa-search"></i></a>
 				</div>
 
 
