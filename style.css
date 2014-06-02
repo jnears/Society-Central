@@ -3387,6 +3387,12 @@ html.sc.lt-ie8 .colgroup-3 {
 html.sc.lt-ie8 .fa {
   line-height: 27px; }
 
+html.sc.lt-ie8 .fa-envelope-o {
+  background: url("ui/email-ico.png") center 0px repeat; }
+
+html.sc.lt-ie8 .fa-code {
+  background: url("ui/embed-ico.png") center 0px repeat; }
+
 /*!
  * Datepicker for Bootstrap
  *
