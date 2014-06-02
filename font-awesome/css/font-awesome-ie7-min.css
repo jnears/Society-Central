@@ -175,7 +175,7 @@ a [class*=" icon-"],a [class^=icon-]{cursor:pointer}
 .fa-bookmark-empty{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf097;')}
 .fa-phone-sign{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf098;')}
 .fa-twitter{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;')}
-.fa-facebook{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09a;')}
+.fa .fa-facebook{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09a;')}
 .fa-github{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09b;')}
 .fa-unlock{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09c;')}
 .fa-credit-card{*zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09d;')}
