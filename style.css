@@ -2885,8 +2885,6 @@ html.sc aside#headlines nav {
   margin-bottom: 1.44444rem;
   margin-left: 0px;
   margin-left: 0rem;
-  font-size: 16px;
-  font-size: 0.88889rem;
   position: relative;
   right: 0;
   width: 100%; }
@@ -2901,14 +2899,13 @@ html.sc aside#headlines nav {
       border-top: 1px solid #cccccc; }
       html.sc aside#headlines nav ol li:last-of-type {
         border-bottom: 1px solid #cccccc; }
-      html.sc aside#headlines nav ol li a:link {
+      html.sc aside#headlines nav ol li a:link, html.sc aside#headlines nav ol li a:visited {
         font-size: 18px;
         font-size: 1rem;
         padding: 13px;
         padding: 0.72222rem;
         background: #f2f2f2;
-        display: block; }
-      html.sc aside#headlines nav ol li a:link, html.sc aside#headlines nav ol li a:visited {
+        display: block;
         text-decoration: none;
         color: #2c2c2c; }
       html.sc aside#headlines nav ol li a:hover, html.sc aside#headlines nav ol li a.active {
