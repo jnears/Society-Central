@@ -3255,7 +3255,6 @@ html.sc form input:focus, html.sc form textarea:focus, html.sc form select:focus
 html.sc form[role=search] {
   background: none; }
   html.sc form[role=search] fieldset {
-    width: 90%;
     text-align: left;
     max-width: 1185px; }
     @media only screen and (max-width: 480px) {
