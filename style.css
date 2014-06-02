@@ -3364,7 +3364,7 @@ html.sc.grid {
   z-index: 10;
   background: url("ui/grid.png") center 0px repeat; }
 
-html.sc.lt-ie9 .site-branding {
+html.sc.lt-ie9 header[role=banner] .site-branding {
   width: 972px; }
 
 html.sc.lt-ie9 #content {
