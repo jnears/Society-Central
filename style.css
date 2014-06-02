@@ -3364,12 +3364,6 @@ html.sc.grid {
   z-index: 10;
   background: url("ui/grid.png") center 0px repeat; }
 
-.lt-ie9 header[role=banner] .site-branding {
-  width: 972px; }
-
-.lt-ie9 header[role=banner] .site-content {
-  width: 972px; }
-
 /*!
  * Datepicker for Bootstrap
  *
