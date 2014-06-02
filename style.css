@@ -3384,6 +3384,9 @@ html.sc.lt-ie8 #secondary {
 html.sc.lt-ie8 .colgroup-3 {
   margin-top: 0px; }
 
+html.sc.lt-ie8 .fa {
+  line-height: 27px; }
+
 /*!
  * Datepicker for Bootstrap
  *
