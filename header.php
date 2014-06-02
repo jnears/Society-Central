@@ -24,6 +24,10 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js" type="text/javascript"></script>
 <![endif]-->
 
+<!--[if IE 7]>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+
 <?php wp_head(); ?>
 <link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo('stylesheet_directory'); ?>/print.css" />
 </head>
