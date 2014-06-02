@@ -2908,6 +2908,9 @@ html.sc aside#headlines nav {
         display: block;
         text-decoration: none;
         color: #2c2c2c; }
+      html.sc aside#headlines nav ol li a:visited {
+        padding: 13px;
+        padding: 0.72222rem; }
       html.sc aside#headlines nav ol li a:hover, html.sc aside#headlines nav ol li a.active {
         text-decoration: none;
         background: #dfdfdf;
