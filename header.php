@@ -39,10 +39,10 @@
 
 				<header id="masthead" class="site-header" role="banner">
 					<div class="site-branding">
-						<a id="nav-menu-btn" class="nav-btn closed circ-border" href="#"><i class="fa fa-bars"></i></a>
+						<a id="nav-menu-btn" class="nav-btn closed" href="#"><i class="fa fa-bars"></i></a>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-						<a id="nav-search-btn" class="search-toggle circ-border " href="#"><i class="fa fa-search icon-search"></i></a>
+						<a id="nav-search-btn" class="search-toggle " href="#"><i class="fa fa-search icon-search"></i></a>
 					<?php get_search_form(); ?>
 					</div>
 				</header><!-- #masthead -->
