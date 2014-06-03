@@ -3171,7 +3171,9 @@ html.sc main.site-main article {
   html.sc main.site-main article.featured {
     background-color: #f2f2f2;
     min-height: 378px;
-    min-height: 21rem; }
+    min-height: 21rem;
+    margin-bottom: 27px;
+    margin-bottom: 1.5rem; }
     html.sc main.site-main article.featured img {
       -moz-border-radius: 0px;
       -webkit-border-radius: 5px 5px 0px 0px;
