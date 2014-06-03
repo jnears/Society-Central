@@ -2950,6 +2950,8 @@ html.sc .tribe-events-list-separator-month + .vevent.hentry.tribe-events-first {
 html.sc .events-list.tribe-bar-is-disabled #tribe-events-content-wrapper {
   max-width: 100%;
   margin: 0; }
+html.sc #tribe-events-content a:hover, html.sc .tribe-events-event-meta a:hover {
+  text-decoration: underline; }
 @media only screen and (max-width: 480px) {
   html.sc blockquote.pull-quote {
     margin: 0px 0px 27px 0px;
