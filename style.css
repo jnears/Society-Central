@@ -2947,6 +2947,9 @@ html.sc .tribe-events-sub-nav li a {
   background: none; }
 html.sc .tribe-events-list-separator-month + .vevent.hentry.tribe-events-first {
   padding-top: 0; }
+html.sc #tribe-events-content-wrapper {
+  max-width: 100%;
+  margin: 0; }
 @media only screen and (max-width: 480px) {
   html.sc blockquote.pull-quote {
     margin: 0px 0px 27px 0px;
