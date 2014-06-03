@@ -2812,7 +2812,9 @@ html.sc .entry-meta {
   font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
   font-weight: normal;
   line-height: 27px;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  margin-bottom: 13.5px;
+  margin-bottom: 0.75rem; }
   html.sc .entry-meta a:link, html.sc .entry-meta a:visited, html.sc .entry-meta a:active {
     color: gray;
     text-decoration: none; }
