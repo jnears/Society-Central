@@ -3235,8 +3235,7 @@ html.sc .entry-content figure figcaption {
   color: gray; }
 html.sc .circ-border {
   margin-top: 0;
-  border: 1px solid #cccccc;
-  background: #fafafa; }
+  border: 1px solid #cccccc; }
   html.sc .circ-border .fa {
     color: gray; }
 html.sc #comments {
