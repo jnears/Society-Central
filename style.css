@@ -3467,7 +3467,7 @@ html.sc.lt-ie8 .fa {
   line-height: 27px; }
 
 html.sc.lt-ie8 .social-wrapper .email {
-  background: url("ui/email-ico.gif") center 0px no-repeat; }
+  background: url("ui/email-ico.gif") 5px 5px no-repeat; }
 
 html.sc.lt-ie8 .social-wrapper .embed {
   background: url("ui/embed-ico.gif") 5px 5px no-repeat; }
