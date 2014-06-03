@@ -2956,6 +2956,8 @@ html.sc #tribe-events-content a:hover, html.sc .tribe-events-event-meta a:hover 
   text-decoration: underline; }
 html.sc .tribe-events-list .tribe-events-event-cost {
   display: none; }
+html.sc .tribe-events-widget-link {
+  text-align: right; }
 @media only screen and (max-width: 480px) {
   html.sc blockquote.pull-quote {
     margin: 0px 0px 27px 0px;
