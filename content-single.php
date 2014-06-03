@@ -23,8 +23,8 @@
 							<a class="circ-border" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-twitter icon-twitter"></i></a>
 						</li>
 						<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook icon-facebook"></i></a></li>
-						<li><a class="circ-border" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o icon-envelope-o"></i></a></li>
-						<li><a class="circ-border" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#"><i class="fa fa-code"></i></a></li>
+						<li><a class="circ-border" class="email" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o icon-envelope-o"></i></a></li>
+						<li><a class="circ-border" id="embed-link" class="embed" title="Embed link"  onclick="select_all(this)" href="#"><i class="fa fa-code"></i></a></li>
 					</ul>
 				</div>
 			<div id="embed-modal" >
@@ -55,7 +55,7 @@
 						<a class="circ-border" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-twitter"></i></a>
 					</li>
 					<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook"></i></a></li>
-					<li><a class="circ-border" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o"></i></a></li>
+					<li><a class="circ-border" class="email" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o"></i></a></li>
 				</ul>
 			</div>
 

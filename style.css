@@ -3466,11 +3466,11 @@ html.sc.lt-ie8 .colgroup-3 {
 html.sc.lt-ie8 .fa {
   line-height: 27px; }
 
-html.sc.lt-ie8 .fa-envelope-o {
-  background: url("ui/email-ico.gif") center 0px repeat; }
+html.sc.lt-ie8 .social-wrapper .email {
+  background: url("ui/email-ico.gif") center 0px no-repeat; }
 
-html.sc.lt-ie8 .fa-code {
-  background: url("ui/embed-ico.gif") center 0px repeat; }
+html.sc.lt-ie8 .social-wrapper .embed {
+  background: url("ui/embed-ico.gif") 5px 5px no-repeat; }
 
 /*!
  * Datepicker for Bootstrap
