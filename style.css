@@ -3555,6 +3555,9 @@ html.sc main.site-main article {
     min-height: 21rem;
     margin-bottom: 27px;
     margin-bottom: 1.5rem; }
+    html.sc main.site-main article.featured figure {
+      margin-bottom: 0px;
+      margin-bottom: 0rem; }
     html.sc main.site-main article.featured img {
       -moz-border-radius: 0px;
       -webkit-border-radius: 5px 5px 0px 0px;
@@ -3563,8 +3566,8 @@ html.sc main.site-main article {
       font-size: 22px;
       font-size: 1.22222rem; }
     html.sc main.site-main article.featured figcaption {
-      padding: 9px 13.5px 18px;
-      padding: 0.5rem 0.75rem 1rem;
+      padding: 13.5px 13.5px 18px;
+      padding: 0.75rem 0.75rem 1rem;
       font-style: normal;
       font-size: 18px;
       font-size: 1rem; }

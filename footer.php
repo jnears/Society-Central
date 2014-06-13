@@ -39,8 +39,6 @@
 							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 					</div>
 
-					<a href="#" id="show-grid" class="btn">Toggle grid</a>
-
 					<div class="closing">
 						<p class="logo"><a class="iser-logo" href="https://iser.essex.ac.uk">ISER</a></p>
 						<p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
