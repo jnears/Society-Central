@@ -35,12 +35,12 @@ jQuery(document).ready(function( $ ){
     if ( $("#nav-menu-btn").hasClass("closed")) {
       $( this ).removeClass('closed');
       $( this ).addClass('open');
-      $('#inner-wrap').animate({left:'70%'}, 500);
+      $('#inner-wrap').animate({left:'70%'}, 200);
     }
     else if ($ ("#nav-menu-btn").hasClass("open")) {
       $( this ).removeClass('open');
       $( this ).addClass('closed');
-      $('#inner-wrap').animate({left:'0'}, 500);
+      $('#inner-wrap').animate({left:'0'}, 200);
     }
     event.preventDefault()   
   });
@@ -67,6 +67,11 @@ jQuery(document).ready(function( $ ){
     }).on('click', '.onX', function(){
       $(this).removeClass('x onX').val('');
   });
+
+//add class to comment form submit
+$('input#submit').addClass('btn'); 
+$('.tribe-events-widget-link > a').addClass('btn'); 
+
 
 //baseline
 $('img').baseline(27);

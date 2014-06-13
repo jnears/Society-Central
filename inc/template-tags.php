@@ -22,11 +22,11 @@ function societycentral_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'societycentral' ) ); ?></div>
+			<div class="btn nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'societycentral' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'societycentral' ) ); ?></div>
+			<div class="btn nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'societycentral' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -52,8 +52,8 @@ function societycentral_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'societycentral' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'societycentral' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'societycentral' ) );
+				previous_post_link( '<div class="btn nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'societycentral' ) );
+				next_post_link(     '<div class="btn nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'societycentral' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -94,12 +94,13 @@ function societycentral_posted_on() {
 		// 	esc_url( get_permalink() ),
 		// 	$time_string
 		// ),
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s %3$s</a> %4$s</span>',
+		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s %3$s</a> %4$s</span> %5$s',
 			
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html(get_the_author_meta( 'user_firstname' )),
 			esc_html(get_the_author_meta( 'user_lastname' )),
-			$author_jobtitle
+			$author_jobtitle,
+			$time_string
 		)
 	);
 }

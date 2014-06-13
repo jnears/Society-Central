@@ -288,15 +288,19 @@ html {
     margin-top: 0; }
   [class*="span"] span:last-of-type {
     margin-bottom: 0; }
+  @media only screen and (max-width: 480px) {
+    [class*="span"] {
+      margin-left: 0; } }
 
 .container {
   margin: 3% auto;
   margin: 0 auto;
-  width: 90%;
-  position: relative; }
+  width: 85%;
+  position: relative;
+  max-width: 100rem; }
   @media only screen and (max-width: 480px) {
     .container {
-      width: 92%; } }
+      width: 96%; } }
 
 .pad {
   padding: 1rem; }
@@ -307,7 +311,7 @@ html {
 
 .half {
   float: left;
-  width: 48%; }
+  width: 50%; }
   .half:nth-child(odd) {
     clear: left; }
   .half:nth-child(even) {
@@ -343,23 +347,27 @@ html {
     clear: both; }
   @media only screen and (max-width: 480px) {
     .colgroup-2 {
+      margin-bottom: 0;
+      margin-left: 0; } }
+  @media only screen and (max-width: 480px) {
+    .colgroup-2 {
       margin-top: 0%; } }
   .colgroup-2 > .span1 {
     width: 47%; }
     @media only screen and (max-width: 480px) {
-      .colgroup-2 > .span1 {
+      .colgroup-2 > .span1:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-2 > .span1:nth-child(n) {
+        .colgroup-2 > .span1:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-2 > .span2 {
     width: 97%; }
     @media only screen and (max-width: 480px) {
-      .colgroup-2 > .span2 {
+      .colgroup-2 > .span2:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-2 > .span2:nth-child(n) {
+        .colgroup-2 > .span2:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
 
@@ -379,6 +387,10 @@ html {
     clear: both; }
   @media only screen and (max-width: 480px) {
     .colgroup-3 {
+      margin-bottom: 0;
+      margin-left: 0; } }
+  @media only screen and (max-width: 480px) {
+    .colgroup-3 {
       margin-top: 0%; } }
   .colgroup-3 > .span1 {
     width: 30.33333%; }
@@ -390,10 +402,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-3 > .span1 {
+      .colgroup-3 > .span1:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-3 > .span1:nth-child(n) {
+        .colgroup-3 > .span1:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-3 > .span2 {
@@ -406,10 +418,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-3 > .span2 {
+      .colgroup-3 > .span2:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-3 > .span2:nth-child(n) {
+        .colgroup-3 > .span2:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-3 > .span3 {
@@ -422,10 +434,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-3 > .span3 {
+      .colgroup-3 > .span3:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-3 > .span3:nth-child(n) {
+        .colgroup-3 > .span3:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
 
@@ -445,6 +457,10 @@ html {
     clear: both; }
   @media only screen and (max-width: 480px) {
     .colgroup-4 {
+      margin-bottom: 0;
+      margin-left: 0; } }
+  @media only screen and (max-width: 480px) {
+    .colgroup-4 {
       margin-top: 0%; } }
   .colgroup-4 > .span1 {
     width: 22%; }
@@ -457,10 +473,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-4 > .span1 {
+      .colgroup-4 > .span1:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-4 > .span1:nth-child(n) {
+        .colgroup-4 > .span1:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-4 > .span2 {
@@ -474,10 +490,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-4 > .span2 {
+      .colgroup-4 > .span2:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-4 > .span2:nth-child(n) {
+        .colgroup-4 > .span2:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-4 > .span3 {
@@ -491,10 +507,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-4 > .span3 {
+      .colgroup-4 > .span3:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-4 > .span3:nth-child(n) {
+        .colgroup-4 > .span3:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-4 > .span4 {
@@ -508,10 +524,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-4 > .span4 {
+      .colgroup-4 > .span4:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-4 > .span4:nth-child(n) {
+        .colgroup-4 > .span4:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
 
@@ -531,6 +547,10 @@ html {
     clear: both; }
   @media only screen and (max-width: 480px) {
     .colgroup-5 {
+      margin-bottom: 0;
+      margin-left: 0; } }
+  @media only screen and (max-width: 480px) {
+    .colgroup-5 {
       margin-top: 0%; } }
   .colgroup-5 > .span1 {
     width: 17%; }
@@ -543,10 +563,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-5 > .span1 {
+      .colgroup-5 > .span1:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-5 > .span1:nth-child(n) {
+        .colgroup-5 > .span1:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-5 > .span2 {
@@ -560,10 +580,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-5 > .span2 {
+      .colgroup-5 > .span2:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-5 > .span2:nth-child(n) {
+        .colgroup-5 > .span2:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-5 > .span3 {
@@ -577,10 +597,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-5 > .span3 {
+      .colgroup-5 > .span3:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-5 > .span3:nth-child(n) {
+        .colgroup-5 > .span3:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-5 > .span4 {
@@ -594,10 +614,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-5 > .span4 {
+      .colgroup-5 > .span4:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-5 > .span4:nth-child(n) {
+        .colgroup-5 > .span4:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-5 > .span5 {
@@ -611,10 +631,10 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-5 > .span5 {
+      .colgroup-5 > .span5:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-5 > .span5:nth-child(n) {
+        .colgroup-5 > .span5:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
 
@@ -634,10 +654,14 @@ html {
     clear: both; }
   @media only screen and (max-width: 480px) {
     .colgroup-6 {
+      margin-bottom: 0;
+      margin-left: 0; } }
+  @media only screen and (max-width: 480px) {
+    .colgroup-6 {
       margin-top: 0%; } }
   .colgroup-6 > .span1 {
     width: 13.66667%; }
-    @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 1600px) {
       .colgroup-6 > .span1 {
         width: 30.33333%; }
         .colgroup-6 > .span1:nth-child(3n+1) {
@@ -654,15 +678,15 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-6 > .span1 {
+      .colgroup-6 > .span1:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-6 > .span1:nth-child(n) {
+        .colgroup-6 > .span1:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-6 > .span2 {
     width: 30.33333%; }
-    @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 1600px) {
       .colgroup-6 > .span2 {
         width: 30.33333%; }
         .colgroup-6 > .span2:nth-child(3n+1) {
@@ -679,15 +703,15 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-6 > .span2 {
+      .colgroup-6 > .span2:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-6 > .span2:nth-child(n) {
+        .colgroup-6 > .span2:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-6 > .span3 {
     width: 47%; }
-    @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 1600px) {
       .colgroup-6 > .span3 {
         width: 30.33333%; }
         .colgroup-6 > .span3:nth-child(3n+1) {
@@ -704,15 +728,15 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-6 > .span3 {
+      .colgroup-6 > .span3:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-6 > .span3:nth-child(n) {
+        .colgroup-6 > .span3:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-6 > .span4 {
     width: 63.66667%; }
-    @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 1600px) {
       .colgroup-6 > .span4 {
         width: 30.33333%; }
         .colgroup-6 > .span4:nth-child(3n+1) {
@@ -729,15 +753,15 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-6 > .span4 {
+      .colgroup-6 > .span4:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-6 > .span4:nth-child(n) {
+        .colgroup-6 > .span4:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-6 > .span5 {
     width: 80.33333%; }
-    @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 1600px) {
       .colgroup-6 > .span5 {
         width: 30.33333%; }
         .colgroup-6 > .span5:nth-child(3n+1) {
@@ -754,15 +778,15 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-6 > .span5 {
+      .colgroup-6 > .span5:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-6 > .span5:nth-child(n) {
+        .colgroup-6 > .span5:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
   .colgroup-6 > .span6 {
     width: 97%; }
-    @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 1600px) {
       .colgroup-6 > .span6 {
         width: 30.33333%; }
         .colgroup-6 > .span6:nth-child(3n+1) {
@@ -779,18 +803,49 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
     @media only screen and (max-width: 480px) {
-      .colgroup-6 > .span6 {
+      .colgroup-6 > .span6:not(.no-single) {
         width: auto;
         float: none; }
-        .colgroup-6 > .span6:nth-child(n) {
+        .colgroup-6 > .span6:not(.no-single):nth-child(n) {
           margin-top: 27px;
           margin-top: 1.5rem; } }
+
+.colgroup-3 > .span2 > .colgroup-2 > .span1 {
+  width: 46%;
+  margin-left: 3%; }
+  .colgroup-3 > .span2 > .colgroup-2 > .span1:nth-child(even) {
+    margin-left: 5%; }
+  @media only screen and (max-width: 480px) {
+    .colgroup-3 > .span2 > .colgroup-2 > .span1 {
+      width: auto;
+      float: none;
+      margin-left: 0%; }
+      .colgroup-3 > .span2 > .colgroup-2 > .span1:nth-child(even) {
+        margin-left: 0%; } }
+
+body:after {
+  content: "desktop";
+  display: none; }
+  @media only screen and (min-width: 1601px) {
+    body:after {
+      content: "large_desktop"; } }
+  @media only screen and (max-width: 768px) {
+    body:after {
+      content: "tablet"; } }
+  @media only screen and (max-width: 480px) {
+    body:after {
+      content: "handheld"; } }
 
 p {
   margin-top: 0px;
   margin-top: 0rem;
   margin-bottom: 27px;
   margin-bottom: 1.5rem; }
+
+audio {
+  width: 100%;
+  margin: 18px 0px 18px 0px;
+  margin: 1rem 0rem 1rem 0rem; }
 
 .heading {
   font-family: "Officina", Georgia, "Times New Roman", Times, serif;
@@ -847,8 +902,16 @@ h1 {
   margin-bottom: 27px;
   margin-bottom: 1.5rem;
   margin-top: 0; }
+  @media only screen and (max-width: 480px) {
+    h1 {
+      font-size: 36px;
+      font-size: 2rem;
+      line-height: 36px;
+      line-height: 2rem; } }
   h1.info {
     font-weight: normal; }
+    h1.info a:link, h1.info a:visited {
+      color: #2c2c2c; }
   h1.c {
     text-align: center; }
   h1.inline {
@@ -884,8 +947,16 @@ h2 {
   margin-bottom: 27px;
   margin-bottom: 1.5rem;
   margin-top: 0; }
+  @media only screen and (max-width: 480px) {
+    h2 {
+      font-size: 27px;
+      font-size: 1.5rem;
+      line-height: 27px;
+      line-height: 1.5rem; } }
   h2.info {
     font-weight: normal; }
+    h2.info a:link, h2.info a:visited {
+      color: #2c2c2c; }
   h2.c {
     text-align: center; }
   h2.inline {
@@ -923,6 +994,8 @@ h3 {
   margin-top: 0; }
   h3.info {
     font-weight: normal; }
+    h3.info a:link, h3.info a:visited {
+      color: #2c2c2c; }
   h3.c {
     text-align: center; }
   h3.inline {
@@ -959,6 +1032,8 @@ h4 {
   margin-top: 0; }
   h4.info {
     font-weight: normal; }
+    h4.info a:link, h4.info a:visited {
+      color: #2c2c2c; }
   h4.c {
     text-align: center; }
   h4.inline {
@@ -968,8 +1043,8 @@ h5 {
   position: relative;
   clear: both;
   font-family: "Officina", Georgia, "Times New Roman", Times, serif;
-  font-size: 18px;
-  font-size: 1rem;
+  font-size: 20px;
+  font-size: 1.11111rem;
   font-weight: bold;
   line-height: 27px;
   line-height: 1.5rem;
@@ -977,6 +1052,8 @@ h5 {
   margin-top: 0; }
   h5.info {
     font-weight: normal; }
+    h5.info a:link, h5.info a:visited {
+      color: #2c2c2c; }
   h5.c {
     text-align: center; }
   h5.inline {
@@ -995,6 +1072,8 @@ h6 {
   margin-top: 0; }
   h6.info {
     font-weight: normal; }
+    h6.info a:link, h6.info a:visited {
+      color: #2c2c2c; }
   h6.c {
     text-align: center; }
   h6.inline {
@@ -1048,6 +1127,14 @@ blockquote {
     blockquote.pull-quote *:last-child {
       margin-bottom: 0px;
       margin-bottom: 0rem; }
+  @media only screen and (max-width: 480px) {
+    blockquote {
+      font-size: 18px;
+      font-size: 1rem;
+      line-height: 27px;
+      line-height: 1.5rem;
+      margin: 0px 18px;
+      margin: 0rem 1rem; } }
 
 blockquote b {
   display: block;
@@ -1080,6 +1167,8 @@ hr {
   margin: 1.44444rem 0rem 1.5rem 0rem;
   line-height: 27px;
   line-height: 1.5rem; }
+  hr.hidden {
+    border-bottom: 1px solid transparent; }
 
 code {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -1288,14 +1377,10 @@ header[role=banner] {
     height: 4rem;
     padding: 18px;
     padding: 1rem;
-    background: white url(asset-path("iser-logo.gif", image)) no-repeat 0 50%;
+    background: url(asset-path("iser.svg", image)) no-repeat 50% 50%;
     text-indent: -3000em;
     overflow: hidden;
     display: block; }
-    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-      header[role=banner] a.home-logo {
-        background-image: url(asset-path("iser-logo@2x.gif", image));
-        background-size: 80px 68px; } }
     @media only screen and (max-width: 768px) {
       header[role=banner] a.home-logo {
         margin-left: auto;
@@ -1419,6 +1504,14 @@ button.close {
   color: white;
   float: right; }
 
+ul.compact li, ol.compact li {
+  margin-bottom: 0; }
+
+ul.plain, ol.plain {
+  padding: 0; }
+  ul.plain li, ol.plain li {
+    list-style-type: none; }
+
 ul, ol {
   padding: 0px 0px 0px 18px;
   padding: 0rem 0rem 0rem 1rem;
@@ -1427,6 +1520,10 @@ ul, ol {
 
 ul, ol {
   list-style-position: outside; }
+
+li {
+  margin: 0px 0px 27px 0px;
+  margin: 0rem 0rem 1.5rem 0rem; }
 
 ul ul,
 ol ol {
@@ -1464,19 +1561,24 @@ ol#publications {
     list-style-type: none;
     padding: 4.5px 0px;
     padding: 0.25rem 0rem; }
-  ol#publications dt, ol#publications dd {
-    margin: 0; }
-  ol#publications dd.publication-date {
+  ol#publications time {
     color: gray;
-    font-size: 14.4px;
-    font-size: 0.8rem;
+    font-size: 16px;
+    font-size: 0.88889rem;
     font-style: italic; }
   ol#publications i {
     color: #cccccc; }
   ol#publications cite a:link, ol#publications cite a:visited {
     color: gray;
-    font-size: 14.4px;
-    font-size: 0.8rem; }
+    font-size: 16px;
+    font-size: 0.88889rem; }
+
+.small-publication h4 {
+  font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem; }
 
 table {
   width: 100%;
@@ -1485,6 +1587,8 @@ table {
   border-spacing: 0;
   margin-bottom: 27px;
   margin-bottom: 1.5rem; }
+  table.all-left td:last-of-type {
+    text-align: left; }
   table caption {
     text-align: left;
     font-style: italic; }
@@ -1522,6 +1626,12 @@ p.lead {
   font-size: 1.22222rem;
   line-height: 27px;
   line-height: 1.5rem; }
+  @media only screen and (max-width: 480px) {
+    p.lead {
+      font-size: 18px;
+      font-size: 1rem;
+      line-height: 27px;
+      line-height: 1.5rem; } }
 
 p.call-to-action {
   font-size: 22px;
@@ -1577,10 +1687,19 @@ h6.meta {
   margin-bottom: 1.5rem;
   padding: 9px 0px;
   padding: 0.5rem 0rem;
+  z-index: 100;
+  position: relative;
   background: white;
   cursor: default;
-  overflow: auto; }
-  .pagination a, .pagination span, .pagination em {
+  overflow: auto;
+  margin-left: -3px; }
+  .pagination span {
+    display: block; }
+    .pagination span:first-child {
+      margin-left: 3px; }
+    .pagination span a {
+      padding: 0.2em 0.5em; }
+  .pagination a, .pagination em {
     padding: 0.2em 0.5em;
     display: block;
     float: left;
@@ -1623,8 +1742,6 @@ h6.meta {
       color: #dddddd;
       outline: none; }
   .pagination .current {
-    font-style: normal;
-    font-weight: bold;
     display: inline-block;
     padding: 4px 12px;
     margin-bottom: 0;
@@ -1642,6 +1759,12 @@ h6.meta {
     *border: 0;
     background: #005ea5;
     color: white;
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right: 4.5px;
+    margin-right: 0.25rem;
     background: #ce001f;
     color: white; }
     .pagination .current:hover, .pagination .current:focus {
@@ -1655,6 +1778,9 @@ h6.meta {
     .pagination .current.disabled, .pagination .current[disabled] {
       cursor: default;
       background-image: none; }
+  .pagination .gap {
+    float: left;
+    margin-right: 0.25rem; }
   .pagination a {
     text-decoration: none;
     display: inline-block;
@@ -1871,19 +1997,26 @@ fieldset.property {
 img.preview {
   max-width: 200px; }
 
+.meta {
+  color: gray;
+  font-size: 14.4px;
+  font-size: 0.8rem;
+  line-height: 14.4px;
+  line-height: 0.8rem; }
+
 .badge {
   display: inline-block;
   min-width: 10px;
-  padding: 3px 7px;
-  font-size: 18px;
-  font-size: 1rem;
+  min-height: 10px;
+  padding: 5px 3px 3px 3px;
+  font-size: 14px;
+  font-size: 0.77778rem;
   font-weight: bold;
-  color: white;
-  vertical-align: baseline;
+  vertical-align: middle;
   white-space: nowrap;
   text-align: center;
   background-color: #dddddd;
-  border-radius: 5px; }
+  border-radius: 30%; }
 
 .circ-border {
   margin-top: -10px;
@@ -1918,23 +2051,31 @@ img.preview {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6); }
 
+.half-hero header {
+  position: absolute;
+  color: white;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  bottom: 18px;
+  bottom: 1rem; }
+  .half-hero header a:link, .half-hero header a:visited {
+    position: relative;
+    z-index: 1;
+    color: white; }
+  .half-hero header a:hover {
+    color: #1e9cee; }
+  .half-hero header h1 {
+    margin: 0 auto 3rem auto;
+    font-size: 36px;
+    font-size: 2rem;
+    padding: 18px 72px;
+    padding: 1rem 4rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); }
+
 .component {
   background: #f2f2f2; }
-
-main.post time {
-  display: block;
-  color: gray;
-  font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
-  font-weight: normal;
-  font-style: italic;
-  font-size: 16px;
-  font-size: 0.88889rem;
-  line-height: 27px;
-  line-height: 1.5rem;
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
 
 aside.home {
   background: #f2f2f2;
@@ -1942,15 +2083,52 @@ aside.home {
   padding: 1rem; }
 
 .home-banner {
-  margin-top: -36px;
-  margin-top: -2rem;
-  background: #2c2c2c url(asset-path("home_banner.jpg", image)) no-repeat 50% 0;
-  background-size: cover;
-  color: white;
-  padding: 108px 0px;
-  padding: 6rem 0rem; }
-  .home-banner span {
-    color: rgba(255, 255, 255, 0.75); }
+  margin-top: -18px;
+  margin-top: -1rem; }
+
+.compact {
+  margin-bottom: 0; }
+
+.tag i.fa {
+  margin-left: 6.3px;
+  margin-left: 0.35rem; }
+
+.brochure .row {
+  width: 100%;
+  display: block;
+  overflow: auto;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 26px 0px 27px 0px;
+  padding: 1.44444rem 0rem 1.5rem 0rem; }
+  .brochure .row:first-child {
+    padding-top: 0px;
+    padding-top: 0rem; }
+  .brochure .row:last-child {
+    border-bottom: 0;
+    margin-bottom: 27px;
+    margin-bottom: 1.5rem; }
+  .brochure .row .container {
+    width: 100%;
+    margin: 0 auto; }
+  .brochure .row figure {
+    float: left;
+    width: 40%;
+    margin: 0;
+    vertical-align: top;
+    margin-top: 13.5px;
+    margin-top: 0.75rem; }
+    .brochure .row figure img {
+      width: 100%; }
+  .brochure .row:nth-child(odd) figure {
+    margin-right: 3%; }
+  .brochure .row:nth-child(even) figure {
+    margin-left: 3%; }
+  .brochure .row .content {
+    float: left;
+    width: 57%;
+    vertical-align: top; }
+.brochure.zebra .row:nth-child(odd) {
+  background: #fafafa; }
 
 @font-face {
   font-family: "Officina";
@@ -2067,8 +2245,8 @@ header[role=banner] nav {
       font-size: 16px;
       font-size: 0.88889rem;
       float: left;
-      margin-left: 18px;
-      margin-left: 1rem;
+      margin: 0px 0px 0px 18px;
+      margin: 0rem 0rem 0rem 1rem;
       line-height: 2.2rem; }
       header[role=banner] nav ol li a:link, header[role=banner] nav ol li a:visited {
         font-family: "Officina", Georgia, "Times New Roman", Times, serif;
@@ -2112,6 +2290,9 @@ header[role=banner] nav {
           header[role=banner] nav ol li.dropdown ol li {
             float: none;
             display: block; }
+
+.active {
+  font-weight: bold; }
 
 body.app header[role=banner] nav {
   width: 75%;
@@ -2182,7 +2363,7 @@ nav.breadcrumb {
       line-height: 14.0px;
       line-height: 0.77778rem; }
       nav.breadcrumb ol li:not(:last-of-type):after {
-        content: "\E602\003E\E602"; }
+        content: "\00A0\003E\00A0"; }
       nav.breadcrumb ol li a:link, nav.breadcrumb ol li a:visited {
         font-weight: bold; }
 
@@ -2203,11 +2384,28 @@ main {
   max-width: 630px;
   max-width: 35rem;
   margin: 0 auto; }
-
-div.meta {
-  font-size: 14px;
-  font-size: 0.77778rem;
-  color: gray !important; }
+  main.two-column {
+    margin: 0;
+    max-width: 100%; }
+    @media only screen and (max-width: 768px) {
+      main.two-column img {
+        float: left;
+        width: 50%; }
+      main.two-column aside {
+        background: white;
+        padding-top: 0;
+        float: left;
+        width: 50%; } }
+    @media only screen and (max-width: 480px) {
+      main.two-column img {
+        float: none;
+        width: 100%; }
+      main.two-column aside {
+        background: #f2f2f2;
+        float: none;
+        padding: 18px;
+        padding: 1rem;
+        width: 100%; } }
 
 body.app main {
   float: none;
@@ -2221,6 +2419,10 @@ a#show-grid {
   position: fixed;
   bottom: 10px;
   right: 10px; }
+
+@media only screen and (max-width: 480px) {
+  .handheld-hide {
+    display: none; } }
 
 section.post-list article {
   padding: 27px 0px;
@@ -2332,8 +2534,8 @@ footer[role=contentinfo] {
       font-size: 0.77778rem;
       list-style-type: none;
       float: left;
-      margin-left: 9px;
-      margin-left: 0.5rem;
+      margin-left: 13.5px;
+      margin-left: 0.75rem;
       vertical-align: middle; }
   footer[role=contentinfo] a.esrc {
     float: left;
@@ -2365,9 +2567,40 @@ footer[role=contentinfo] {
 img {
   width: 100%; }
 
+.autoimage img {
+  width: auto; }
+
 .hero {
   margin-top: -36px;
   margin-top: -2rem; }
+
+figure {
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem; }
+
+figcaption {
+  font-style: italic;
+  font-size: 16px;
+  font-size: 0.88889rem;
+  line-height: 27px;
+  line-height: 1.5rem;
+  color: gray; }
+
+.avatar {
+  text-align: center; }
+  .avatar figure {
+    padding: 0px 27px;
+    padding: 0rem 1.5rem;
+    margin: 0; }
+    .avatar figure img {
+      border-radius: 100%; }
+
+.avatar-clear {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
 
 .stories p {
   font-size: 16.0px;
@@ -2375,70 +2608,70 @@ img {
 
 .components .span1 {
   background: #f2f2f2;
-  min-height: 18rem;
+  min-height: 24rem;
   padding: 1rem; }
   .components .span1 > :first-child {
     margin-top: 0rem; }
   .components .span1 > :last-child {
     margin-bottom: 0rem; }
-  .components .span1 p {
-    font-size: 16.0px;
-    font-size: 0.88889rem; }
+  @media only screen and (max-width: 1600px) {
+    .components .span1 {
+      min-height: 14rem; } }
 .components .span2 {
   background: #f2f2f2;
-  min-height: 18rem;
+  min-height: 24rem;
   padding: 1rem; }
   .components .span2 > :first-child {
     margin-top: 0rem; }
   .components .span2 > :last-child {
     margin-bottom: 0rem; }
-  .components .span2 p {
-    font-size: 16.0px;
-    font-size: 0.88889rem; }
+  @media only screen and (max-width: 1600px) {
+    .components .span2 {
+      min-height: 14rem; } }
 .components .span3 {
   background: #f2f2f2;
-  min-height: 18rem;
+  min-height: 24rem;
   padding: 1rem; }
   .components .span3 > :first-child {
     margin-top: 0rem; }
   .components .span3 > :last-child {
     margin-bottom: 0rem; }
-  .components .span3 p {
-    font-size: 16.0px;
-    font-size: 0.88889rem; }
+  @media only screen and (max-width: 1600px) {
+    .components .span3 {
+      min-height: 14rem; } }
 .components .span4 {
   background: #f2f2f2;
-  min-height: 18rem;
+  min-height: 24rem;
   padding: 1rem; }
   .components .span4 > :first-child {
     margin-top: 0rem; }
   .components .span4 > :last-child {
     margin-bottom: 0rem; }
-  .components .span4 p {
-    font-size: 16.0px;
-    font-size: 0.88889rem; }
+  @media only screen and (max-width: 1600px) {
+    .components .span4 {
+      min-height: 14rem; } }
 .components .span5 {
   background: #f2f2f2;
-  min-height: 18rem;
+  min-height: 24rem;
   padding: 1rem; }
   .components .span5 > :first-child {
     margin-top: 0rem; }
   .components .span5 > :last-child {
     margin-bottom: 0rem; }
-  .components .span5 p {
-    font-size: 16.0px;
-    font-size: 0.88889rem; }
+  @media only screen and (max-width: 1600px) {
+    .components .span5 {
+      min-height: 14rem; } }
 .components .span6 {
   background: #f2f2f2;
-  min-height: 18rem;
+  min-height: 24rem;
   padding: 1rem; }
   .components .span6 > :first-child {
     margin-top: 0rem; }
   .components .span6 > :last-child {
     margin-bottom: 0rem; }
-  .components .span6 p {
-    font-size: 16.0px;
-    font-size: 0.88889rem; }
+  @media only screen and (max-width: 1600px) {
+    .components .span6 {
+      min-height: 14rem; } }
 
 .pygment .hll {
   background-color: #ffffcc; }
@@ -2584,6 +2817,144 @@ img {
 .pygment .il {
   color: #666666; }
 
+.feed article {
+  position: relative;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 26px 0px 27px 108px;
+  padding: 1.44444rem 0rem 1.5rem 6rem; }
+  @media only screen and (max-width: 768px) {
+    .feed article {
+      padding: 26px 0px 27px 0px;
+      padding: 1.44444rem 0rem 1.5rem 0rem; } }
+  .feed article *:last-of-type {
+    margin-bottom: 0; }
+  .feed article.publication p {
+    margin-bottom: 0; }
+.feed time {
+  top: 27px;
+  top: 1.5rem;
+  display: block;
+  color: gray;
+  font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 16px;
+  font-size: 0.88889rem;
+  line-height: 27px;
+  line-height: 1.5rem;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 768px) {
+    .feed time {
+      top: auto; } }
+.feed figure {
+  margin: 18px 0px;
+  margin: 1rem 0rem; }
+
+.twitter-tweet {
+  visibility: hidden; }
+
+.left-margin {
+  position: absolute;
+  top: 1px;
+  left: 0; }
+  @media only screen and (max-width: 768px) {
+    .left-margin {
+      position: relative;
+      top: 0; } }
+
+main.podcast .intro {
+  padding-right: 120px;
+  position: relative;
+  overflow: visible;
+  min-height: 110px;
+  margin-top: 27px;
+  margin-top: 1.5rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem; }
+  main.podcast .intro p.lead {
+    margin-right: 10px; }
+  main.podcast .intro figure {
+    position: absolute;
+    padding-left: 60px;
+    top: 0;
+    right: 0; }
+    main.podcast .intro figure img {
+      width: 120px; }
+      @media only screen and (max-width: 480px) {
+        main.podcast .intro figure img {
+          width: 100px; } }
+main.podcast .audio-player {
+  width: 100%;
+  margin-bottom: 0; }
+main.podcast .avatar {
+  border-radius: 100%; }
+main.podcast div.audio-meta {
+  position: relative;
+  color: gray;
+  font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 16px;
+  font-size: 0.88889rem;
+  margin-bottom: 27px;
+  margin-bottom: 1.5rem;
+  padding-right: 120px;
+  overflow: auto; }
+  @media only screen and (max-width: 480px) {
+    main.podcast div.audio-meta {
+      padding-right: 0; } }
+  main.podcast div.audio-meta .subscribe {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    @media only screen and (max-width: 480px) {
+      main.podcast div.audio-meta .subscribe {
+        position: relative; } }
+main.podcast a.itunes {
+  float: left;
+  padding-top: 2px;
+  margin-top: -2px;
+  width: 62px;
+  height: 22px;
+  margin-right: 9px;
+  background: url("/assets/itunes.png") no-repeat 46px 6px; }
+main.podcast a[href$='.rss'] {
+  padding-top: 2px;
+  margin-top: -2px;
+  width: 44px;
+  float: left;
+  background: url(asset-path("rss.png", image)) no-repeat 32px 8px; }
+main.podcast article.latest {
+  position: relative;
+  padding-left: 110px;
+  min-height: 110px; }
+  main.podcast article.latest figure {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    main.podcast article.latest figure img {
+      width: 100px; }
+      @media only screen and (max-width: 480px) {
+        main.podcast article.latest figure img {
+          width: 80px; } }
+
+.people .colgroup-4 {
+  margin-bottom: 0; }
+
+aside {
+  padding: 20px;
+  background: #f2f2f2; }
+  aside h3 {
+    font-size: 1.2rem; }
+  aside ol {
+    list-style-type: none;
+    padding: 0; }
+  aside li {
+    margin: 0; }
+
 html.sc h1 {
   font-size: 36px;
   font-size: 2rem; }
@@ -2606,6 +2977,8 @@ html.sc a:link, html.sc a:visited {
   text-decoration: none; }
 html.sc a:hover {
   text-decoration: underline; }
+html.sc .btn a:link, html.sc .btn a:visited, html.sc .btn a:hover {
+  color: white; }
 html.sc .clearable {
   background: #fafafa url("ui/close-ico.png") no-repeat right -10px center;
   border: 1px solid #999999;
@@ -2691,7 +3064,6 @@ html.sc header[role=banner] {
     margin: 0 auto;
     width: 90%;
     position: relative;
-    overflow: hidden;
     max-width: 1185px; }
     @media only screen and (max-width: 480px) {
       html.sc header[role=banner] .site-branding {
@@ -2804,7 +3176,9 @@ html.sc .paging-navigation {
   margin-bottom: 27px;
   margin-bottom: 1.5rem; }
   html.sc .paging-navigation .nav-previous {
-    float: left; }
+    float: left;
+    margin-left: 3px;
+    margin-left: 0.16667rem; }
   html.sc .paging-navigation .nav-next {
     float: right; }
 html.sc .entry-meta {
@@ -2977,7 +3351,9 @@ html.sc aside#headlines nav {
   margin-left: 0rem;
   position: relative;
   right: 0;
-  width: 100%; }
+  width: 100%;
+  font-family: "Officina", Georgia, "Times New Roman", Times, serif;
+  font-weight: bold; }
   html.sc aside#headlines nav ol {
     padding: 0;
     margin: 0px;
@@ -3061,7 +3437,9 @@ html.sc div#secondary {
     width: 100%;
     margin-left: 0;
     font-size: 18px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    padding: 0;
+    background: none; }
     @media only screen and (max-width: 480px) {
       html.sc div#secondary aside#site-overview {
         display: none; } }
@@ -3129,8 +3507,8 @@ html.sc div#secondary {
     html.sc div#secondary form[role=search] input[type=submit] {
       display: none; }
 html.sc main.site-main h1.page-title {
-  font-size: 36px;
-  font-size: 2rem;
+  font-size: 54px;
+  font-size: 3rem;
   line-height: 54px;
   line-height: 3rem;
   margin-bottom: 27px;
@@ -3140,8 +3518,8 @@ html.sc main.site-main article.single-post {
   margin: 0px;
   margin: 0rem; }
   html.sc main.site-main article.single-post h1 {
-    font-size: 36px;
-    font-size: 2rem;
+    font-size: 54px;
+    font-size: 3rem;
     line-height: 54px;
     line-height: 3rem;
     margin-bottom: 27px;
@@ -3185,7 +3563,10 @@ html.sc main.site-main article {
       font-size: 1.22222rem; }
     html.sc main.site-main article.featured figcaption {
       padding: 9px 13.5px 18px;
-      padding: 0.5rem 0.75rem 1rem; }
+      padding: 0.5rem 0.75rem 1rem;
+      font-style: normal;
+      font-size: 18px;
+      font-size: 1rem; }
   html.sc main.site-main article h1 {
     font-size: 24px;
     font-size: 1.33333rem;
@@ -3271,7 +3652,9 @@ html.sc footer[role=contentinfo] {
     html.sc footer[role=contentinfo] .site-info ol {
       padding-left: 0px; }
       html.sc footer[role=contentinfo] .site-info ol li {
-        list-style-type: none; }
+        list-style-type: none;
+        margin-bottom: 0px;
+        margin-bottom: 0rem; }
     html.sc footer[role=contentinfo] .site-info .third {
       float: left;
       width: 33.33333%;
@@ -3292,21 +3675,23 @@ html.sc footer[role=contentinfo] {
     html.sc footer[role=contentinfo] .site-info .closing {
       display: block;
       clear: both;
-      padding-top: 9px;
-      padding-top: 0.5rem; }
+      padding: 9px 0px 18px 0px;
+      padding: 0.5rem 0rem 1rem 0rem; }
       html.sc footer[role=contentinfo] .site-info .closing ul {
         float: right;
-        padding: 13.5px 0px;
-        padding: 0.75rem 0rem;
+        padding: 18px 13.5px 0px;
+        padding: 1rem 0.75rem 0rem;
         margin-bottom: 0; }
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: 768px) {
           html.sc footer[role=contentinfo] .site-info .closing ul {
-            float: left; } }
+            float: left;
+            padding: 18px 0px 13.5px;
+            padding: 1rem 0rem 0.75rem; } }
         html.sc footer[role=contentinfo] .site-info .closing ul li {
           display: inline;
           padding: 0px 0px 0px 20px;
           padding: 0rem 0rem 0rem 1.11111rem; }
-          @media only screen and (max-width: 480px) {
+          @media only screen and (max-width: 768px) {
             html.sc footer[role=contentinfo] .site-info .closing ul li {
               padding: 0px 20px 0px 0px;
               padding: 0rem 1.11111rem 0rem 0rem; } }
@@ -3337,12 +3722,6 @@ html.sc footer[role=contentinfo] {
         html.sc footer[role=contentinfo] p.logo .essex-logo {
           background-image: url("ui/essex-logo2x.png");
           background-size: 166px 96px; } }
-html.sc form input:focus, html.sc form textarea:focus, html.sc form select:focus {
-  outline: 0;
-  outline: thin dotted \9;
-  -moz-box-shadow: 0px 0px 6px 0px #cccccc;
-  -webkit-box-shadow: 0px 0px 6px 0px #cccccc;
-  box-shadow: 0px 0px 6px 0px #cccccc; }
 html.sc form[role=search] {
   background: none; }
   html.sc form[role=search] fieldset {
@@ -3354,7 +3733,6 @@ html.sc form[role=search] {
         padding: 0px 9px;
         padding: 0rem 0.5rem; } }
   html.sc form[role=search] input[type=search] {
-    border: 1px solid #cccccc;
     width: 80%;
     margin-right: 1%;
     padding: 0 1%;
@@ -3368,11 +3746,8 @@ html.sc form[role=search] {
         width: 73%;
         margin-right: 1%; } }
   html.sc form[role=search] input[type=submit] {
-    border: 1px solid #cccccc;
-    background: #fafafa;
     width: 12%;
-    margin: 0;
-    color: #2c2c2c; }
+    margin: 0; }
     @media only screen and (max-width: 480px) {
       html.sc form[role=search] input[type=submit] {
         width: 18%;
@@ -3380,35 +3755,8 @@ html.sc form[role=search] {
     @media only screen and (max-width: 768px) {
       html.sc form[role=search] input[type=submit] {
         width: 18%; } }
-    html.sc form[role=search] input[type=submit]:hover, html.sc form[role=search] input[type=submit]:focus {
-      background: gray;
-      outline: 0;
-      color: white; }
 html.sc #commentform p.form-allowed-tags {
   display: none; }
-html.sc #primary input[type=submit] {
-  padding: 8px;
-  padding: 0.44444rem;
-  display: inline-block;
-  position: relative;
-  font-size: 18px;
-  font-size: 1rem;
-  font-family: "Officina", Georgia, "Times New Roman", Times, serif;
-  font-weight: normal;
-  text-align: center;
-  color: white;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border: none;
-  outline: 0;
-  background-color: gray;
-  padding: 13.5px 18px;
-  padding: 0.75rem 1rem;
-  line-height: 18px;
-  line-height: 1rem;
-  margin: 4.5px 0px;
-  margin: 0.25rem 0rem; }
 html.sc #primary form[role=search] {
   display: block;
   background: #f2f2f2;
@@ -3430,12 +3778,7 @@ html.sc #primary form[role=search] {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    width: 90%; }
-  html.sc #primary form[role=search] input[type=submit] {
-    padding: 8px;
-    padding: 0.44444rem;
-    float: left;
-    width: autof; }
+    width: 80%; }
 html.sc #primary .comment-form {
   width: auto;
   line-height: normal;
@@ -3443,9 +3786,6 @@ html.sc #primary .comment-form {
   padding-right: 1rem; }
   html.sc #primary .comment-form label {
     text-align: left; }
-  html.sc #primary .comment-form input[type="submit"] {
-    margin: 0px;
-    margin: 0rem; }
 html.sc body.home span.comments-link, html.sc body.home span.edit-link {
   display: none; }
 
