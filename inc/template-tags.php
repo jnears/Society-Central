@@ -61,15 +61,38 @@ function societycentral_post_nav() {
 }
 endif;
 
-if ( ! function_exists( 'societycentral_posted_on' ) ) :
+if ( ! function_exists( 'societycentral_post_meta' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function societycentral_posted_on() {
-	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	if ( get_the_author_meta( 'jobtitle' ) ) { 
-		$author_jobtitle =  '- ' . esc_html(get_the_author_meta( 'jobtitle' )) ;
+function societycentral_post_meta() {
+	if ( get_the_author_meta( 'title' ) ) { 
+		$author_title =  esc_html(get_the_author_meta( 'title' )) ;
 	};
+	if ( get_the_author_meta( 'jobtitle' ) ) { 
+		$author_jobtitle =  ', ' . esc_html(get_the_author_meta( 'jobtitle' )) ;
+	};
+
+
+	printf( __( '<span class="byline">%1$s </span>', 'societycentral' ),
+		
+		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s %3$s %4$s</a>%5$s</span>',
+			
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			$author_title,
+			esc_html(get_the_author_meta( 'user_firstname' )),
+			esc_html(get_the_author_meta( 'user_lastname' )),
+			$author_jobtitle
+		)
+	);
+}
+endif;
+
+if ( ! function_exists( 'societycentral_posted_date' ) ) :
+
+function societycentral_posted_date() {
+
+	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
@@ -78,17 +101,14 @@ function societycentral_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="byline">%1$s </span>', 'societycentral' ),
+	printf( __( '%1$s', 'societycentral' ),
 		
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s %3$s</a> %4$s</span> %5$s',
+		sprintf( '%1$s',
 			
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_html(get_the_author_meta( 'user_firstname' )),
-			esc_html(get_the_author_meta( 'user_lastname' )),
-			$author_jobtitle,
 			$time_string
 		)
 	);
+
 }
 endif;
 

@@ -8,7 +8,7 @@
             $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
         ?>
 
-            <h1 class="entry-title"><?php printf( __( 'About %s %s <span>%s</span>', 'societycentral' ), $curauth->first_name, $curauth->last_name, $curauth->jobtitle ); ?><span><?php get_the_author_meta( 'jobtitle' ) ?></span></h1>
+            <h1 class="entry-title"><?php printf( __( 'About %s %s %s <span>%s</span>', 'societycentral' ), $curauth->title, $curauth->first_name, $curauth->last_name, $curauth->jobtitle ); ?><span><?php get_the_author_meta( 'jobtitle' ) ?></span></h1>
             
             <div class="colgroup-4">
                 
@@ -26,7 +26,7 @@
         
             <hr>
             
-            <h3>Recent posts by <?php echo $curauth->first_name; ?></h3>
+            <h3>Recent posts by <?php echo $curauth->title; ?> <?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></h3>
 
             <ul>
             	<!-- The Loop -->

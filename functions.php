@@ -306,6 +306,13 @@ function my_show_extra_profile_fields( $user ) { ?>
     <table class="form-table">
 
         <tr>
+            <th><label for="title">Title e.g. Professor</label></th>
+
+            <td>
+                <input type="text" name="title" id="title" value="<?php echo esc_attr( get_the_author_meta( 'title', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">Please enter your title.</span>
+            </td>
+        </tr><tr>
             <th><label for="jobtitle">Job Title</label></th>
 
             <td>
@@ -336,9 +343,48 @@ function my_save_extra_profile_fields( $user_id ) {
         return false;
 
     /* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
+    update_usermeta( $user_id, 'title', $_POST['title'] );
     update_usermeta( $user_id, 'jobtitle', $_POST['jobtitle'] );
     update_usermeta( $user_id, 'excerpt', $_POST['excerpt'] );
 }
+
+
+add_filter( 'post_class', 'custom_taxonomy_post_class', 10, 3 );
+
+    if( !function_exists( 'custom_taxonomy_post_class' ) ) {
+
+        function custom_taxonomy_post_class( $classes, $class, $ID ) {
+
+            $taxonomy = 'feature';
+
+            $terms = get_the_terms( (int) $ID, $taxonomy );
+
+            if( !empty( $terms ) ) {
+
+                foreach( (array) $terms as $order => $term ) {
+
+                    if( !in_array( $term->slug, $classes ) ) {
+
+                        $classes[] = $term->slug;
+
+                    }
+
+                }
+
+            }
+
+            return $classes;
+
+        }
+
+    }
+
+
+
+
+
+
+
 
 
 //Enqueueing retina.js (for retina images)

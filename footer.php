@@ -31,6 +31,7 @@
 							+44 (0) 1206 873684<br>
 							<a href="mailto:societycentral@essex.ac.uk">societycentral@essex.ac.uk</a><br>
 						</p>
+						<p class="logo"><a class="iser-logo" href="https://iser.essex.ac.uk">ISER</a></p>
 
 					</div>
 					
@@ -40,8 +41,6 @@
 					</div>
 
 					<div class="closing">
-						<p class="logo"><a class="iser-logo" href="https://iser.essex.ac.uk">ISER</a></p>
-						<p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
 						<ul>
 							<li><a href="<?php echo site_url(); ?>/archives">Archives</a></li>
 							<li><a href="<?php echo site_url(); ?>/events">Events</a></li>
@@ -49,6 +48,7 @@
 							<li><a href="<?php echo site_url(); ?>/privacy">Privacy and Cookies</a></li>
 						</ul>
 					</div><!-- .closing -->
+					<p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

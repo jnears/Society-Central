@@ -18,7 +18,7 @@
 		
 		<?php if ( 'post' == get_post_type()  or 'essexuni_news' == get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php societycentral_posted_on(); ?>
+				<?php societycentral_post_meta(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>	
 		

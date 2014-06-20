@@ -14,17 +14,46 @@
 		<div class="meta-container">
 			<!-- meta information -->
 			
-			<div class="entry-meta"><?php societycentral_posted_on(); ?></div>
+			<div class="entry-meta">
+				<?php societycentral_post_meta(); ?>
+				<?php societycentral_posted_date(); ?>
+			</div>
 
 			<!-- social buttons -->
 				<div class="social-wrapper">
 					<ul>
 						<li>
-							<a class="circ-border" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-twitter icon-twitter"></i></a>
+							<a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
 						</li>
-						<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook icon-facebook"></i></a></li>
-						<li><a class="circ-border email" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o icon-envelope-o"></i></a></li>
-						<li><a class="circ-border embed" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#"><i class="fa fa-code"></i></a></li>
+						<li>
+							<a title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="email" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="embed" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-code fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			<div id="embed-modal" >
@@ -52,10 +81,29 @@
 			<div class="social-wrapper">
 				<ul>
 					<li>
-						<a class="circ-border" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-twitter icon-twitter"></i></a>
-					</li>
-					<li><a class="circ-border" title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-facebook icon-facebook"></i></a></li>
-					<li><a class="circ-border email" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>"><i class="fa fa-envelope-o"></i></a></li>
+							<a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<?php echo urlencode( get_the_title() ) ?>&amp;url=<?php echo urlencode( get_permalink() ); ?>">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a title="Share on facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="email" title="Email this link" href="mailto:?subject=<?php echo ( get_the_title() ) ?>&amp;body=<?php echo urlencode( get_permalink() ); ?>">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
 				</ul>
 			</div>
 

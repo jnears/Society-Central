@@ -68,6 +68,7 @@ jQuery(document).ready(function( $ ){
       $(this).removeClass('x onX').val('');
   });
 
+
 //add class to comment form submit
 $('input#submit').addClass('btn'); 
 $('.tribe-events-widget-link > a').addClass('btn'); 
@@ -76,3 +77,4 @@ $('.tribe-events-widget-link > a').addClass('btn');
 //baseline
 $('img').baseline(27);
 });
+
