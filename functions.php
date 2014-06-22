@@ -349,43 +349,6 @@ function my_save_extra_profile_fields( $user_id ) {
 }
 
 
-add_filter( 'post_class', 'custom_taxonomy_post_class', 10, 3 );
-
-    if( !function_exists( 'custom_taxonomy_post_class' ) ) {
-
-        function custom_taxonomy_post_class( $classes, $class, $ID ) {
-
-            $taxonomy = 'feature';
-
-            $terms = get_the_terms( (int) $ID, $taxonomy );
-
-            if( !empty( $terms ) ) {
-
-                foreach( (array) $terms as $order => $term ) {
-
-                    if( !in_array( $term->slug, $classes ) ) {
-
-                        $classes[] = $term->slug;
-
-                    }
-
-                }
-
-            }
-
-            return $classes;
-
-        }
-
-    }
-
-
-
-
-
-
-
-
 
 //Enqueueing retina.js (for retina images)
 function retina_support_enqueue_scripts() {
