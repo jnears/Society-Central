@@ -31,7 +31,6 @@
 							+44 (0) 1206 873684<br>
 							<a href="mailto:societycentral@essex.ac.uk">societycentral@essex.ac.uk</a><br>
 						</p>
-						<p class="logo"><a class="iser-logo" href="https://iser.essex.ac.uk">ISER</a></p>
 
 					</div>
 					
@@ -47,16 +46,20 @@
 							<li><a href="<?php echo site_url(); ?>/author/society-central/">About</a></li>
 							<li><a href="<?php echo site_url(); ?>/privacy">Privacy and Cookies</a></li>
 						</ul>
+						<div class="logos">
+							<a class="iser" href="https://www.iser.essex.ac.uk/">Institute for Social & Economic Research (ISER)</a>
+							<a class="uoe" href="http://www.essex.ac.uk">University of Essex</a>
+						</div><!-- .logos -->
 					</div><!-- .closing -->
-					<p class="logo"><a class="essex-logo" href="http://www.essex.ac.uk">University of Essex</a></p>
+				
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 	</div><!-- #outerwrap -->
 </div><!-- #innerwrap -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.8.2.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.1.min.js"><\/script>')</script>
 <script src="<?php echo plugins_url(); ?>/jetpack/modules/sharedaddy/sharing.js" type="text/javascript"></script>
 <script>
 var _gaq=[['_setAccount','UA-27334759-2'],['_trackPageview']];
