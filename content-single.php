@@ -15,7 +15,7 @@
 			<!-- meta information -->
 			
 			<div class="entry-meta">
-				<?php societycentral_post_meta(); ?>
+				<?php societycentral_post_meta_multiline(); ?>
 				<?php societycentral_posted_date(); ?>
 			</div>
 

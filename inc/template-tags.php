@@ -22,11 +22,11 @@ function societycentral_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="btn nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'societycentral' ) ); ?></div>
+			<div class="btn nav-previous"><?php next_posts_link( __( '<i class="fa fa-angle-left"></i> Older posts', 'societycentral' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="btn nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'societycentral' ) ); ?></div>
+			<div class="btn nav-next"><?php previous_posts_link( __( 'Newer posts <i class="fa fa-angle-right"></i>', 'societycentral' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -87,6 +87,37 @@ function societycentral_post_meta() {
 	);
 }
 endif;
+
+if ( ! function_exists( 'societycentral_post_meta_multiline' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function societycentral_post_meta_multiline() {
+	if ( get_the_author_meta( 'title' ) ) { 
+		$author_title =  esc_html(get_the_author_meta( 'title' )) ;
+	};
+	if ( get_the_author_meta( 'jobtitle' ) ) { 
+		$author_jobtitle =  '' . esc_html(get_the_author_meta( 'jobtitle' )) ;
+	};
+
+
+	printf( __( '<span class="byline">%1$s </span>', 'societycentral' ),
+		
+		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s %3$s %4$s</a><br>%5$s</span>',
+			
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			$author_title,
+			esc_html(get_the_author_meta( 'user_firstname' )),
+			esc_html(get_the_author_meta( 'user_lastname' )),
+			$author_jobtitle
+		)
+	);
+}
+endif;
+
+
+
+
 
 if ( ! function_exists( 'societycentral_posted_date' ) ) :
 
