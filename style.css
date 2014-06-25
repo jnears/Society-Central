@@ -3417,8 +3417,8 @@ html.sc .entry-meta {
   font-weight: normal;
   line-height: 27px;
   line-height: 1.5rem;
-  margin-bottom: 13.5px;
-  margin-bottom: 0.75rem; }
+  margin-bottom: 18px;
+  margin-bottom: 1rem; }
   html.sc .entry-meta i.tag {
     position: relative;
     margin-top: 0px;
@@ -3489,7 +3489,7 @@ html.sc .social-wrapper {
       width: 36px;
       margin-right: 3px; }
       html.sc .social-wrapper ul li a {
-        color: #dddddd; }
+        color: #b6b6b6; }
       html.sc .social-wrapper ul li a:hover {
         color: gray; }
 html.sc #embed-modal {
@@ -3579,7 +3579,8 @@ html.sc main {
   margin: 0rem;
   max-width: 100%; }
   html.sc main.single-post {
-    max-width: 35rem; }
+    max-width: 35rem;
+    margin: 0 auto; }
 html.sc aside#headlines nav {
   margin-top: 0px;
   margin-top: 0rem;
@@ -3647,6 +3648,7 @@ html.sc nav#site-navigation {
 html.sc div#content {
   width: 90%;
   margin: 0 auto;
+  overflow: hidden;
   max-width: 1185px;
   position: relative;
   margin-bottom: 27px;
@@ -3790,13 +3792,37 @@ html.sc main.site-main article {
     html.sc main.site-main article {
       margin-bottom: 27px;
       margin-bottom: 1.5rem; } }
+  html.sc main.site-main article.featured {
+    background-color: #f2f2f2;
+    min-height: 378px;
+    min-height: 21rem;
+    margin-bottom: 27px;
+    margin-bottom: 1.5rem; }
+    html.sc main.site-main article.featured figure {
+      margin-bottom: 0px;
+      margin-bottom: 0rem; }
+    html.sc main.site-main article.featured img {
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 5px 5px 0px 0px;
+      border-radius: 5px 5px 0px 0px; }
+    html.sc main.site-main article.featured h1 {
+      font-size: 22px;
+      font-size: 1.22222rem; }
+    html.sc main.site-main article.featured figcaption {
+      padding: 13.5px 13.5px 18px;
+      padding: 0.75rem 0.75rem 1rem;
+      font-style: normal;
+      font-size: 18px;
+      font-size: 1rem; }
+      html.sc main.site-main article.featured figcaption .author a {
+        font-weight: bold; }
   html.sc main.site-main article h1 {
     font-size: 24px;
     font-size: 1.33333rem;
     line-height: 27px;
     line-height: 1.5rem;
-    margin-bottom: 13.5px;
-    margin-bottom: 0.75rem; }
+    margin-bottom: 9px;
+    margin-bottom: 0.5rem; }
   html.sc main.site-main article p {
     color: black; }
   html.sc main.site-main article figure.thumb {
@@ -3812,49 +3838,14 @@ html.sc main.site-main article {
         html.sc main.site-main article figure.thumb img {
           width: 80px;
           height: 80px; } }
-  html.sc main.site-main article.homepage-feature {
-    margin-left: -35px; }
-    html.sc main.site-main article.homepage-feature figure.thumb.thumb img {
-      vertical-align: middle;
-      width: 160px; }
-    html.sc main.site-main article.homepage-feature h1 {
-      font-size: 27px;
-      font-size: 1.5rem; }
-    html.sc main.site-main article.homepage-feature figcaption {
-      padding: 13.5px 13.5px 18px;
-      padding: 0.75rem 0.75rem 1rem;
-      font-style: normal;
-      font-size: 18px;
-      font-size: 1rem; }
 html.sc main.site-main article.image {
   padding-left: 150px; }
   @media only screen and (max-width: 480px) {
     html.sc main.site-main article.image {
       padding-left: 100px; } }
-html.sc main.site-main article.homepage-feature {
-  min-height: 189px;
-  min-height: 10.5rem;
-  padding-left: 185px;
-  font-size: 115%; }
 html.sc main.site-main article.excerpt p {
   margin-bottom: 0px;
   margin-bottom: 0rem; }
-  html.sc main.site-main article.excerpt p.featured {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color: white;
-    background: #005ea5;
-    padding: 0px 5px;
-    padding: 0rem 0.27778rem;
-    font-size: 16px;
-    font-size: 0.88889rem;
-    border-top-left-radius: 5px;
-    -moz-border-top-left-radius: 5px;
-    -webkit-border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    -moz-border-bottom-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px; }
 html.sc main.site-main ol.comment-list {
   margin-left: 1.8px;
   margin-left: 0.1rem; }
@@ -3886,105 +3877,97 @@ html.sc .circ-border {
 html.sc #comments {
   margin-top: 27px;
   margin-top: 1.5rem; }
-html.sc footer[role=contentinfo] {
-  color: white;
-  margin-top: 0px;
-  margin-top: 0rem;
-  padding-bottom: 0px;
-  padding-bottom: 0rem; }
-  html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
-    color: white; }
+html.sc footer[role=contentinfo] a:link, html.sc footer[role=contentinfo] a:visited {
+  color: white; }
+@media only screen and (max-width: 480px) {
+  html.sc footer[role=contentinfo] {
+    padding: 27px 0px;
+    padding: 1.5rem 0rem; } }
+html.sc footer[role=contentinfo] .site-info {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1185px;
+  overflow: auto; }
   @media only screen and (max-width: 480px) {
-    html.sc footer[role=contentinfo] {
-      padding: 27px 0px;
-      padding: 1.5rem 0rem; } }
-  html.sc footer[role=contentinfo] .site-info {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1185px; }
+    html.sc footer[role=contentinfo] .site-info {
+      width: auto;
+      margin-left: 9px;
+      margin-left: 0.5rem;
+      margin-right: 9px;
+      margin-right: 0.5rem; } }
+  html.sc footer[role=contentinfo] .site-info ol {
+    padding-left: 0px; }
+    html.sc footer[role=contentinfo] .site-info ol li {
+      list-style-type: none;
+      margin-bottom: 0px;
+      margin-bottom: 0rem; }
+  html.sc footer[role=contentinfo] .site-info .third {
+    float: left;
+    width: 33.33333%;
+    padding-bottom: 27px;
+    padding-bottom: 1.5rem; }
+    @media only screen and (max-width: 768px) {
+      html.sc footer[role=contentinfo] .site-info .third {
+        width: 100%; } }
     @media only screen and (max-width: 480px) {
-      html.sc footer[role=contentinfo] .site-info {
-        width: auto;
-        margin-left: 9px;
-        margin-left: 0.5rem;
-        margin-right: 9px;
-        margin-right: 0.5rem; } }
-    html.sc footer[role=contentinfo] .site-info ol {
-      padding-left: 0px; }
-      html.sc footer[role=contentinfo] .site-info ol li {
-        list-style-type: none;
-        margin-bottom: 0px;
-        margin-bottom: 0rem; }
-    html.sc footer[role=contentinfo] .site-info .third {
-      float: left;
-      width: 33.33333%;
-      padding-bottom: 27px;
-      padding-bottom: 1.5rem; }
-      @media only screen and (max-width: 768px) {
-        html.sc footer[role=contentinfo] .site-info .third {
-          width: 100%; } }
+      html.sc footer[role=contentinfo] .site-info .third {
+        width: 100%; } }
+    html.sc footer[role=contentinfo] .site-info .third:last-of-type {
+      width: 31%;
+      padding-left: 2.33333%; }
       @media only screen and (max-width: 480px) {
-        html.sc footer[role=contentinfo] .site-info .third {
+        html.sc footer[role=contentinfo] .site-info .third:last-of-type {
           width: 100%; } }
-      html.sc footer[role=contentinfo] .site-info .third:last-of-type {
-        width: 31%;
-        padding-left: 2.33333%; }
-        @media only screen and (max-width: 480px) {
-          html.sc footer[role=contentinfo] .site-info .third:last-of-type {
-            width: 100%; } }
-    html.sc footer[role=contentinfo] .site-info .closing {
-      display: block;
-      clear: both;
+  html.sc footer[role=contentinfo] .site-info .closing {
+    display: block;
+    clear: both;
+    padding: 0px;
+    padding: 0rem;
+    text-align: center; }
+    html.sc footer[role=contentinfo] .site-info .closing ul {
       padding: 0px;
       padding: 0rem;
-      text-align: center; }
-      html.sc footer[role=contentinfo] .site-info .closing ul {
-        padding: 0px;
-        padding: 0rem;
-        margin-bottom: 0; }
+      margin-bottom: 0; }
+      @media only screen and (max-width: 768px) {
+        html.sc footer[role=contentinfo] .site-info .closing ul {
+          float: left;
+          padding: 18px 0px 13.5px;
+          padding: 1rem 0rem 0.75rem; } }
+      html.sc footer[role=contentinfo] .site-info .closing ul li {
+        display: inline;
+        padding: 0px 27px 0px 0px;
+        padding: 0rem 1.5rem 0rem 0rem; }
+        html.sc footer[role=contentinfo] .site-info .closing ul li:last-of-type {
+          padding: 0px 0px 0px 0px;
+          padding: 0rem 0rem 0rem 0rem; }
         @media only screen and (max-width: 768px) {
-          html.sc footer[role=contentinfo] .site-info .closing ul {
-            float: left;
-            padding: 18px 0px 13.5px;
-            padding: 1rem 0rem 0.75rem; } }
-        html.sc footer[role=contentinfo] .site-info .closing ul li {
-          display: inline;
-          padding: 0px 27px 0px 0px;
-          padding: 0rem 1.5rem 0rem 0rem; }
-          html.sc footer[role=contentinfo] .site-info .closing ul li:last-of-type {
-            padding: 0px 0px 0px 0px;
-            padding: 0rem 0rem 0rem 0rem; }
-          @media only screen and (max-width: 768px) {
-            html.sc footer[role=contentinfo] .site-info .closing ul li {
-              padding: 0px 20px 0px 0px;
-              padding: 0rem 1.11111rem 0rem 0rem; } }
-  html.sc footer[role=contentinfo] p.logo {
-    display: inline-block;
-    margin-right: 27px;
-    margin-right: 1.5rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem; }
-    html.sc footer[role=contentinfo] p.logo .iser-logo, html.sc footer[role=contentinfo] p.logo .essex-logo {
-      text-indent: -3000em;
-      display: block;
-      overflow: hidden;
-      float: left; }
-    html.sc footer[role=contentinfo] p.logo .iser-logo {
-      background: url("ui/iser-logo.png") no-repeat;
-      height: 60px;
-      width: 72px; }
-      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-        html.sc footer[role=contentinfo] p.logo .iser-logo {
-          background-image: url("ui/iser-logo2x.png");
-          background-size: 144px 120px; } }
-    html.sc footer[role=contentinfo] p.logo .essex-logo {
-      background: url("ui/essex-logo.png") no-repeat;
-      height: 48px;
-      width: 133px; }
-      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-        html.sc footer[role=contentinfo] p.logo .essex-logo {
-          background-image: url("ui/essex-logo2x.png");
-          background-size: 166px 96px; } }
+          html.sc footer[role=contentinfo] .site-info .closing ul li {
+            padding: 0px 20px 0px 0px;
+            padding: 0rem 1.11111rem 0rem 0rem; } }
+    html.sc footer[role=contentinfo] .site-info .closing .logos {
+      margin: 0 auto;
+      display: inline-block;
+      width: 500px;
+      margin-top: 45px;
+      margin-top: 2.5rem;
+      opacity: 0.5;
+      overflow: auto; }
+      html.sc footer[role=contentinfo] .site-info .closing .logos a.iser {
+        display: inline-block;
+        width: 222px;
+        height: 81px;
+        overflow: hidden;
+        text-indent: -3000em;
+        background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%; }
+      html.sc footer[role=contentinfo] .site-info .closing .logos a.uoe {
+        display: inline-block;
+        width: 222px;
+        height: 81px;
+        overflow: hidden;
+        text-indent: -3000em;
+        margin-left: 27px;
+        margin-left: 1.5rem;
+        background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%; }
 html.sc form[role=search] {
   background: none; }
   html.sc form[role=search] fieldset {
