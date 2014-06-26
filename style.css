@@ -3947,10 +3947,9 @@ html.sc footer[role=contentinfo] .site-info {
     html.sc footer[role=contentinfo] .site-info .closing .logos {
       margin: 0 auto;
       display: inline-block;
-      width: 500px;
-      margin-top: 45px;
-      margin-top: 2.5rem;
-      opacity: 0.5;
+      width: 475px;
+      margin-top: 36px;
+      margin-top: 2rem;
       overflow: auto; }
       html.sc footer[role=contentinfo] .site-info .closing .logos a.iser {
         display: inline-block;
@@ -3958,16 +3957,26 @@ html.sc footer[role=contentinfo] .site-info {
         height: 81px;
         overflow: hidden;
         text-indent: -3000em;
-        background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%; }
+        background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%;
+        margin-left: 27px;
+        margin-left: 1.5rem;
+        opacity: 0.5;
+        filter: alpha(opacity=50); }
+        html.sc footer[role=contentinfo] .site-info .closing .logos a.iser:hover {
+          opacity: 1;
+          filter: alpha(opacity=100); }
       html.sc footer[role=contentinfo] .site-info .closing .logos a.uoe {
         display: inline-block;
         width: 222px;
         height: 81px;
         overflow: hidden;
         text-indent: -3000em;
-        margin-left: 27px;
-        margin-left: 1.5rem;
-        background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%; }
+        background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%;
+        opacity: 0.5;
+        filter: alpha(opacity=50); }
+        html.sc footer[role=contentinfo] .site-info .closing .logos a.uoe:hover {
+          opacity: 1;
+          filter: alpha(opacity=100); }
 html.sc form[role=search] {
   background: none; }
   html.sc form[role=search] fieldset {
