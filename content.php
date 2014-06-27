@@ -6,7 +6,9 @@
 
 <!-- set a different class if the post has an image thumbnail (to prevent a big white space on left hand side.) -->
 
-<?php if  (has_post_thumbnail()): ?>
+<?php if ( has_term('homepage-feature', 'feature', $post ) ) : ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt image homepage-feature'); ?> >
+<?php elseif  (has_post_thumbnail()): ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt image'); ?> >
 <?php else: ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt'); ?> >
@@ -43,9 +45,15 @@
 	<?php 
 		if (has_post_thumbnail()) {
 			echo "<figure class=\"thumb\">";
+			if ( has_term('homepage-feature', 'feature', $post ) ) {
+			the_post_thumbnail(); }
+			else {
 			the_post_thumbnail('thumbnail'); 
+				}
+				
 			echo "</figure>";
 		}
+
 		?><!-- .thumb-image -->
 
 

@@ -3237,9 +3237,7 @@ html.sc .lt-ie8 img, html.sc .lt-ie8 object {
   height: auto !important; }
 html.sc #outer-wrap {
   position: relative;
-  overflow: hidden;
-  width: 100%;
-  background: #2c2c2c; }
+  width: 100%; }
 html.sc #inner-wrap {
   position: relative;
   width: 100%; }
@@ -3252,7 +3250,8 @@ html.sc #inner-wrap {
     top: 0;
     padding-top: 72px;
     padding-top: 4rem;
-    background: #2c2c2c; }
+    background: #2c2c2c;
+    height: 100%; }
     html.sc #inner-wrap #page > nav.categories ol {
       margin-bottom: 0;
       padding-left: 0; }
@@ -3417,8 +3416,8 @@ html.sc .entry-meta {
   font-weight: normal;
   line-height: 27px;
   line-height: 1.5rem;
-  margin-bottom: 18px;
-  margin-bottom: 1rem; }
+  margin-bottom: 13.5px;
+  margin-bottom: 0.75rem; }
   html.sc .entry-meta i.tag {
     position: relative;
     margin-top: 0px;
@@ -3648,7 +3647,6 @@ html.sc nav#site-navigation {
 html.sc div#content {
   width: 92%;
   margin: 0 auto;
-  overflow: hidden;
   max-width: 1185px;
   position: relative;
   padding: 0px 3px;
@@ -3794,6 +3792,37 @@ html.sc main.site-main article {
     html.sc main.site-main article {
       margin-bottom: 27px;
       margin-bottom: 1.5rem; } }
+  html.sc main.site-main article.image {
+    padding-left: 150px; }
+    @media only screen and (max-width: 480px) {
+      html.sc main.site-main article.image {
+        padding-left: 100px; } }
+  html.sc main.site-main article.homepage-feature {
+    font-size: 20px;
+    font-size: 1.11111rem; }
+    html.sc main.site-main article.homepage-feature.image {
+      padding: 27px 27px 27px 302px;
+      padding: 1.5rem 1.5rem 1.5rem 16.77778rem;
+      margin-left: -27px;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      background-color: #f2f2f2; }
+      html.sc main.site-main article.homepage-feature.image figure.thumb {
+        left: 27px;
+        left: 1.5rem;
+        top: 27px;
+        top: 1.5rem; }
+    html.sc main.site-main article.homepage-feature h1 {
+      font-size: 27px;
+      font-size: 1.5rem; }
+    html.sc main.site-main article.homepage-feature figure.thumb img {
+      vertical-align: middle;
+      width: 250px; }
+      @media only screen and (max-width: 480px) {
+        html.sc main.site-main article.homepage-feature figure.thumb img {
+          width: 80px;
+          height: 80px; } }
   html.sc main.site-main article.featured {
     background-color: #f2f2f2;
     min-height: 378px;
@@ -3823,8 +3852,8 @@ html.sc main.site-main article {
     font-size: 1.33333rem;
     line-height: 27px;
     line-height: 1.5rem;
-    margin-bottom: 9px;
-    margin-bottom: 0.5rem; }
+    margin-bottom: 13.5px;
+    margin-bottom: 0.75rem; }
   html.sc main.site-main article p {
     color: black; }
   html.sc main.site-main article figure.thumb {
@@ -3840,11 +3869,6 @@ html.sc main.site-main article {
         html.sc main.site-main article figure.thumb img {
           width: 80px;
           height: 80px; } }
-html.sc main.site-main article.image {
-  padding-left: 150px; }
-  @media only screen and (max-width: 480px) {
-    html.sc main.site-main article.image {
-      padding-left: 100px; } }
 html.sc main.site-main article.excerpt p {
   margin-bottom: 0px;
   margin-bottom: 0rem; }
