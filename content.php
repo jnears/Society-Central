@@ -14,6 +14,23 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt'); ?> >
 <?php endif; ?>
 
+	<?php 
+		if (has_post_thumbnail()) {
+			echo "<figure class=\"thumb\">";
+			if ( has_term('homepage-feature', 'feature', $post ) ) {
+			the_post_thumbnail(); }
+			else {
+			the_post_thumbnail('thumbnail'); 
+				}
+				
+			echo "</figure>";
+		}
+
+		?><!-- .thumb-image -->
+		<?php if  ( has_term('homepage-feature', 'feature', $post ) ) {
+			echo '<div class="content">';
+		}
+		?>
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
@@ -42,19 +59,6 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 	
-	<?php 
-		if (has_post_thumbnail()) {
-			echo "<figure class=\"thumb\">";
-			if ( has_term('homepage-feature', 'feature', $post ) ) {
-			the_post_thumbnail(); }
-			else {
-			the_post_thumbnail('thumbnail'); 
-				}
-				
-			echo "</figure>";
-		}
-
-		?><!-- .thumb-image -->
 
 
 	<footer class="entry-footer">
@@ -83,4 +87,8 @@
 
 		<?php edit_post_link( __( 'Edit', 'societycentral' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
+<?php if  ( has_term('homepage-feature', 'feature', $post ) ) {
+			echo '</div>';
+		}
+		?>
 </article><!-- #post-## -->

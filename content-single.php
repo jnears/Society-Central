@@ -47,7 +47,7 @@
 							</a>
 						</li>
 						<li>
-							<a class="embed" id="embed-link" title="Embed link"  onclick="select_all(this)" href="#">
+							<a class="embed" id="embed-link-sidebar" title="Embed link"  onclick="select_all(this)" href="#">
 								<span class="fa-stack">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-code fa-stack-1x fa-inverse"></i>
@@ -56,8 +56,8 @@
 						</li>
 					</ul>
 				</div>
-			<div id="embed-modal" >
-				<textarea wrap="soft" rows="6" cols="18" id="embed-text" name="embed-link" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
+			<div id="embed-modal-sidebar" >
+				<textarea wrap="soft" rows="6" cols="18" id="embed-text-sidebar" name="embed-link-sidebar" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
 				</textarea>
 			</div>
 		</div>
@@ -104,9 +104,20 @@
 								</span>
 							</a>
 						</li>
+						<li>
+							<a class="embed" id="embed-link-primary" title="Embed link"  onclick="select_all(this)" href="#">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-code fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
 				</ul>
 			</div>
-
+		<div id="embed-modal-primary" >
+			<textarea wrap="soft" rows="6" cols="18" id="embed-text-primary" name="embed-link-primary" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
+			</textarea>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

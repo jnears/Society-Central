@@ -2,9 +2,13 @@ jQuery(document).ready(function( $ ){
 
   $("html").removeClass("no-js");
 
+
+
 	$( "#show-grid" ).click(function() {
 	  $( "html" ).toggleClass( "grid" );
   });
+
+  // $( ".homepage-feature .author" ).prepend( '<i class="fa fa-caret-right"></i> ' );
   
 
 	$( "#nav-search-btn" ).click(function() {
@@ -14,10 +18,17 @@ jQuery(document).ready(function( $ ){
   	event.preventDefault()
   });
 
-  $( "#embed-link" ).click(function() {
+  $( "#embed-link-sidebar" ).click(function() {
     $( this ).toggleClass('active');
-    $( "#embed-modal" ).toggleClass('show');
-    $("#embed-text").select();
+    $( "#embed-modal-sidebar" ).toggle();
+    $("#embed-text-sidebar").select();
+    event.preventDefault()
+  }); 
+
+  $( "#embed-link-primary" ).click(function() {
+    $( this ).toggleClass('active');
+    $( "#embed-modal-primary" ).toggle();
+    $("#embed-text-primary").select();
     event.preventDefault()
   });
 
@@ -74,6 +85,7 @@ $('input#submit').addClass('btn');
 $('.tribe-events-widget-link > a').addClass('btn'); 
 $('.tribe-events-sub-nav > a').addClass('btn'); 
 $('.tribe-events-widget-link > a').append(' <i class="fa fa-angle-right"></i>'); 
+
 
 });
 

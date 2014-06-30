@@ -3195,12 +3195,9 @@ html.sc h1 {
 html.sc h2 {
   font-size: 30px;
   font-size: 1.66667rem; }
-html.sc h1 a:link, html.sc h1 a:visited, html.sc h2 a:link, html.sc h2 a:visited, html.sc h3 a:link, html.sc h3 a:visited, html.sc h4 a:link, html.sc h4 a:visited {
-  color: #2c2c2c;
-  text-decoration: none; }
-html.sc h1 a:hover, html.sc h2 a:hover, html.sc h3 a:hover, html.sc h4 a:hover {
-  color: #2c2c2c;
-  text-decoration: underline; }
+  html.sc h2 a:hover {
+    color: #2c2c2c;
+    text-decoration: underline; }
 html.sc a:link, html.sc a:visited {
   color: #005ea5;
   text-decoration: none; }
@@ -3491,7 +3488,7 @@ html.sc .social-wrapper {
         color: #b6b6b6; }
       html.sc .social-wrapper ul li a:hover {
         color: gray; }
-html.sc #embed-modal {
+html.sc #embed-modal-primary, html.sc #embed-modal-sidebar {
   display: none;
   background: #f2f2f2;
   overflow: hidden;
@@ -3506,14 +3503,14 @@ html.sc #embed-modal {
   margin-top: -9px;
   margin-top: -0.5rem;
   position: absolute; }
-  html.sc #embed-modal textarea[name=embed-link] {
+  html.sc #embed-modal-primary textarea[name=embed-link-sidebar], html.sc #embed-modal-primary textarea[name=embed-link-primary], html.sc #embed-modal-sidebar textarea[name=embed-link-sidebar], html.sc #embed-modal-sidebar textarea[name=embed-link-primary] {
     border: none;
     resize: none;
     font-size: 14px;
     font-size: 0.77778rem;
     background: none;
     width: 100%; }
-    html.sc #embed-modal textarea[name=embed-link]:focus {
+    html.sc #embed-modal-primary textarea[name=embed-link-sidebar]:focus, html.sc #embed-modal-primary textarea[name=embed-link-primary]:focus, html.sc #embed-modal-sidebar textarea[name=embed-link-sidebar]:focus, html.sc #embed-modal-sidebar textarea[name=embed-link-primary]:focus {
       outline: 0; }
 html.sc #tribe-events .tribe-events-content p, html.sc #tribe-events .tribe-events-before-html p, html.sc #tribe-events .tribe-events-after-html p {
   margin: 0px 0px 27px 0px;
@@ -3666,7 +3663,8 @@ html.sc div#primary {
 html.sc div#secondary {
   float: left;
   width: 30%;
-  padding-left: 2.33333%; }
+  padding-left: 54px;
+  padding-left: 3rem; }
   @media only screen and (max-width: 768px) {
     html.sc div#secondary {
       float: none;
@@ -3801,28 +3799,54 @@ html.sc main.site-main article {
     font-size: 20px;
     font-size: 1.11111rem; }
     html.sc main.site-main article.homepage-feature.image {
-      padding: 27px 27px 27px 302px;
-      padding: 1.5rem 1.5rem 1.5rem 16.77778rem;
-      margin-left: -27px;
+      padding: 13.5px 13.5px 13.5px 290px;
+      padding: 0.75rem 0.75rem 0.75rem 16.11111rem;
+      margin-left: -13.5px;
+      margin-left: -0.75rem;
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
-      background-color: #f2f2f2; }
+      border: 1px solid #cccccc;
+      background: #fafafa; }
+      @media only screen and (max-width: 768px) {
+        html.sc main.site-main article.homepage-feature.image {
+          padding: 0;
+          margin-left: 0; } }
+      @media only screen and (max-width: 768px) {
+        html.sc main.site-main article.homepage-feature.image .content {
+          padding: 13.5px;
+          padding: 0.75rem; } }
       html.sc main.site-main article.homepage-feature.image figure.thumb {
-        left: 27px;
-        left: 1.5rem;
-        top: 27px;
-        top: 1.5rem; }
+        left: 18px;
+        left: 1rem;
+        top: 18px;
+        top: 1rem; }
+        @media only screen and (max-width: 768px) {
+          html.sc main.site-main article.homepage-feature.image figure.thumb {
+            position: relative;
+            left: 0px;
+            left: 0rem;
+            top: 0px;
+            top: 0rem; } }
     html.sc main.site-main article.homepage-feature h1 {
-      font-size: 27px;
-      font-size: 1.5rem; }
+      font-size: 30px;
+      font-size: 1.66667rem;
+      line-height: 36px;
+      line-height: 2rem; }
     html.sc main.site-main article.homepage-feature figure.thumb img {
       vertical-align: middle;
       width: 250px; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 768px) {
         html.sc main.site-main article.homepage-feature figure.thumb img {
-          width: 80px;
-          height: 80px; } }
+          width: 100%;
+          border-bottom-left-radius: 0;
+          -moz-border-bottom-left-radius: 0;
+          -webkit-border-bottom-left-radius-: 0;
+          border-bottom-right-radius: 0;
+          -moz-border-bottom-right-radius: 0;
+          -webkit-border-bottom-right-radius-: 0; } }
+    html.sc main.site-main article.homepage-feature .fa {
+      color: #005ea5; }
   html.sc main.site-main article.featured {
     background-color: #f2f2f2;
     min-height: 378px;
