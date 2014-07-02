@@ -53,7 +53,7 @@
 					</div><!-- .closing -->
 				
 				</div><!-- .site-info -->
-			</footer><!-- #colophon1 -->
+			</footer><!-- #colophon -->
 		</div><!-- #page -->
 	</div><!-- #outerwrap -->
 </div><!-- #innerwrap -->
