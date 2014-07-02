@@ -14,15 +14,64 @@
 get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			
+		
+			<div class="colgroup-2 items-container">
+				<?php // Get 4 featured posts ?>
+				<?php
+
+				$args = array(
+				    'posts_per_page' => 2,
+				    'tax_query' => array(
+				        array(
+				            'taxonomy' => 'feature',
+				            'terms' => array('homepage-feature'),
+				            'field' => 'slug',
+				            'operator' => 'IN'
+				        ),
+				    )
+				);
+
+
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();
+				?>
+				<?php
+				if ( has_post_thumbnail() ) {
+				?>
+					<article class="span1 item featured ">
+						<figure><?php the_post_thumbnail(); ?>
+							<figcaption>
+								<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php truncate_title(55); ?></a></h1>
+					 		<div class="entry-meta">
+					 			<?php societycentral_post_meta_multiline(); ?>
+							</div>
+
+							</figcaption>
+						</figure>
+					</article>
+				<?php
+				} // end if loop
+				endwhile;
+				wp_reset_query();
+				?>
+			</div>
+
 
 			<?php if ( have_posts() ) : ?>
 			<?php
-			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 			$args = array(
 			    'posts_per_page' => 10,
-			    'paged' => $paged
+			    'paged' => $paged,
 			    
+			    'tax_query' => array(
+			        array(
+			            'taxonomy' => 'feature',
+			            'terms' => array('homepage-feature'),
+			            'field' => 'slug',
+			            'operator' => 'NOT IN'
+			        ),
+			    )
 			);
 			query_posts($args);
 			?>

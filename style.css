@@ -3195,9 +3195,12 @@ html.sc h1 {
 html.sc h2 {
   font-size: 30px;
   font-size: 1.66667rem; }
-  html.sc h2 a:hover {
-    color: #2c2c2c;
-    text-decoration: underline; }
+html.sc h1 a:link, html.sc h1 a:visited, html.sc h2 a:link, html.sc h2 a:visited, html.sc h3 a:link, html.sc h3 a:visited, html.sc h4 a:link, html.sc h4 a:visited {
+  color: #2c2c2c;
+  text-decoration: none; }
+html.sc h1 a:hover, html.sc h2 a:hover, html.sc h3 a:hover, html.sc h4 a:hover {
+  color: #2c2c2c;
+  text-decoration: underline; }
 html.sc a:link, html.sc a:visited {
   color: #005ea5;
   text-decoration: none; }
@@ -3649,7 +3652,9 @@ html.sc div#content {
   padding: 0px 3px;
   padding: 0rem 0.16667rem;
   margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  overflow: auto; }
   @media only screen and (max-width: 480px) {
     html.sc div#content {
       width: 96%; } }
@@ -3795,58 +3800,6 @@ html.sc main.site-main article {
     @media only screen and (max-width: 480px) {
       html.sc main.site-main article.image {
         padding-left: 100px; } }
-  html.sc main.site-main article.homepage-feature {
-    font-size: 20px;
-    font-size: 1.11111rem; }
-    html.sc main.site-main article.homepage-feature.image {
-      padding: 13.5px 13.5px 13.5px 290px;
-      padding: 0.75rem 0.75rem 0.75rem 16.11111rem;
-      margin-left: -13.5px;
-      margin-left: -0.75rem;
-      border-radius: 5px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border: 1px solid #cccccc;
-      background: #fafafa; }
-      @media only screen and (max-width: 768px) {
-        html.sc main.site-main article.homepage-feature.image {
-          padding: 0;
-          margin-left: 0; } }
-      @media only screen and (max-width: 768px) {
-        html.sc main.site-main article.homepage-feature.image .content {
-          padding: 13.5px;
-          padding: 0.75rem; } }
-      html.sc main.site-main article.homepage-feature.image figure.thumb {
-        left: 18px;
-        left: 1rem;
-        top: 18px;
-        top: 1rem; }
-        @media only screen and (max-width: 768px) {
-          html.sc main.site-main article.homepage-feature.image figure.thumb {
-            position: relative;
-            left: 0px;
-            left: 0rem;
-            top: 0px;
-            top: 0rem; } }
-    html.sc main.site-main article.homepage-feature h1 {
-      font-size: 30px;
-      font-size: 1.66667rem;
-      line-height: 36px;
-      line-height: 2rem; }
-    html.sc main.site-main article.homepage-feature figure.thumb img {
-      vertical-align: middle;
-      width: 250px; }
-      @media only screen and (max-width: 768px) {
-        html.sc main.site-main article.homepage-feature figure.thumb img {
-          width: 100%;
-          border-bottom-left-radius: 0;
-          -moz-border-bottom-left-radius: 0;
-          -webkit-border-bottom-left-radius-: 0;
-          border-bottom-right-radius: 0;
-          -moz-border-bottom-right-radius: 0;
-          -webkit-border-bottom-right-radius-: 0; } }
-    html.sc main.site-main article.homepage-feature .fa {
-      color: #005ea5; }
   html.sc main.site-main article.featured {
     background-color: #f2f2f2;
     min-height: 378px;

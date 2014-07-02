@@ -6,9 +6,7 @@
 
 <!-- set a different class if the post has an image thumbnail (to prevent a big white space on left hand side.) -->
 
-<?php if ( has_term('homepage-feature', 'feature', $post ) ) : ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt image homepage-feature'); ?> >
-<?php elseif  (has_post_thumbnail()): ?>
+<?php if  (has_post_thumbnail()): ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt image'); ?> >
 <?php else: ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class('excerpt'); ?> >
@@ -17,20 +15,14 @@
 	<?php 
 		if (has_post_thumbnail()) {
 			echo "<figure class=\"thumb\">";
-			if ( has_term('homepage-feature', 'feature', $post ) ) {
-			the_post_thumbnail(); }
-			else {
-			the_post_thumbnail('thumbnail'); 
-				}
+		
+			the_post_thumbnail("thumbnail"); 
 				
 			echo "</figure>";
 		}
 
 		?><!-- .thumb-image -->
-		<?php if  ( has_term('homepage-feature', 'feature', $post ) ) {
-			echo '<div class="content">';
-		}
-		?>
+		
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
@@ -87,8 +79,4 @@
 
 		<?php edit_post_link( __( 'Edit', 'societycentral' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
-<?php if  ( has_term('homepage-feature', 'feature', $post ) ) {
-			echo '</div>';
-		}
-		?>
 </article><!-- #post-## -->

@@ -47,8 +47,8 @@
 							<li><a href="<?php echo site_url(); ?>/privacy">Privacy and Cookies</a></li>
 						</ul>
 						<div class="logos">
-							<a class="iser" href="https://www.iser.essex.ac.uk/">Institute for Social & Economic Research (ISER)</a>
-							<a class="uoe" href="http://www.essex.ac.uk">University of Essex</a>
+							<a class="iser" href="https://www.iser.essex.ac.uk/" title="University of Essex logo">Institute for Social & Economic Research (ISER)</a>
+							<a class="uoe" href="http://www.essex.ac.uk" title="University of Essex logo">University of Essex</a>
 						</div><!-- .logos -->
 					</div><!-- .closing -->
 				
@@ -57,7 +57,6 @@
 		</div><!-- #page -->
 	</div><!-- #outerwrap -->
 </div><!-- #innerwrap -->
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.1.min.js"><\/script>')</script>
 <script src="<?php echo plugins_url(); ?>/jetpack/modules/sharedaddy/sharing.js" type="text/javascript"></script>
