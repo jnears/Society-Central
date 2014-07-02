@@ -1,14 +1,6 @@
 jQuery(document).ready(function( $ ){
 
   $("html").removeClass("no-js");
-
-
-
-	$( "#show-grid" ).click(function() {
-	  $( "html" ).toggleClass( "grid" );
-  });
-
-  // $( ".homepage-feature .author" ).prepend( '<i class="fa fa-caret-right"></i> ' );
   
 
 	$( "#nav-search-btn" ).click(function() {
