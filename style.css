@@ -3195,12 +3195,9 @@ html.sc h1 {
 html.sc h2 {
   font-size: 30px;
   font-size: 1.66667rem; }
-html.sc h1 a:link, html.sc h1 a:visited, html.sc h2 a:link, html.sc h2 a:visited, html.sc h3 a:link, html.sc h3 a:visited, html.sc h4 a:link, html.sc h4 a:visited {
-  color: #2c2c2c;
-  text-decoration: none; }
-html.sc h1 a:hover, html.sc h2 a:hover, html.sc h3 a:hover, html.sc h4 a:hover {
-  color: #2c2c2c;
-  text-decoration: underline; }
+  html.sc h2 a:hover {
+    color: #2c2c2c;
+    text-decoration: underline; }
 html.sc a:link, html.sc a:visited {
   color: #005ea5;
   text-decoration: none; }
@@ -3652,9 +3649,7 @@ html.sc div#content {
   padding: 0px 3px;
   padding: 0rem 0.16667rem;
   margin-bottom: 27px;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  overflow: auto; }
+  margin-bottom: 1.5rem; }
   @media only screen and (max-width: 480px) {
     html.sc div#content {
       width: 96%; } }
@@ -3800,6 +3795,58 @@ html.sc main.site-main article {
     @media only screen and (max-width: 480px) {
       html.sc main.site-main article.image {
         padding-left: 100px; } }
+  html.sc main.site-main article.homepage-feature {
+    font-size: 20px;
+    font-size: 1.11111rem; }
+    html.sc main.site-main article.homepage-feature.image {
+      padding: 13.5px 13.5px 13.5px 290px;
+      padding: 0.75rem 0.75rem 0.75rem 16.11111rem;
+      margin-left: -13.5px;
+      margin-left: -0.75rem;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border: 1px solid #cccccc;
+      background: #fafafa; }
+      @media only screen and (max-width: 768px) {
+        html.sc main.site-main article.homepage-feature.image {
+          padding: 0;
+          margin-left: 0; } }
+      @media only screen and (max-width: 768px) {
+        html.sc main.site-main article.homepage-feature.image .content {
+          padding: 13.5px;
+          padding: 0.75rem; } }
+      html.sc main.site-main article.homepage-feature.image figure.thumb {
+        left: 18px;
+        left: 1rem;
+        top: 18px;
+        top: 1rem; }
+        @media only screen and (max-width: 768px) {
+          html.sc main.site-main article.homepage-feature.image figure.thumb {
+            position: relative;
+            left: 0px;
+            left: 0rem;
+            top: 0px;
+            top: 0rem; } }
+    html.sc main.site-main article.homepage-feature h1 {
+      font-size: 30px;
+      font-size: 1.66667rem;
+      line-height: 36px;
+      line-height: 2rem; }
+    html.sc main.site-main article.homepage-feature figure.thumb img {
+      vertical-align: middle;
+      width: 250px; }
+      @media only screen and (max-width: 768px) {
+        html.sc main.site-main article.homepage-feature figure.thumb img {
+          width: 100%;
+          border-bottom-left-radius: 0;
+          -moz-border-bottom-left-radius: 0;
+          -webkit-border-bottom-left-radius-: 0;
+          border-bottom-right-radius: 0;
+          -moz-border-bottom-right-radius: 0;
+          -webkit-border-bottom-right-radius-: 0; } }
+    html.sc main.site-main article.homepage-feature .fa {
+      color: #005ea5; }
   html.sc main.site-main article.featured {
     background-color: #f2f2f2;
     min-height: 378px;
@@ -3945,7 +3992,7 @@ html.sc footer[role=contentinfo] .site-info {
     html.sc footer[role=contentinfo] .site-info .closing .logos {
       margin: 0 auto;
       display: inline-block;
-      width: 390px;
+      width: 475px;
       margin-top: 36px;
       margin-top: 2rem;
       overflow: auto; }
@@ -3954,23 +4001,28 @@ html.sc footer[role=contentinfo] .site-info {
           width: 100%; } }
       html.sc footer[role=contentinfo] .site-info .closing .logos a.iser {
         display: inline-block;
-        width: 140px;
-        height: 120px;
+        width: 222px;
+        height: 81px;
         overflow: hidden;
         text-indent: -3000em;
-        background: url("ui/iser-logo.svg") no-repeat 50% 50%;
+        background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%;
+        margin-left: 27px;
+        margin-left: 1.5rem;
         opacity: 0.5;
-        filter: alpha(opacity=50);
-        float: left; }
+        filter: alpha(opacity=50); }
         html.sc footer[role=contentinfo] .site-info .closing .logos a.iser:hover {
           opacity: 1;
           filter: alpha(opacity=100); }
+        @media only screen and (max-width: 480px) {
+          html.sc footer[role=contentinfo] .site-info .closing .logos a.iser {
+            width: 150px;
+            height: 55px;
+            margin-left: 9px;
+            margin-left: 0.5rem; } }
       html.sc footer[role=contentinfo] .site-info .closing .logos a.uoe {
         display: inline-block;
         width: 222px;
-        height: 130px;
-        margin-left: 27px;
-        margin-left: 1.5rem;
+        height: 81px;
         overflow: hidden;
         text-indent: -3000em;
         background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%;
@@ -3981,8 +4033,8 @@ html.sc footer[role=contentinfo] .site-info {
           filter: alpha(opacity=100); }
         @media only screen and (max-width: 480px) {
           html.sc footer[role=contentinfo] .site-info .closing .logos a.uoe {
-            margin-left: 0px;
-            margin-left: 0rem; } }
+            width: 150px;
+            height: 55px; } }
 html.sc form[role=search] {
   background: none; }
   html.sc form[role=search] fieldset {
