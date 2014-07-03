@@ -15,7 +15,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
-			<div class="colgroup-2 items-container">
+			<div class="colgroup-2">
 				<?php // Get 4 featured posts ?>
 				<?php
 
@@ -38,7 +38,7 @@ get_header(); ?>
 				<?php
 				if ( has_post_thumbnail() ) {
 				?>
-					<article class="span1 item featured ">
+					<article class="span1 featured ">
 						<figure><?php the_post_thumbnail(); ?>
 							<figcaption>
 								<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php truncate_title(55); ?></a></h1>

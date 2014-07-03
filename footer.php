@@ -42,13 +42,14 @@
 					<div class="closing">
 						<ul>
 							<li><a href="<?php echo site_url(); ?>/archives">Archives</a></li>
-							<li><a href="<?php echo site_url(); ?>/events">Events</a></li>
+							<!-- <li><a href="<?php echo site_url(); ?>/events">Events</a></li> -->
 							<li><a href="<?php echo site_url(); ?>/author/society-central/">About</a></li>
 							<li><a href="<?php echo site_url(); ?>/privacy">Privacy and Cookies</a></li>
 						</ul>
 						<div class="logos">
-							<a class="iser" href="https://www.iser.essex.ac.uk/" title="University of Essex logo">Institute for Social & Economic Research (ISER)</a>
+							<a class="iser" href="https://www.iser.essex.ac.uk/" title="ISER logo">Institute for Social & Economic Research (ISER)</a>
 							<a class="uoe" href="http://www.essex.ac.uk" title="University of Essex logo">University of Essex</a>
+							
 						</div><!-- .logos -->
 					</div><!-- .closing -->
 				
