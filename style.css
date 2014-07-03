@@ -2236,7 +2236,7 @@ aside.home {
   padding: 18px;
   padding: 1rem; }
 
-@font-face {
+/*@font-face {
   font-family: "Officina";
   src: url("http://fast.fonts.com/dv2/2/d29a1003-aa62-4492-a4ab-3b649c7efccd.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
   font-weight: normal;
@@ -2336,7 +2336,7 @@ aside.home {
   font-style: italic;
   src: url("http://fast.fonts.com/dv2/2/de7ff4aa-b177-4dcc-ae55-882c01bacbd7.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
   src: url("http://fast.fonts.com/dv2/3/32488492-33c2-4df2-91e5-02c85cafc09d.woff?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("http://fast.fonts.com/dv2/1/afa52904-1d9c-40df-b5c2-69ba22fb9167.ttf?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("http://fast.fonts.com/dv2/11/38c9269b-1171-4d1c-adde-e5faa0c6e91b.svg?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#38c9269b-1171-4d1c-adde-e5faa0c6e91b") format("svg"); }
-
+*/
 nav ol {
   padding-left: 0px;
   padding-left: 0rem; }
@@ -3332,7 +3332,7 @@ html.sc header[role=banner] {
     margin: 0rem;
     padding-top: 27px;
     padding-top: 1.5rem;
-    font-family: "Officina", Georgia, "Times New Roman", Times, serif; }
+    font-family: "OfficinaSerifITCW01-Bol 734534", Georgia, "Times New Roman", Times, serif; }
     @media only screen and (max-width: 480px) {
       html.sc header[role=banner] h1 {
         font-size: 26px;
