@@ -58,9 +58,11 @@ get_header(); ?>
 
 
 			<?php if ( have_posts() ) : ?>
+
 			<?php
 
 			$args = array(
+			    'post_type'  => array( 'post', 'essexuni_news'),
 			    'posts_per_page' => 10,
 			    'paged' => $paged,
 			    
