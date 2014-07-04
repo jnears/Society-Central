@@ -456,6 +456,12 @@ function my_mce_before_init( $settings ) {
     		'block' => 'blockquote',
     		'classes' => 'pull-quote'
 
+        ),
+        array(
+            'title' => 'Standfirst',
+            'block' => 'p',
+            'classes' => 'standfirst'
+
         )
     );
 
