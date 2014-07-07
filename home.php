@@ -62,7 +62,7 @@ get_header(); ?>
 			<?php
 
 			$args = array(
-			    'post_type'  => array( 'post', 'essexuni_news'),
+			    'post_type'  => array( 'post'),
 			    'posts_per_page' => 10,
 			    'paged' => $paged,
 			    
