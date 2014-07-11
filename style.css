@@ -3272,6 +3272,10 @@ html.sc img, html.sc object {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px; }
+html.sc img.avatar {
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px; }
 html.sc .lt-ie9 img, html.sc .lt-ie9 object {
   height: 100% !important; }
 html.sc .lt-ie8 img, html.sc .lt-ie8 object {
