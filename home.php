@@ -43,7 +43,7 @@ get_header(); ?>
 							<figcaption>
 								<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'essexuni' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php truncate_title(55); ?></a></h1>
 					 		<div class="entry-meta">
-					 			<?php societycentral_post_meta_multiline(); ?>
+					 			<?php societycentral_post_meta(); ?>
 							</div>
 
 							</figcaption>

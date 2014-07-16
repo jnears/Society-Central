@@ -79,6 +79,7 @@
 
 
 		<?php the_content(); ?>
+		<hr>
 		<!-- social buttons -->
 			<div class="social-wrapper">
 				<ul>
