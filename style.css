@@ -3950,9 +3950,10 @@ html.sc main.site-main #author-profile {
     position: absolute;
     left: 0;
     margin: 0; }
-html.sc .entry-content figure figcaption {
+html.sc .entry-content figure figcaption, html.sc .entry-content .wp-caption-text {
   font-size: 18px;
   font-size: 1rem;
+  font-style: italic;
   line-height: 27px;
   line-height: 1.5rem;
   margin-top: 9px;
