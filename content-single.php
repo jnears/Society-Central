@@ -62,8 +62,6 @@
 			</div>
 		</div>
 
-		<p class="standfirst"><?php the_field('standfirst'); ?></p>
-
 		<?php
 			if ( has_post_thumbnail() ) {
 				echo "<figure>";
