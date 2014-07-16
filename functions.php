@@ -460,13 +460,6 @@ function my_mce_before_init( $settings ) {
          array(
             'title' => 'Blockquote',
             'block' => 'blockquote'
-
-        ),
-        array(
-            'title' => 'Standfirst',
-            'block' => 'p',
-            'classes' => 'standfirst'
-
         )
     );
 
