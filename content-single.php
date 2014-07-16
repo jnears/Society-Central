@@ -62,7 +62,7 @@
 			</div>
 		</div>
 
-		<p class="standfirst"><?php the_field('standfirst'); ?></p>
+		<div class="standfirst"><?php the_field('standfirst'); ?></div>
 
 		<?php
 			if ( has_post_thumbnail() ) {
