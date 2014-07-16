@@ -276,7 +276,7 @@ function top_level_category_list() {
 
 
 
-// Show posts of 'post', 'page' and 'movie' post types on home page
+// Show posts of 'post', 'page' and 'news in brief' post types on home page
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
 function add_my_post_types_to_query( $query ) {
