@@ -457,6 +457,11 @@ function my_mce_before_init( $settings ) {
     		'classes' => 'pull-quote'
 
         ),
+         array(
+            'title' => 'Blockquote',
+            'block' => 'blockquote'
+
+        ),
         array(
             'title' => 'Standfirst',
             'block' => 'p',
