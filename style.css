@@ -3229,6 +3229,55 @@ main.podcast article.latest {
   .two-col aside li {
     margin: 0; }
 
+.social-toolbar {
+  position: relative; }
+  .social-toolbar ul {
+    list-style-type: none;
+    padding: 0em; }
+    .social-toolbar ul li {
+      float: left;
+      margin: 0px 9px 27px 0px;
+      margin: 0rem 0.5rem 1.5rem 0rem;
+      font-size: 16px;
+      font-size: 0.88889rem; }
+      .social-toolbar ul li a:link, .social-toolbar ul li a:visited, .social-toolbar ul li a:active {
+        color: #cccccc; }
+      .social-toolbar ul li a:hover {
+        color: #1e9cee; }
+  .social-toolbar .embed-modal {
+    display: none;
+    top: 40px;
+    position: absolute;
+    z-index: 1000;
+    background: #f2f2f2;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 9px;
+    padding: 0.5rem;
+    max-width: 300px; }
+
+textarea[name=embed-link] {
+  border: none;
+  resize: none;
+  font-size: 16px;
+  font-size: 0.88889rem;
+  background: none;
+  width: 100%; }
+
+.ukhls section {
+  padding-top: 3rem; }
+.ukhls div.more {
+  width: 300px;
+  margin: 0 auto; }
+  .ukhls div.more a.btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 15px; }
+
 html.sc h1 {
   font-size: 36px;
   font-size: 2rem; }
@@ -3458,7 +3507,8 @@ html.sc header[role=banner] {
           color: white; }
 html.sc .paging-navigation {
   margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  overflow: auto; }
   html.sc .paging-navigation .nav-previous {
     float: left;
     margin-left: 3px;
