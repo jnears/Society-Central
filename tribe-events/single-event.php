@@ -28,13 +28,13 @@ $event_id = get_the_ID();
 
 	<?php the_title( '<h1>', '</h1>' ); ?>
 
-	<div class="tribe-events-schedule updated published tribe-clearfix">
+	<!-- <div class="tribe-events-schedule updated published tribe-clearfix">
 		<?php echo tribe_events_event_schedule_details( $event_id, '<h3>', '</h3>'); ?>
 		<?php  if ( tribe_get_cost() ) :  ?>
 			<span class="tribe-events-divider">|</span>
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
 		<?php endif; ?>
-	</div>
+	</div> -->
 
 	<!-- Event header -->
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
