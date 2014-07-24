@@ -74,8 +74,8 @@ jQuery(document).ready(function( $ ){
 
 //add class to comment form submit
 $('input#submit').addClass('btn'); 
-$('.tribe-events-widget-link > a').addClass('btn'); 
-$('.tribe-events-sub-nav > a').addClass('btn'); 
+//add btn class to events calendar links
+$('.tribe-events-widget-link > a, .tribe-events-sub-nav > a').addClass('btn'); 
 $('.tribe-events-widget-link > a').append(' <i class="fa fa-angle-right"></i>'); 
 
 
