@@ -499,3 +499,66 @@ function make_post_thumbnail_link( $html, $post_id, $post_image_id ) {
 }
 
 remove_filter('pre_user_description', 'wp_filter_kses');
+
+
+function authorNotification( $new_status, $old_status, $post ) { 
+    if ( $new_status == 'publish' && $old_status != 'publish' ) 
+        { $author = get_userdata($post->post_author); 
+        $message = " Hi ".$author->display_name.", New post, ".$post->post_title." has just been published at ".get_permalink( $post->ID ).". "; 
+    wp_mail($author->user_email, "New Post Published", $message); 
+} } 
+add_action('transition_post_status', 'authorNotification', 10, 3 );
+
+
+// TRIBE EVENTS CALENDAR SPECIFIC
+
+// Hide event calendar ical and google+ links
+
+/*
+ * Removes the Google Calendar and iCal single event links
+ */
+
+add_action('tribe_events_single_event_before_the_content', 'tribe_remove_single_event_links');
+
+function tribe_remove_single_event_links () {
+    remove_action( 'tribe_events_single_event_after_the_content', array( 'TribeiCal', 'single_event_links' ) );
+}
+
+/*
+ * Uncomment the following action to add the Google Calendar Link
+ */
+
+//add_action('tribe_events_single_event_after_the_content', 'tribe_add_gcal_link');
+
+function tribe_add_gcal_link()  {
+
+    // don't show on password protected posts
+    if (is_single() && !post_password_required()) {
+        echo '<div class="tribe-events-cal-links">';
+        echo '<a class="tribe-events-gcal tribe-events-button" href="' . tribe_get_gcal_link() . '" title="' . __( 'Add to Google Calendar', 'tribe-events-calendar' ) . '">+ ' . __( 'Google Calendar', 'tribe-events-calendar-pro' ) . '</a>';
+        echo '</div><!-- .tribe-events-cal-links -->';
+    }
+
+}
+
+/*
+ * Uncomment the following action to add the iCal Link
+ */
+
+//add_action('tribe_events_single_event_after_the_content', 'tribe_add_ical_link');
+
+function tribe_add_ical_link()  {
+
+    // don't show on password protected posts
+    if (is_single() && !post_password_required()) {
+        echo '<div class="tribe-events-cal-links">';
+        echo '<a class="tribe-events-ical tribe-events-button" href="' . tribe_get_single_ical_link() . '">+ ' . __( 'iCal Import', 'tribe-events-calendar' ) . '</a>';
+        echo '</div><!-- .tribe-events-cal-links -->';
+    }
+
+}
+
+// Remove ical import for all events on the events list
+
+
+remove_filter('tribe_events_after_footer', array('TribeiCal', 'maybe_add_link'), 10, 1);
