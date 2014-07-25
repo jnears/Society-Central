@@ -3391,6 +3391,8 @@ html.sc header[role=banner] {
   position: relative; }
   @media only screen and (max-width: 480px) {
     html.sc header[role=banner] {
+      min-height: 108px;
+      min-height: 6rem;
       margin-bottom: 18px;
       margin-bottom: 1rem; } }
   html.sc header[role=banner] .site-branding {
@@ -3414,6 +3416,10 @@ html.sc header[role=banner] {
         html.sc header[role=banner] .site-branding #nav-menu-btn {
           display: inline;
           z-index: 99999; } }
+      @media only screen and (max-width: 480px) {
+        html.sc header[role=banner] .site-branding #nav-menu-btn {
+          top: 25px;
+          top: 1.38889rem; } }
     html.sc header[role=banner] .site-branding #nav-search-btn {
       position: absolute;
       top: 34px;
@@ -3422,6 +3428,10 @@ html.sc header[role=banner] {
       padding: 0.55556rem;
       right: 0;
       color: gray; }
+      @media only screen and (max-width: 480px) {
+        html.sc header[role=banner] .site-branding #nav-search-btn {
+          top: 25px;
+          top: 1.38889rem; } }
     html.sc header[role=banner] .site-branding .fa {
       font-size: 22px;
       font-size: 1.22222rem; }
@@ -3463,7 +3473,8 @@ html.sc header[role=banner] {
       html.sc header[role=banner] h2 {
         font-size: 18px;
         font-size: 1rem;
-        margin: 0; } }
+        margin: 4.5px;
+        margin: 0.25rem; } }
   html.sc header[role=banner] div.social-links {
     position: absolute;
     left: 0;
@@ -3508,7 +3519,9 @@ html.sc header[role=banner] {
 html.sc .paging-navigation {
   margin-bottom: 27px;
   margin-bottom: 1.5rem;
-  overflow: auto; }
+  overflow: auto;
+  padding: 3px 0px;
+  padding: 0.16667rem 0rem; }
   html.sc .paging-navigation .nav-previous {
     float: left;
     margin-left: 3px;
@@ -3793,7 +3806,7 @@ html.sc div#secondary {
     font-size: 1rem;
     padding: 0;
     background: none; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 768px) {
       html.sc div#secondary aside#site-overview {
         display: none; } }
     html.sc div#secondary aside#site-overview p.lead {
