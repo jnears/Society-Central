@@ -3352,8 +3352,8 @@ html.sc #inner-wrap {
     position: absolute;
     width: 70%;
     top: 0;
-    padding-top: 72px;
-    padding-top: 4rem;
+    padding-top: 54px;
+    padding-top: 3rem;
     background: #2c2c2c;
     height: 100%; }
     html.sc #inner-wrap #page > nav.categories ol {
