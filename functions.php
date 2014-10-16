@@ -422,14 +422,6 @@ function delete_retina_support_images( $attachment_id ) {
     }
 }
 
-// remove attachments from search results
-function filter_search($query) {
-    if ($query->is_search) {
-        $query->set('post_type', 'attachment');
-    }
-    return $query;
-}
-add_filter('pre_get_posts', 'filter_search');
 
 
 // //baseline.js - set image margins to
