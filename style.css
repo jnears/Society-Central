@@ -4199,10 +4199,14 @@ html.sc main.site-main article {
         padding-left: 100px; } }
   html.sc main.site-main article.featured {
     background-color: #f2f2f2;
-    min-height: 378px;
-    min-height: 21rem;
+    min-height: 480px;
+    min-height: 23.33333333rem;
     margin-bottom: 27px;
     margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 480px) {
+      html.sc main.site-main article.featured {
+        min-height: 378px;
+        min-height: 21rem; } }
     html.sc main.site-main article.featured figure {
       margin-bottom: 0px;
       margin-bottom: 0rem; }
