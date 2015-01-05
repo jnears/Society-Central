@@ -1,4 +1,4 @@
-@import url(https://fast.fonts.com/t/1.css?apiType=css&projectid=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f);
+@import url(//fast.fonts.net/t/1.css?apiType=css&projectid=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f);
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -278,7 +278,7 @@ html {
   overflow-x: hidden; }
   html.grid {
     z-index: 10;
-    background: url(asset-path("drop.png")) center 0px repeat-y white; }
+    background: url(asset-path("drop.png", image)) center 0px repeat-y white; }
 
 [class*="span"] {
   float: left;
@@ -810,28 +810,18 @@ html {
           margin-top: 27px;
           margin-top: 1.5rem; } }
 
-@media only screen and (max-width: 768px) {
-  .colgroup-3.home > .span2:nth-child(n) {
-    margin-top: 0px;
-    margin-top: 0rem; } }
-.colgroup-3.home > .span2 > .colgroup-2 > .span1 {
-  margin-top: 0px;
-  margin-top: 0rem;
+.colgroup-3 > .span2 > .colgroup-2 > .span1 {
   width: 46%;
   margin-left: 3%; }
-  .colgroup-3.home > .span2 > .colgroup-2 > .span1:nth-child(even) {
+  .colgroup-3 > .span2 > .colgroup-2 > .span1:nth-child(even) {
     margin-left: 5%; }
   @media only screen and (max-width: 480px) {
-    .colgroup-3.home > .span2 > .colgroup-2 > .span1 {
+    .colgroup-3 > .span2 > .colgroup-2 > .span1 {
       width: auto;
       float: none;
       margin-left: 0%; }
-      .colgroup-3.home > .span2 > .colgroup-2 > .span1:nth-child(even) {
+      .colgroup-3 > .span2 > .colgroup-2 > .span1:nth-child(even) {
         margin-left: 0%; } }
-
-.multi {
-  max-height: 750px;
-  overflow: auto; }
 
 body:after {
   content: "desktop";
@@ -858,7 +848,7 @@ audio {
   margin: 1rem 0rem 1rem 0rem; }
 
 ::selection {
-  background: #005ea5;
+  background: #ab7070;
   color: white; }
 
 ::-moz-selection {
@@ -955,8 +945,6 @@ h1 {
       h1 span {
         font-size: 24px;
         font-size: 1.33333rem; } }
-    h1 span.inline {
-      display: inline; }
 
 h2 {
   position: relative;
@@ -1005,8 +993,6 @@ h2 {
       h2 span {
         font-size: 18px;
         font-size: 1rem; } }
-    h2 span.inline {
-      display: inline; }
 
 h3 {
   position: relative;
@@ -1049,8 +1035,6 @@ h3 {
       h3 span {
         font-size: 13.5px;
         font-size: 0.75rem; } }
-    h3 span.inline {
-      display: inline; }
 
 h4 {
   position: relative;
@@ -1129,6 +1113,9 @@ h1 span {
   font-style: normal;
   margin-top: 0px;
   margin-top: 0rem; }
+
+h1.inline span {
+  display: inline; }
 
 blockquote {
   font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
@@ -1228,9 +1215,6 @@ i,
 em {
   font-family: "Amasis", Georgia, "Times New Roman", Times, serif; }
 
-.fa span {
-  display: none; }
-
 form {
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
@@ -1238,10 +1222,6 @@ form {
   margin: 1.38889rem 0rem;
   padding: 27px 0px;
   padding: 1.5rem 0rem; }
-  form.hidden {
-    border: none;
-    margin: 0;
-    padding: 0; }
   form fieldset {
     position: relative;
     border: none;
@@ -1276,18 +1256,14 @@ form {
     line-height: 41.4px;
     line-height: 2.3rem;
     float: left;
-    padding-right: 1em;
     width: 25%;
+    padding-right: 1em;
     text-align: right; }
-    @media only screen and (max-width: 1600px) {
+    @media only screen and (max-width: 768px) {
       form label {
         text-align: left;
-        width: 100%;
-        font-weight: bold; } }
-    form label.inline {
-      width: auto; }
+        width: 100%; } }
   form div.field {
-    clear: left;
     min-height: 54px;
     min-height: 3rem;
     margin-bottom: 27px;
@@ -1312,27 +1288,29 @@ form {
   form input[type=search],
   form input[type=email],
   form input[type=url],
-  form textarea {
+  form textarea,
+  form select {
     border: 1px solid #cccccc;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #fafafa;
     overflow: visible;
-    width: 100%;
+    width: 75%;
     -webkit-appearance: none;
     border-radius: 0;
     padding: 9px;
     padding: 0.5rem;
     min-height: 36px;
     min-height: 2rem; }
-    @media only screen and (min-width: 1601px) {
+    @media only screen and (max-width: 768px) {
       form input[type=text],
       form input[type=number],
       form input[type=password],
       form input[type=search],
       form input[type=email],
       form input[type=url],
-      form textarea {
-        width: 75%; } }
+      form textarea,
+      form select {
+        width: 100%; } }
   form input[type=submit] {
     -webkit-appearance: none;
     border-radius: 0; }
@@ -1351,8 +1329,6 @@ form {
       margin-bottom: 9px;
       margin-bottom: 0.5rem; } }
   form div.actions {
-    margin: 27px 0px 0px 0px;
-    margin: 1.5rem 0rem 0rem 0rem;
     text-align: center; }
 
 form[role=search] {
@@ -1398,35 +1374,6 @@ form[role=search] {
         margin: 0rem;
         margin-left: 1%;
         width: 25%; } }
-  form[role=search].inbody {
-    display: block;
-    padding: 13.5px 18px;
-    padding: 0.75rem 1rem;
-    margin: 18px 0px 27px 0px;
-    margin: 1rem 0rem 1.5rem 0rem; }
-    form[role=search].inbody fieldset {
-      text-align: left; }
-      form[role=search].inbody fieldset input[type=search] {
-        width: 60%; }
-        @media only screen and (min-width: 1601px) {
-          form[role=search].inbody fieldset input[type=search] {
-            width: 80%; } }
-        @media only screen and (max-width: 768px) {
-          form[role=search].inbody fieldset input[type=search] {
-            width: 50%; } }
-      form[role=search].inbody fieldset label {
-        float: none;
-        width: auto;
-        padding: 0;
-        display: inline;
-        font-size: 14px;
-        font-size: 0.77778rem;
-        color: gray; }
-      form[role=search].inbody fieldset .controls {
-        float: right; }
-        @media only screen and (max-width: 480px) {
-          form[role=search].inbody fieldset .controls {
-            float: none; } }
 
 ol.multi {
   margin-bottom: 0px;
@@ -1507,7 +1454,7 @@ header[role=banner] {
     height: 4rem;
     padding: 18px;
     padding: 1rem;
-    background: url(asset-path("iser.svg")) no-repeat 50% 50%;
+    background: url(asset-path("iser.svg", image)) no-repeat 50% 50%;
     text-indent: -3000em;
     overflow: hidden;
     display: block; }
@@ -1523,20 +1470,9 @@ header.plain {
   margin-bottom: 27px;
   margin-bottom: 1.5rem;
   margin-top: -36px;
-  margin-top: -2rem;
-  text-align: center; }
+  margin-top: -2rem; }
   header.plain.white {
     background: none; }
-  header.plain h1 {
-    font-size: 23.4px;
-    font-size: 1.3rem;
-    margin-top: -36px;
-    margin-top: -2rem;
-    padding-bottom: 18px;
-    padding-bottom: 1rem;
-    padding: 0px 72px 18px 72px;
-    padding: 0rem 4rem 1rem 4rem;
-    color: gray; }
 
 .btn {
   display: inline-block;
@@ -1715,9 +1651,7 @@ ol.cloud {
       border: none;
       *border: 0;
       background: #005ea5;
-      color: white;
-      margin-bottom: 13.5px;
-      margin-bottom: 0.75rem; }
+      color: white; }
       ol.cloud li a:hover, ol.cloud li a:focus {
         color: white;
         text-decoration: none;
@@ -1744,25 +1678,24 @@ ol.tag-list {
     ol.tag-list li:nth-last-of-type(2):after {
       content: " and\00a0"; }
 
-time {
-  color: gray;
-  font-size: 16px;
-  font-size: 0.88889rem;
-  font-style: italic; }
-
-ol#publications, ol.publications {
+ol#publications {
   padding-left: 0; }
-  ol#publications p, ol.publications p {
+  ol#publications p {
     margin: 0; }
-  ol#publications > li, ol.publications > li {
+  ol#publications > li {
     list-style-type: none;
     padding: 4.5px 0px;
     padding: 0.25rem 0rem;
     margin-bottom: 27px;
     margin-bottom: 1.5rem; }
-  ol#publications i, ol.publications i {
+  ol#publications time {
+    color: gray;
+    font-size: 16px;
+    font-size: 0.88889rem;
+    font-style: italic; }
+  ol#publications i {
     color: #cccccc; }
-  ol#publications cite a:link, ol#publications cite a:visited, ol.publications cite a:link, ol.publications cite a:visited {
+  ol#publications cite a:link, ol#publications cite a:visited {
     color: gray;
     font-size: 16px;
     font-size: 0.88889rem; }
@@ -1824,7 +1757,7 @@ table {
     padding: 0.75rem 0.33333rem 0.75rem 0.33333rem;
     text-align: left;
     vertical-align: top;
-    border-bottom: 1px solid #cccccc; }
+    border-top: 1px solid #cccccc; }
     table th:last-of-type,
     table td:last-of-type {
       text-align: right; }
@@ -1845,10 +1778,6 @@ table {
     border: 1px solid #cccccc;
     margin: 26px 0px;
     margin: 1.44444rem 0rem; }
-
-@media only screen and (max-width: 768px) {
-  .tablet_hide {
-    display: none; } }
 
 p.lead {
   font-size: 22px;
@@ -2032,18 +1961,6 @@ h6.meta {
       color: #000033;
       background: #ff3c5b;
       padding: 0.1em 0.25em; }
-
-.theme-pagination {
-  padding: 9px 3px;
-  padding: 0.5rem 0.16667rem;
-  margin-right: -3px;
-  margin-right: -0.16667rem;
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: default;
-  overflow: auto; }
 
 .block {
   border-radius: 5px;
@@ -2345,19 +2262,10 @@ aside.home {
   background: #f2f2f2;
   padding: 18px;
   padding: 1rem; }
-  aside.home nav ol {
-    padding-left: 0; }
 
 .home-banner {
   margin-top: -18px;
-  margin-top: -1rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 85%;
-  max-width: 100rem; }
-  @media only screen and (max-width: 480px) {
-    .home-banner {
-      width: 96%; } }
+  margin-top: -1rem; }
 
 .compact {
   margin-bottom: 0; }
@@ -2378,8 +2286,8 @@ aside.home {
   padding: 1.5rem 0rem; }
   @media only screen and (max-width: 480px) {
     .brochure .row {
-      padding: 9px 0px;
-      padding: 0.5rem 0rem; } }
+      padding: 0px;
+      padding: 0rem; } }
   .brochure .row:first-child {
     padding-top: 0px;
     padding-top: 0rem; }
@@ -2387,12 +2295,6 @@ aside.home {
     border-bottom: 0;
     margin-bottom: 27px;
     margin-bottom: 1.5rem; }
-  .brochure .row.theme {
-    min-height: 540px;
-    min-height: 30rem; }
-  .brochure .row.theme-large {
-    min-height: 648px;
-    min-height: 36rem; }
   .brochure .row .container {
     width: 85%;
     margin: 0 auto; }
@@ -2401,22 +2303,17 @@ aside.home {
         width: 96%; } }
   .brochure .row figure {
     float: left;
-    width: 100%;
+    width: 50%;
     margin: 0;
     line-height: 0; }
     .brochure .row figure a {
       line-height: 0; }
-    .brochure .row figure.alternating {
-      width: 50%; }
-      @media only screen and (max-width: 480px) {
-        .brochure .row figure.alternating {
-          width: 100%; } }
     @media only screen and (max-width: 480px) {
       .brochure .row figure {
         width: 100%; } }
     .brochure .row figure img {
       width: 100%; }
-  .brochure .row:nth-child(even) figure.alternating {
+  .brochure .row:nth-child(even) figure {
     float: right; }
   .brochure .row .content {
     float: left;
@@ -2426,23 +2323,18 @@ aside.home {
     @media only screen and (max-width: 480px) {
       .brochure .row .content {
         width: 100%;
-        padding: 18px 0px;
-        padding: 1rem 0rem; } }
+        padding: 0px;
+        padding: 0rem; } }
   .brochure .row:nth-child(even) .content {
     padding: 0px 27px 0px 0px;
     padding: 0rem 1.5rem 0rem 0rem; }
-    @media only screen and (max-width: 480px) {
-      .brochure .row:nth-child(even) .content {
-        width: 100%;
-        padding: 18px 0px 0px 0px;
-        padding: 1rem 0rem 0rem 0rem; } }
 .brochure.zebra .row:first-child {
   padding-top: 27px;
   padding-top: 1.5rem; }
-  @media only screen and (max-width: 480px) {
-    .brochure.zebra .row:first-child {
-      padding: 9px 0px;
-      padding: 0.5rem 0rem; } }
+@media only screen and (max-width: 480px) {
+  .brochure.zebra .row {
+    padding-top: 0px;
+    padding-top: 0rem; } }
 .brochure.zebra .row:nth-child(odd) {
   background: #f2f2f2; }
 
@@ -2570,146 +2462,146 @@ a[data-scrolldown]:link, a[data-scrolldown]:visited {
       font-size: 10px;
       font-size: 0.55556rem; } }
 
-h6.tag time {
-  font-weight: normal;
-  color: gray;
-  font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-  font-size: 16px;
-  font-size: 0.88889rem; }
-
-.search-results p {
-  margin: 0; }
-.search-results article {
-  padding: 0px 0px 27px 0px;
-  padding: 0rem 0rem 1.5rem 0rem; }
-
-.urdu {
-  font-style: normal !important;
-  font-size: 1.5em;
-  direction: rtl; }
-
-.true-icon {
-  padding-left: 0.25em;
-  color: #74a290; }
-
-.false-icon {
-  padding-left: 0.25em;
-  color: #ce001f; }
-
-i.tag {
-  font-size: 16px;
-  font-size: 0.88889rem;
-  color: #cccccc; }
-
-p.people-list {
-  margin-bottom: 0; }
+@font-face {
+  font-family: "Amasis_n4";
+  src: url("//fast.fonts.net/dv2/2/af8335c0-1081-47c6-853f-2d02c3a47996.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot"); }
 
 @font-face {
-  font-family: "Officina";
-  src: url("https://fast.fonts.com/dv2/2/d29a1003-aa62-4492-a4ab-3b649c7efccd.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
-  font-weight: normal;
+  font-family: "Amasis";
+  src: url("//fast.fonts.net/dv2/2/af8335c0-1081-47c6-853f-2d02c3a47996.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
+  font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  font-family: "Officina";
-  src: url("https://fast.fonts.com/dv2/2/d29a1003-aa62-4492-a4ab-3b649c7efccd.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
-  src: url("https://fast.fonts.com/dv2/3/d8999082-96b7-4355-bab1-d135f4e4bee7.woff?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("https://fast.fonts.com/dv2/1/e0a4e45b-0b2e-4b30-82d9-808d85415dc9.ttf?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("https://fast.fonts.com/dv2/11/9e9b325c-b638-44e5-9889-91dd0d826f86.svg?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#9e9b325c-b638-44e5-9889-91dd0d826f86") format("svg");
-  font-weight: normal;
+  font-family: "Amasis";
+  src: url("//fast.fonts.net/dv2/2/af8335c0-1081-47c6-853f-2d02c3a47996.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
+  src: url("//fast.fonts.net/dv2/3/f229152d-8ed7-4236-b540-ba1cea5f11eb.woff?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("//fast.fonts.net/dv2/1/12ad0e25-785b-46c9-8ea3-bfdc509f58ae.ttf?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("//fast.fonts.net/dv2/11/251b757e-cf9a-499c-b749-378acf84b1d2.svg?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#251b757e-cf9a-499c-b749-378acf84b1d2") format("svg");
+  font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  font-family: "Officina";
-  src: url("https://fast.fonts.com/dv2/2/cc85218b-466c-4ac1-a21f-674cffd418f5.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
-  font-weight: normal;
-  font-style: italic; }
+  font-family: "Amasis_i4";
+  src: url("//fast.fonts.net/dv2/2/0927708d-07ba-4e1c-abe0-91901523665c.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot"); }
 
 @font-face {
-  font-family: "Officina";
-  src: url("https://fast.fonts.com/dv2/2/cc85218b-466c-4ac1-a21f-674cffd418f5.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
-  src: url("https://fast.fonts.com/dv2/3/4c40ad3e-0ea9-4fa8-bb55-dac5eba3025b.woff?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("https://fast.fonts.com/dv2/1/454e8a09-e941-4fc3-a07c-5b360c1e5493.ttf?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("https://fast.fonts.com/dv2/11/6bf37b4a-2697-4f7f-a95c-fa13a4a75cbe.svg?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#6bf37b4a-2697-4f7f-a95c-fa13a4a75cbe") format("svg");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Officina";
-  src: url("https://fast.fonts.com/dv2/2/377ad900-10be-4f48-a384-6d415b7a190a.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Officina";
-  src: url("https://fast.fonts.com/dv2/2/377ad900-10be-4f48-a384-6d415b7a190a.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
-  src: url("https://fast.fonts.com/dv2/3/c8ffa661-8ad8-4a47-a2f8-bdf1becae09b.woff?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("https://fast.fonts.com/dv2/1/dbdab976-8993-4b93-94cc-a8a15b6a855e.ttf?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("https://fast.fonts.com/dv2/11/3bfbaef3-6eb6-4c59-b59e-d7d5fd624f8c.svg?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#3bfbaef3-6eb6-4c59-b59e-d7d5fd624f8c") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Officina";
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Officina";
-  font-weight: bold;
+  font-family: "Amasis";
+  src: url("//fast.fonts.net/dv2/2/0927708d-07ba-4e1c-abe0-91901523665c.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
+  font-weight: 400;
   font-style: italic; }
 
 @font-face {
   font-family: "Amasis";
-  src: url("https://fast.fonts.com/dv2/2/af8335c0-1081-47c6-853f-2d02c3a47996.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
-  font-weight: normal;
+  src: url("//fast.fonts.net/dv2/2/0927708d-07ba-4e1c-abe0-91901523665c.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
+  src: url("//fast.fonts.net/dv2/3/68e7e4bb-54e8-4f36-88b6-cebd1a5719e6.woff?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("//fast.fonts.net/dv2/1/fc006e8f-28c5-4c7d-8277-2e3ffeb8aab4.ttf?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("//fast.fonts.net/dv2/11/7ff51a01-3cc1-4df6-b52a-0cecb849ee55.svg?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#7ff51a01-3cc1-4df6-b52a-0cecb849ee55") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Amasis_n7";
+  src: url("//fast.fonts.net/dv2/2/29e042d3-ac19-44b7-851a-d89fe7f33362.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot"); }
+
+@font-face {
+  font-family: "Amasis";
+  src: url("//fast.fonts.net/dv2/2/29e042d3-ac19-44b7-851a-d89fe7f33362.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
+  font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: "Amasis";
-  src: url("https://fast.fonts.com/dv2/2/af8335c0-1081-47c6-853f-2d02c3a47996.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
-  src: url("https://fast.fonts.com/dv2/3/f229152d-8ed7-4236-b540-ba1cea5f11eb.woff?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("https://fast.fonts.com/dv2/1/12ad0e25-785b-46c9-8ea3-bfdc509f58ae.ttf?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("https://fast.fonts.com/dv2/11/251b757e-cf9a-499c-b749-378acf84b1d2.svg?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#251b757e-cf9a-499c-b749-378acf84b1d2") format("svg");
-  font-weight: normal;
+  src: url("//fast.fonts.net/dv2/2/29e042d3-ac19-44b7-851a-d89fe7f33362.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
+  src: url("//fast.fonts.net/dv2/3/803daadd-fb44-44a2-898a-3886e2b0c29c.woff?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("//fast.fonts.net/dv2/1/a95848ef-ef4a-40aa-8193-71001a8a450e.ttf?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("//fast.fonts.net/dv2/11/9eb34d77-fb26-4e81-8d5c-75916f01c223.svg?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#9eb34d77-fb26-4e81-8d5c-75916f01c223") format("svg");
+  font-weight: 700;
   font-style: normal; }
 
 @font-face {
-  font-family: "Amasis";
-  src: url("https://fast.fonts.com/dv2/2/29e042d3-ac19-44b7-851a-d89fe7f33362.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
-  font-weight: bold;
-  font-style: normal; }
+  font-family: "Amasis_i7";
+  src: url("//fast.fonts.net/dv2/2/de7ff4aa-b177-4dcc-ae55-882c01bacbd7.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot"); }
 
 @font-face {
   font-family: "Amasis";
-  src: url("https://fast.fonts.com/dv2/2/29e042d3-ac19-44b7-851a-d89fe7f33362.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
-  src: url("https://fast.fonts.com/dv2/3/803daadd-fb44-44a2-898a-3886e2b0c29c.woff?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("https://fast.fonts.com/dv2/1/a95848ef-ef4a-40aa-8193-71001a8a450e.ttf?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("https://fast.fonts.com/dv2/11/9eb34d77-fb26-4e81-8d5c-75916f01c223.svg?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#9eb34d77-fb26-4e81-8d5c-75916f01c223") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Amasis";
-  src: url("https://fast.fonts.com/dv2/2/0927708d-07ba-4e1c-abe0-91901523665c.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
-  font-weight: normal;
+  src: url("//fast.fonts.net/dv2/2/de7ff4aa-b177-4dcc-ae55-882c01bacbd7.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
+  font-weight: 700;
   font-style: italic; }
 
 @font-face {
   font-family: "Amasis";
-  src: url("https://fast.fonts.com/dv2/2/0927708d-07ba-4e1c-abe0-91901523665c.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
-  src: url("https://fast.fonts.com/dv2/3/68e7e4bb-54e8-4f36-88b6-cebd1a5719e6.woff?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("https://fast.fonts.com/dv2/1/fc006e8f-28c5-4c7d-8277-2e3ffeb8aab4.ttf?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("https://fast.fonts.com/dv2/11/7ff51a01-3cc1-4df6-b52a-0cecb849ee55.svg?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#7ff51a01-3cc1-4df6-b52a-0cecb849ee55") format("svg");
-  font-weight: normal;
+  src: url("//fast.fonts.net/dv2/2/de7ff4aa-b177-4dcc-ae55-882c01bacbd7.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
+  src: url("//fast.fonts.net/dv2/3/32488492-33c2-4df2-91e5-02c85cafc09d.woff?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("//fast.fonts.net/dv2/1/afa52904-1d9c-40df-b5c2-69ba22fb9167.ttf?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("//fast.fonts.net/dv2/11/38c9269b-1171-4d1c-adde-e5faa0c6e91b.svg?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#38c9269b-1171-4d1c-adde-e5faa0c6e91b") format("svg");
+  font-weight: 700;
   font-style: italic; }
 
 @font-face {
-  font-family: "Amasis";
-  src: url("https://fast.fonts.com/dv2/2/de7ff4aa-b177-4dcc-ae55-882c01bacbd7.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
-  font-weight: bold;
+  font-family: "Officina_n3";
+  src: url("//fast.fonts.net/dv2/2/d29a1003-aa62-4492-a4ab-3b649c7efccd.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot"); }
+
+@font-face {
+  font-family: "Officina";
+  src: url("//fast.fonts.net/dv2/2/d29a1003-aa62-4492-a4ab-3b649c7efccd.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Officina";
+  src: url("//fast.fonts.net/dv2/2/d29a1003-aa62-4492-a4ab-3b649c7efccd.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
+  src: url("//fast.fonts.net/dv2/3/d8999082-96b7-4355-bab1-d135f4e4bee7.woff?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("//fast.fonts.net/dv2/1/e0a4e45b-0b2e-4b30-82d9-808d85415dc9.ttf?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("//fast.fonts.net/dv2/11/9e9b325c-b638-44e5-9889-91dd0d826f86.svg?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#9e9b325c-b638-44e5-9889-91dd0d826f86") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Officina_i3";
+  src: url("//fast.fonts.net/dv2/2/cc85218b-466c-4ac1-a21f-674cffd418f5.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot"); }
+
+@font-face {
+  font-family: "Officina";
+  src: url("//fast.fonts.net/dv2/2/cc85218b-466c-4ac1-a21f-674cffd418f5.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
+  font-weight: 300;
   font-style: italic; }
 
 @font-face {
-  font-family: "Amasis";
-  font-weight: bold;
-  font-style: italic;
-  src: url("https://fast.fonts.com/dv2/2/de7ff4aa-b177-4dcc-ae55-882c01bacbd7.eot?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
-  src: url("https://fast.fonts.com/dv2/3/32488492-33c2-4df2-91e5-02c85cafc09d.woff?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("https://fast.fonts.com/dv2/1/afa52904-1d9c-40df-b5c2-69ba22fb9167.ttf?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("https://fast.fonts.com/dv2/11/38c9269b-1171-4d1c-adde-e5faa0c6e91b.svg?d44f19a684109620e484157ca390e818e8a97b1e01f390daeacd552611b46b82bc660b095319077cc6067ded815e863105f4cb1ad2c8a23ad2709342fca2c2e2b39983c899bf24d359e887ed1256a9c94f2ee06b42c66b033b7482d25351edcd663a1a919f4844593674b2dcb33f40a5d339aca161392fd411dd01f9e0e6e4f8001c9b98ad58b5457caaddec283c4f816d40750e30cbcf24a1e5&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#38c9269b-1171-4d1c-adde-e5faa0c6e91b") format("svg"); }
+  font-family: "Officina";
+  src: url("//fast.fonts.net/dv2/2/cc85218b-466c-4ac1-a21f-674cffd418f5.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
+  src: url("//fast.fonts.net/dv2/3/4c40ad3e-0ea9-4fa8-bb55-dac5eba3025b.woff?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("//fast.fonts.net/dv2/1/454e8a09-e941-4fc3-a07c-5b360c1e5493.ttf?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("//fast.fonts.net/dv2/11/6bf37b4a-2697-4f7f-a95c-fa13a4a75cbe.svg?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#6bf37b4a-2697-4f7f-a95c-fa13a4a75cbe") format("svg");
+  font-weight: 300;
+  font-style: italic; }
 
-placeholdernav ol {
+@font-face {
+  font-family: "Officina_n7";
+  src: url("//fast.fonts.net/dv2/2/377ad900-10be-4f48-a384-6d415b7a190a.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot"); }
+
+@font-face {
+  font-family: "Officina";
+  src: url("//fast.fonts.net/dv2/2/377ad900-10be-4f48-a384-6d415b7a190a.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Officina";
+  src: url("//fast.fonts.net/dv2/2/377ad900-10be-4f48-a384-6d415b7a190a.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
+  src: url("//fast.fonts.net/dv2/3/c8ffa661-8ad8-4a47-a2f8-bdf1becae09b.woff?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("//fast.fonts.net/dv2/1/dbdab976-8993-4b93-94cc-a8a15b6a855e.ttf?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("//fast.fonts.net/dv2/11/3bfbaef3-6eb6-4c59-b59e-d7d5fd624f8c.svg?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#3bfbaef3-6eb6-4c59-b59e-d7d5fd624f8c") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Officina_i7";
+  src: url("//fast.fonts.net/dv2/2/2559bbeb-6454-4f6a-985d-cc1c1966c3ed.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot"); }
+
+@font-face {
+  font-family: "Officina";
+  src: url("//fast.fonts.net/dv2/2/2559bbeb-6454-4f6a-985d-cc1c1966c3ed.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("eot");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Officina";
+  src: url("//fast.fonts.net/dv2/2/2559bbeb-6454-4f6a-985d-cc1c1966c3ed.eot?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f");
+  src: url("//fast.fonts.net/dv2/3/e836336d-35c0-42d1-957f-e02fa17af2ad.woff?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("woff"), url("//fast.fonts.net/dv2/1/37140562-4d5c-47c6-831d-0c0557cb7f1b.ttf?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f") format("truetype"), url("//fast.fonts.net/dv2/11/65d2a3ab-34b5-4703-921f-dd044dab536e.svg?d44f19a684109620e484157aa090e818164b583323d003aed8738c486c8f2be5451a12b579fdb3b84f52c077b1b063612babe72c6cf13ea84e96a257fd04a45b154216d5ee3c042f5012e90cd21fdb03662f4af4f35591f99819359235fc11a814ebcd89d1a34e0292c757a21a2f45d42a72cf0b3a086cdfe7bdafeaa58263e732606fa96c0e16868c&projectId=f2814b24-b4fc-46e7-b3a2-4ee556c5c73f#65d2a3ab-34b5-4703-921f-dd044dab536e") format("svg");
+  font-weight: 700;
+  font-style: italic; }
+
+nav ol {
   padding-left: 0px;
   padding-left: 0rem; }
-  placeholdernav ol li:first-of-type {
+  nav ol li:first-of-type {
     margin-left: 0; }
 
 header[role=banner] nav {
@@ -2780,11 +2672,13 @@ nav.guide {
     nav.guide ol li a:link, nav.guide ol li a:visited {
       display: block;
       text-decoration: none;
-      padding: 0px;
-      padding: 0rem;
-      margin-left: 5%;
+      border-bottom: 1px solid #f2f2f2;
+      padding: 0px 9px;
+      padding: 0rem 0.5rem;
       line-height: 35px;
       line-height: 1.94444rem; }
+    nav.guide ol li a:hover {
+      background: #fafafa; }
 
 .prime-action {
   position: absolute;
@@ -2887,12 +2781,11 @@ nav.local ul {
   margin-bottom: 0;
   font-family: "Officina", Georgia, "Times New Roman", Times, serif; }
 nav.local ul ul {
-  display: none; }
+  display: none;
+  padding-left: 21.6px;
+  padding-left: 1.2rem; }
   nav.local ul ul.open {
-    display: block;
-    margin-left: 0; }
-nav.local li.indent {
-  margin-left: 17px; }
+    display: block; }
 nav.local i.fa {
   font-size: 14px;
   font-size: 0.77778rem;
@@ -2900,9 +2793,8 @@ nav.local i.fa {
   line-height: 1.5rem;
   color: #005ea5;
   float: left;
-  padding-right: 7.2px;
-  padding-right: 0.4rem;
-  margin-left: -17px;
+  padding-right: 9px;
+  padding-right: 0.5rem;
   cursor: pointer; }
 
 a#handheld-btn {
@@ -2998,15 +2890,11 @@ body.app {
   margin-top: 4rem; }
   body.app main {
     float: none;
-    width: 98%;
+    width: 95%;
     min-width: 820px;
     max-width: none;
     margin-left: auto;
-    margin-right: auto;
-    position: relative; }
-  body.app fieldset {
-    margin-bottom: 27px;
-    margin-bottom: 1.5rem; }
+    margin-right: auto; }
 
 a#show-grid {
   position: fixed;
@@ -3185,7 +3073,7 @@ footer[role=contentinfo] {
     height: 81px;
     overflow: hidden;
     text-indent: -3000em;
-    background: url(asset-path("esrc.svg")) no-repeat 50% 50%; }
+    background: url(asset-path("esrc.svg", image)) no-repeat 50% 50%; }
   footer[role=contentinfo] a.uoe {
     float: left;
     margin-bottom: 27px;
@@ -3195,7 +3083,7 @@ footer[role=contentinfo] {
     height: 81px;
     overflow: hidden;
     text-indent: -3000em;
-    background: url(asset-path("university_of_essex.svg")) no-repeat 50% 50%; }
+    background: url(asset-path("university_of_essex.svg", image)) no-repeat 50% 50%; }
 
 .font20 {
   font-size: 20px;
@@ -3210,6 +3098,10 @@ img {
 
 .autoimage img {
   width: auto; }
+
+.hero {
+  margin-top: -36px;
+  margin-top: -2rem; }
 
 img.logo {
   display: block;
@@ -3551,9 +3443,20 @@ main.podcast div.audio-meta {
     @media only screen and (max-width: 480px) {
       main.podcast div.audio-meta .subscribe {
         position: relative; } }
-    main.podcast div.audio-meta .subscribe a {
-      margin-left: 9px;
-      margin-left: 0.5rem; }
+main.podcast a.itunes {
+  float: left;
+  padding-top: 2px;
+  margin-top: -2px;
+  width: 62px;
+  height: 22px;
+  margin-right: 9px;
+  background: url("/assets/itunes.png") no-repeat 46px 6px; }
+main.podcast a[href$='.rss'] {
+  padding-top: 2px;
+  margin-top: -2px;
+  width: 44px;
+  float: left;
+  background: url(asset-path("rss.png", image)) no-repeat 32px 8px; }
 main.podcast article.latest {
   position: relative;
   padding-left: 110px;
@@ -3567,25 +3470,6 @@ main.podcast article.latest {
       @media only screen and (max-width: 480px) {
         main.podcast article.latest figure img {
           width: 80px; } }
-main.podcast time {
-  top: 27px;
-  top: 1.5rem;
-  display: block;
-  color: gray;
-  font-family: "Amasis", Georgia, "Times New Roman", Times, serif;
-  font-weight: normal;
-  font-style: italic;
-  font-size: 16px;
-  font-size: 0.88889rem;
-  line-height: 27px;
-  line-height: 1.5rem;
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-  @media only screen and (max-width: 768px) {
-    main.podcast time {
-      top: auto; } }
 
 .people .colgroup-4 {
   margin-bottom: 0; }
@@ -3666,50 +3550,6 @@ textarea[name=embed-link] {
     display: block;
     margin: 0 auto;
     padding: 10px 15px; }
-
-.bhpsdoc table {
-  background: #f2f2f2;
-  border: 1px solid #cccccc; }
-  .bhpsdoc table th,
-  .bhpsdoc table td {
-    padding: 7.2px 10.8px;
-    padding: 0.4rem 0.6rem;
-    border-top: 1px solid #dddddd; }
-    .bhpsdoc table th:last-of-type,
-    .bhpsdoc table td:last-of-type {
-      text-align: left; }
-    .bhpsdoc table th:first-child,
-    .bhpsdoc table td:first-child {
-      width: 30%; }
-    .bhpsdoc table th.c,
-    .bhpsdoc table td.c {
-      text-align: center; }
-.bhpsdoc table.data {
-  border: 0;
-  font-family: monospace, serif;
-  margin-bottom: 0;
-  width: 80%; }
-  .bhpsdoc table.data th,
-  .bhpsdoc table.data td {
-    border: 0;
-    padding: 3.6px 7.2px;
-    padding: 0.2rem 0.4rem;
-    text-align: right; }
-    .bhpsdoc table.data th:first-child,
-    .bhpsdoc table.data td:first-child {
-      text-align: left;
-      width: 35%; }
-.bhpsdoc pre {
-  margin: 0;
-  background: none;
-  text-align: left;
-  padding: 7.2px;
-  padding: 0.4rem; }
-  .bhpsdoc pre code,
-  .bhpsdoc pre b {
-    font-family: monospace, serif; }
-.bhpsdoc code b {
-  font-family: monospace, serif; }
 
 html.sc h1 {
   font-size: 36px;
@@ -4115,9 +3955,7 @@ html.sc #tribe-events-content a:hover, html.sc .tribe-events-event-meta a:hover 
 html.sc .tribe-events-list .tribe-events-event-cost {
   display: none; }
 html.sc .tribe-events-widget-link {
-  text-align: right;
-  padding: 27px 0px;
-  padding: 1.5rem 0rem; }
+  text-align: right; }
 html.sc #tribe-events-content.tribe-events-list {
   margin-bottom: 0px; }
 html.sc #tribe-events-footer .tribe-events-sub-nav {
@@ -4275,8 +4113,6 @@ html.sc div#secondary {
         html.sc div#secondary aside#events-list ol li span {
           font-size: 16px;
           font-size: 0.88889rem; }
-    html.sc div#secondary aside#events-list p {
-      margin-bottom: 0; }
   html.sc div#secondary h3 {
     font-size: 22px;
     font-size: 1.22222rem;
@@ -4315,12 +4151,6 @@ html.sc main.site-main h1.page-title {
   margin-bottom: 27px;
   margin-bottom: 1.5rem;
   clear: both; }
-  @media only screen and (max-width: 480px) {
-    html.sc main.site-main h1.page-title {
-      font-size: 36px;
-      font-size: 2rem;
-      line-height: 36px;
-      line-height: 2rem; } }
 html.sc main.site-main article.single-post {
   margin: 0px;
   margin: 0rem;
@@ -5178,310 +5008,3 @@ section.img.full {
 
 section.image {
   margin-bottom: 1.5rem; }
-
-.bhpsdoc h1 {
-  margin-right: 34%; }
-  @media only screen and (max-width: 480px) {
-    .bhpsdoc h1 {
-      margin-right: 0; } }
-.bhpsdoc div.dropdown-menu {
-  position: absolute;
-  right: 0;
-  z-index: 999;
-  width: 30%; }
-  @media only screen and (max-width: 480px) {
-    .bhpsdoc div.dropdown-menu {
-      position: relative;
-      width: 100%;
-      margin-bottom: 9px;
-      margin-bottom: 0.5rem; } }
-  .bhpsdoc div.dropdown-menu .dropdown-menu-toggler {
-    display: inline-block;
-    padding: 4px 12px;
-    margin-bottom: 0;
-    font-family: "Officina", Georgia, "Times New Roman", Times, serif;
-    -webkit-font-smoothing: antialiased;
-    font-weight: bold;
-    font-size: 18px;
-    font-size: 1rem;
-    line-height: 27px;
-    line-height: 1.5rem;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    border: none;
-    *border: 0;
-    background: #005ea5;
-    color: white; }
-    .bhpsdoc div.dropdown-menu .dropdown-menu-toggler:hover, .bhpsdoc div.dropdown-menu .dropdown-menu-toggler:focus {
-      color: white;
-      text-decoration: none;
-      background: #1e9cee;
-      outline: 3px solid #f5d21e; }
-    .bhpsdoc div.dropdown-menu .dropdown-menu-toggler.active, .bhpsdoc div.dropdown-menu .dropdown-menu-toggler:active {
-      background-image: none;
-      outline: 0; }
-    .bhpsdoc div.dropdown-menu .dropdown-menu-toggler.disabled, .bhpsdoc div.dropdown-menu .dropdown-menu-toggler[disabled] {
-      cursor: default;
-      background-image: none; }
-    .bhpsdoc div.dropdown-menu .dropdown-menu-toggler:hover {
-      outline: none; }
-.bhpsdoc .dropdown-menu-wrapper {
-  cursor: pointer;
-  word-wrap: break-word;
-  padding: 0;
-  background: white;
-  width: 100%;
-  overflow: auto;
-  padding: 3px; }
-  .bhpsdoc .dropdown-menu-wrapper p {
-    margin: 0;
-    display: inline-block;
-    padding: 0;
-    width: 100%;
-    float: left;
-    text-align: left;
-    padding: 9px;
-    padding: 0.5rem; }
-    .bhpsdoc .dropdown-menu-wrapper p .fa {
-      font-size: 13.5px;
-      font-size: 0.75rem;
-      float: right;
-      display: inline-block;
-      padding-top: 3.6px;
-      padding-top: 0.2rem; }
-.bhpsdoc .dropdown-menu-panel {
-  display: none;
-  overflow: auto;
-  clear: both;
-  border: 1px solid #dddddd;
-  border-top: 0;
-  padding: 0px 9px 9px 9px;
-  padding: 0rem 0.5rem 0.5rem 0.5rem; }
-  .bhpsdoc .dropdown-menu-panel ul {
-    top: 100%;
-    max-height: 300px;
-    overflow-x: visible;
-    margin-bottom: 0; }
-    .bhpsdoc .dropdown-menu-panel ul li {
-      list-style: none;
-      padding-left: 0;
-      line-height: 36px;
-      line-height: 2rem; }
-      .bhpsdoc .dropdown-menu-panel ul li a:hover {
-        background: #fafafa; }
-      .bhpsdoc .dropdown-menu-panel ul li .fa {
-        line-height: 36px;
-        line-height: 2rem; }
-  .bhpsdoc .dropdown-menu-panel ul:nth-child(1) {
-    padding-left: 0px;
-    padding-left: 0rem; }
-  .bhpsdoc .dropdown-menu-panel ul:nth-child(2) {
-    padding-left: 0px;
-    padding-left: 0rem; }
-
-#advanced-search-wrapper {
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-
-#advanced-search-button {
-  padding: 7px; }
-
-#advanced-search-panel {
-  display: none;
-  border: 1px solid #e2e2e2;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-  #advanced-search-panel form {
-    padding-bottom: 0;
-    border: 0;
-    padding: 18px;
-    padding: 1rem;
-    margin: 0; }
-  #advanced-search-panel nav.facets ol {
-    margin-bottom: 0; }
-    #advanced-search-panel nav.facets ol li:last-of-type a {
-      border-bottom: 0; }
-
-.span1.overlay {
-  position: relative; }
-  .span1.overlay .text {
-    position: absolute;
-    text-align: center;
-    padding: 14.4px 0px;
-    padding: 0.8rem 0rem;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 70%;
-    top: 30%;
-    background: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0);
-    -webkit-transition: all 2000ms cubic-bezier(0, 0.99, 0.355, 1);
-    -moz-transition: all 2000ms cubic-bezier(0, 0.99, 0.355, 1);
-    -o-transition: all 2000ms cubic-bezier(0, 0.99, 0.355, 1);
-    transition: all 2000ms cubic-bezier(0, 0.99, 0.355, 1);
-    -webkit-transition-timing-function: cubic-bezier(0, 0.99, 0.355, 1);
-    -moz-transition-timing-function: cubic-bezier(0, 0.99, 0.355, 1);
-    -o-transition-timing-function: cubic-bezier(0, 0.99, 0.355, 1);
-    transition-timing-function: cubic-bezier(0, 0.99, 0.355, 1); }
-  .span1.overlay:hover .text {
-    background: rgba(0, 0, 0, 0.75);
-    color: white; }
-
-.ie7 .fa span {
-  display: block;
-  cursor: pointer; }
-
-.ie9 a:focus {
-  outline: none; }
-
-.lt-ie9 #page-wrap {
-  min-width: 960px; }
-.lt-ie9 header[role=banner] a.home-logo {
-  background: url(asset-path("iser.gif")) no-repeat; }
-.lt-ie9 footer[role=contentinfo] a.esrc {
-  background: url(asset-path("esrc.gif")) no-repeat;
-  border: 0; }
-.lt-ie9 footer[role=contentinfo] a.uoe {
-  background: url(asset-path("university_of_essex.gif")) no-repeat;
-  border: 0; }
-.lt-ie9 a:focus {
-  outline: none; }
-.lt-ie9 .colgroup-2.components > .span1 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-2.components > .span2 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-3.components > .span1 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-3.components > .span2 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-3.components > .span3 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-4.components > .span1 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-4.components > .span2 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-4.components > .span3 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-4.components > .span4 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-5.components > .span1 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-5.components > .span2 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-5.components > .span3 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-5.components > .span4 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-5.components > .span5 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-6.components > .span1 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-6.components > .span2 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-6.components > .span3 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-6.components > .span4 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-6.components > .span5 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .colgroup-6.components > .span6 {
-  width: auto;
-  float: none;
-  clear: left;
-  margin-bottom: 27px;
-  margin-bottom: 1.5rem; }
-.lt-ie9 .hero {
-  display: none; }
-.lt-ie9 nav.breadcrumb ol li {
-  margin-right: 1em; }
-.lt-ie9 form#filter {
-  display: none; }
-.lt-ie9 label {
-  text-align: left; }
-.lt-ie9 input[type=text],
-.lt-ie9 input[type=number],
-.lt-ie9 input[type=password],
-.lt-ie9 input[type=search],
-.lt-ie9 input[type=email],
-.lt-ie9 input[type=url],
-.lt-ie9 textarea,
-.lt-ie9 select {
-  margin-left: 5px;
-  width: 98%; }
