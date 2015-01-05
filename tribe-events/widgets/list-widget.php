@@ -47,7 +47,7 @@ if ( $posts ) {
 		<?php do_action( 'tribe_events_list_widget_before_the_meta' ) ?>
 		
 		<div class="duration">
-			<?php echo tribe_events_event_schedule_details(); ?>
+			<?php echo tribe_get_start_date($post->ID, false, 'M j'); ?>
 		</div>
 		
 		<?php do_action( 'tribe_events_list_widget_after_the_meta' ) ?>
