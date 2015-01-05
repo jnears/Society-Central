@@ -3955,6 +3955,7 @@ html.sc #tribe-events-content a:hover, html.sc .tribe-events-event-meta a:hover 
 html.sc .tribe-events-list .tribe-events-event-cost {
   display: none; }
 html.sc .tribe-events-widget-link {
+  margin: 27px 0px;
   text-align: right; }
 html.sc #tribe-events-content.tribe-events-list {
   margin-bottom: 0px; }
@@ -4100,11 +4101,13 @@ html.sc div#secondary {
         list-style-type: none;
         position: relative;
         padding-left: 80px; }
+      html.sc div#secondary aside#events-list ol li p {
+        margin-bottom:0; }
         html.sc div#secondary aside#events-list ol li .duration {
           margin-bottom: 0px;
           margin-bottom: 0rem;
           position: absolute;
-          width: 70px;
+          width: 65px;
           left: 0;
           top: 0.75rem;
           border-right: 1px solid #cccccc;
