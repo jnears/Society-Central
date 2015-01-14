@@ -27,6 +27,7 @@ if ( !defined('ABSPATH') ) { die('-1'); }
 //Check if any posts were found
 if ( $posts ) {
 ?>
+<h4><a href="<?php echo tribe_get_events_link(); ?>" rel="bookmark">Social Policy Events</a></h4>
 
 <ol class="hfeed vcalendar">
 <?php

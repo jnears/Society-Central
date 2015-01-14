@@ -14,7 +14,10 @@
 
 if ( !defined('ABSPATH') ) { die('-1'); } ?>
 
-<div id="tribe-events-content" class="tribe-events-list">
+<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+
 
 	<!-- List Title -->
 	<?php do_action( 'tribe_events_before_the_title' ); ?>
@@ -43,7 +46,6 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 		<?php tribe_get_template_part( 'list/loop' ) ?>
 		<?php do_action( 'tribe_events_after_loop' ); ?>
 	<?php endif; ?>
-
 	<!-- List Footer -->
 	<?php do_action( 'tribe_events_before_footer' ); ?>
 	<div id="tribe-events-footer">
@@ -55,5 +57,13 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 
 	</div><!-- #tribe-events-footer -->
 	<?php do_action( 'tribe_events_after_footer' ) ?>
+	</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<?php get_sidebar(); ?>
+
+
+
+	
 
 </div><!-- #tribe-events-content -->

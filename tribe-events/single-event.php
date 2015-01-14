@@ -35,7 +35,7 @@ $event_id = get_the_ID();
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
 		<?php endif; ?>
 	</div> -->
-
+      
 	<!-- Event header -->
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
 		<!-- Navigation -->
@@ -50,33 +50,32 @@ $event_id = get_the_ID();
 		<div id="post-<?php the_ID(); ?>" <?php post_class('vevent'); ?>>
 			<!-- Event featured image -->
 			<?php echo tribe_event_featured_image(); ?>
-
+			<p><?php  if ( tribe_get_start_date() ) :  ?><span class="date-start dtstart"><b>Date:</b> <?php echo tribe_get_start_date() ?></span><?php endif; ?>
+			<?php  if ( tribe_get_end_date() ) :  ?> - <span class="date-end dtend"><?php echo tribe_get_end_date() ?><?php endif; ?></span></p>
+			<?php  if ( tribe_has_venue() ) :  ?><p><b>Venue:</b> <?php echo tribe_get_venue() ?><?php  if ( tribe_address_exists() ) :  ?>, <?php echo tribe_get_full_address() ?><?php endif; ?><p><?php endif; ?>
+			<?php  if ( tribe_get_map_link() ) :  ?><p><?php echo tribe_get_map_link_html() ?><p><?php endif; ?>
+			
 			<!-- Event content -->
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 			<div class="tribe-events-single-event-description tribe-events-content entry-content description">
 				<?php the_content(); ?>
 			</div><!-- .tribe-events-single-event-description -->
 			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
+			<div id="tribe-events-footer">
+			<p><a href="<?php echo tribe_get_events_link(); ?>" rel="bookmark"><?php _e( 'View all events', 'tribe-events-calendar' );	?></a></p>
+            </div>
 </div>
 </div>
 			<div id="secondary" class="widget-area" role="complementary"><!-- Event meta -->
-			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
-				<aside class="widget"><?php echo tribe_events_single_event_meta() ?></aside>
-			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
-			</div><!-- .hentry .vevent -->
+			<aside id="headlines" class="widget">
+			<?php echo headline_list(10); ?>
+		</aside>
+
+			
 			</div><!-- .hentry .vevent -->
 		<?php if( get_post_type() == TribeEvents::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>
 
-	<!-- Event footer -->
-    <div id="tribe-events-footer">
-		<!-- Navigation -->
-		<!-- Navigation -->
-		<h3 class="tribe-events-visuallyhidden"><?php _e( 'Event Navigation', 'tribe-events-calendar' ) ?></h3>
-		<ul class="tribe-events-sub-nav">
-			<li class="tribe-events-nav-previous "><?php tribe_the_prev_event_link( '<i class="fa fa-angle-left"></i> %title%' ) ?></li>
-			<li class="tribe-events-nav-next "><?php tribe_the_next_event_link( '%title% <i class="fa fa-angle-right"></i>' ) ?></li>
-		</ul><!-- .tribe-events-sub-nav -->
-	</div><!-- #tribe-events-footer -->
+	
 
 
