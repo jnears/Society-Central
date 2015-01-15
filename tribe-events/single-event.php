@@ -50,10 +50,13 @@ $event_id = get_the_ID();
 		<div id="post-<?php the_ID(); ?>" <?php post_class('vevent'); ?>>
 			<!-- Event featured image -->
 			<?php echo tribe_event_featured_image(); ?>
-			<p><?php  if ( tribe_get_start_date() ) :  ?><span class="date-start dtstart"><b>Date:</b> <?php echo tribe_get_start_date() ?></span><?php endif; ?>
-			<?php  if ( tribe_get_end_date() ) :  ?> - <span class="date-end dtend"><?php echo tribe_get_end_date() ?><?php endif; ?></span></p>
-			<?php  if ( tribe_has_venue() ) :  ?><p><b>Venue:</b> <?php echo tribe_get_venue() ?><?php  if ( tribe_address_exists() ) :  ?>, <?php echo tribe_get_full_address() ?><?php endif; ?><p><?php endif; ?>
-			<?php  if ( tribe_get_map_link() ) :  ?><p><?php echo tribe_get_map_link_html() ?><p><?php endif; ?>
+
+			<ul>
+				<?php  if ( tribe_get_start_date() ) :  ?><li><span class="date-start dtstart"><b>Date:</b> <?php echo tribe_get_start_date() ?></span><?php  if ( tribe_get_end_date() ) :  ?> - <span class="date-end dtend"><?php echo tribe_get_end_date() ?></span><?php endif; ?></li><?php endif; ?>
+				
+				<?php  if ( tribe_address_exists() ) :  ?><li><b>Location:</b> <?php echo tribe_get_full_address() ?></li><?php endif; ?>
+				<?php  if ( tribe_get_map_link() ) :  ?><li><?php echo tribe_get_map_link_html() ?></li><?php endif; ?>
+			</ul>
 			
 			<!-- Event content -->
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
@@ -61,9 +64,7 @@ $event_id = get_the_ID();
 				<?php the_content(); ?>
 			</div><!-- .tribe-events-single-event-description -->
 			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
-			<div id="tribe-events-footer">
 			<p><a href="<?php echo tribe_get_events_link(); ?>" rel="bookmark"><?php _e( 'View all events', 'tribe-events-calendar' );	?></a></p>
-            </div>
 </div>
 </div>
 			<div id="secondary" class="widget-area" role="complementary"><!-- Event meta -->
