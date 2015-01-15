@@ -52,7 +52,7 @@ $event_id = get_the_ID();
 			<?php echo tribe_event_featured_image(); ?>
 
 			<ul>
-				<?php  if ( tribe_get_start_date() ) :  ?><li><span class="date-start dtstart"><b>Date:</b> <?php echo tribe_get_start_date() ?></span><?php  if ( tribe_get_end_date() ) :  ?> - <span class="date-end dtend"><?php echo tribe_get_end_date() ?></span><?php endif; ?></li><?php endif; ?>
+				<li><?php echo tribe_events_event_schedule_details() ?></li>
 				
 				<?php  if ( tribe_address_exists() ) :  ?><li><b>Location:</b> <?php echo tribe_get_full_address() ?></li><?php endif; ?>
 				<?php  if ( tribe_get_map_link() ) :  ?><li><?php echo tribe_get_map_link_html() ?></li><?php endif; ?>
