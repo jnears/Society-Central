@@ -50,9 +50,14 @@ $event_id = get_the_ID();
 		<div id="post-<?php the_ID(); ?>" <?php post_class('vevent'); ?>>
 			<!-- Event featured image -->
 			<?php echo tribe_event_featured_image(); ?>
-
+<?php if ( $venue_details ) : ?>
+			<!-- Venue Display Info -->
+			<div class="tribe-events-venue-details">
+				<?php echo implode( ', ', $venue_details ); ?>
+			</div> <!-- .tribe-events-venue-details -->
+		<?php endif; ?>
 			<ul>
-				<li><b>Venue:</b> <?php echo tribe_events_event_schedule_details() ?></li>
+				<li><b>Date:</b> <?php echo tribe_events_event_schedule_details() ?></li>
 				
 				<?php  if ( tribe_address_exists() ) :  ?><li><b>Location:</b> <?php echo tribe_get_full_address() ?></li><?php endif; ?>
 				<?php  if ( tribe_get_map_link() ) :  ?><li><?php echo tribe_get_map_link_html() ?></li><?php endif; ?>
