@@ -3807,6 +3807,8 @@ html.sc .entry-meta {
   font-weight: normal;
   line-height: 27px;
   line-height: 1.5rem;
+  margin-top: 13.5px;
+  margin-top: 0.75rem;
   margin-bottom: 13.5px;
   margin-bottom: 0.75rem; }
   html.sc .entry-meta i.tag {
