@@ -26,7 +26,7 @@
 
 	<!-- Show author meta on single pages only -->
 	<?php if ( is_single() ){?>
-	<div class="meta-container">
+	
 			<!-- meta information -->
 			
 			<div class="entry-meta">
@@ -75,7 +75,7 @@
 				<textarea wrap="soft" rows="6" cols="18" id="embed-text-sidebar" name="embed-link-sidebar" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
 				</textarea>
 			</div>
-		</div>
+	
 	<?php }?>
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
