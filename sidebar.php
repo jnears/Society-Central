@@ -6,9 +6,6 @@
  */
 ?>
 <div id="secondary" class="widget-area" role="complementary">
-	
-	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
-	<?php endif; // end sidebar widget area ?>
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
 		<aside id="site-overview" class="widget">
@@ -75,8 +72,11 @@
 				<textarea wrap="soft" rows="6" cols="18" id="embed-text-sidebar" name="embed-link-sidebar" value="<?php echo get_permalink(); ?>" readonly="readonly"/><?php echo get_permalink(); ?>
 				</textarea>
 			</div>
-	
+		<hr>
 	<?php }?>
+
+	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+	<?php endif; // end sidebar widget area ?>
 
 	<?php if ( is_home() ) : // show events listing on homepage?>
 		<aside id="events-list" class="widget">

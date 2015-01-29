@@ -562,3 +562,6 @@ function tribe_add_ical_link()  {
 
 
 remove_filter('tribe_events_after_footer', array('TribeiCal', 'maybe_add_link'), 10, 1);
+
+#remove related links from under posts
+add_filter( 'rp4wp_append_content', '__return_false' );
