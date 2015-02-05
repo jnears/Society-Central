@@ -73,6 +73,8 @@
 				</textarea>
 			</div>
 		<hr>
+
+		<?php rp4wp_children(); ?>
 	<?php }?>
 
 	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>

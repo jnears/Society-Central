@@ -5017,3 +5017,18 @@ section.img.full {
 
 section.image {
   margin-bottom: 1.5rem; }
+
+
+
+.rp4wp-related-posts ul{width:100%;padding:0;margin:0;float:left;}
+  @media only screen and (max-width: 768px) {
+    .rp4wp-related-posts ul {
+        float: none; } }
+.rp4wp-related-posts ul>li{list-style:none;padding:0;margin:0;padding-bottom:20px;clear:both;min-height: 110px;}
+.rp4wp-related-posts ul>li>p{margin:0;padding:0;}
+.rp4wp-related-post-image{width:70px;padding-top:5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;float:left;}
+.rp4wp-related-post-content{margin-left:90px;}
+
+
+
+
