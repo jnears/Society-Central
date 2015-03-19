@@ -53,7 +53,7 @@ if ( $posts ) {
 		
 		<?php do_action( 'tribe_events_list_widget_after_the_meta' ) ?>
 		
-		<?php the_excerpt(); ?>
+<!-- 		<?php the_excerpt(); ?> -->
 	</li>
 <?php
 	endforeach;
