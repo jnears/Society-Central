@@ -28,7 +28,7 @@
 							University of Essex<br>
 							Wivenhoe Park<br>
 							Colchester CO4 3SQ<br>
-							+44 (0) 1206 873684<br>
+							+44 (0) 1206 873087<br>
 							<a href="mailto:societycentral@essex.ac.uk">societycentral@essex.ac.uk</a><br>
 						</p>
 
