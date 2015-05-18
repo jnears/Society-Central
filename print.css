@@ -26,6 +26,6 @@ html.sc main.site-main article{ page-break-inside:avoid;
 img, p { page-break-inside:avoid; 
      page-break-after:avoid; }
 blockquote, table, pre { page-break-inside:avoid }
-ul, ol, dl  { page-break-before:avoid }
+ul, dl  { page-break-before:avoid }
 
 }
